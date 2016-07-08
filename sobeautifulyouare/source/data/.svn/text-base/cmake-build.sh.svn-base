@@ -1,0 +1,12 @@
+#!/bin/sh
+cd DarwinFramework && cmake . && make && cd ..
+cd DarwinLinux && cmake . && make && cd ..
+cd WitCommunication && cmake . && make && cd ..
+cd WitMotion && cmake . && make && cd ..
+cd WitVisionCam && cmake . && make && cd ..
+cd WitVisionBlob && cmake . && make && cd ..
+cd WitVisionImgproc && cmake . && make && cd ..
+cd WitStrategy && cmake . && make && cd ..
+cd WitDemo && cmake . && make && cd ..
+
+

@@ -1,0 +1,41 @@
+#ifndef _WIT_IMG_PROC_H_
+#define _WIT_IMG_PROC_H_
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+#include <cv.h>
+#include <highgui.h>
+
+#include "witframe.h"
+#include "BlobResult.h"
+
+using std::vector;
+
+#define IMG_WIDTH	320
+#define IMG_HEIGHT	240
+
+class WitImgProc{
+
+public:
+	WitImgProc();
+	~WitImgProc();
+private:
+	unsigned char *srcData;
+	IplImage *src;
+	int data1[6];
+	int data2[6];
+	int data3[6];
+public:	
+	void genImage(unsigned char *srcMat);
+	
+	// Get thresholded image in HSV format
+	IplImage* GetThresholdedImageHSV(IplImage* img, int clrData[18]);
+	
+	void Run(unsigned char *srcMat, unsigned char *dstMat, int clrData[18], MyPointf *pt);
+protected:
+
+};
+
+#endif // _WIT_IMG_PROC_H_

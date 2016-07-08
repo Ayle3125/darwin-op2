@@ -1,0 +1,45 @@
+#ifndef _WIT_MOTION_H_
+#define _WIT_MOTION_H_
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include "witframe.h"
+#include "LinuxDARwIn.h"
+
+#define IMG_WIDTH	320
+#define IMG_HEIGHT	240
+
+#define SCRIPT_FILE_PATH    "script.asc"
+#define U2D_DEV_NAME0       "/dev/ttyUSB0"
+#define U2D_DEV_NAME1       "/dev/ttyUSB1"
+
+#ifdef MX28_1024
+#define MOTION_FILE_PATH    "../../darwin/Data/motion_1024.bin"
+#else
+#define MOTION_FILE_PATH    "../../darwin/Data/motion_4096.bin"
+#endif
+
+using namespace Robot;
+
+class WitMotion{
+
+public:
+	WitMotion();
+	~WitMotion();
+private:
+	Point2D pt;
+	
+	BallTracker *tracker;
+	BallFollower *follower;
+	
+	LinuxCM730 *linux_cm730;
+	CM730 *cm730;
+	
+	int firm_ver;
+	
+public:
+	void Run(MyPointf *coorf);
+};
+
+#endif // _Wit_MOTION_H_

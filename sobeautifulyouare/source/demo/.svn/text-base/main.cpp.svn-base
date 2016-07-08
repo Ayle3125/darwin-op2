@@ -1,0 +1,151 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <pthread.h>
+
+#include <highgui.h>
+#include <cv.h>
+#include <BlobResult.h>
+#include <wit_camera.h>
+#include <wit_imgproc.h>
+#include <wit_motion.h>
+#include <wit_communication.h>
+#include <wit_avoidance.h>
+#include <wit_climbladder.h>
+#include <wit_duanpanzi.h>
+#include <wit_ladderwalking.h>
+#include <wit_marathon.h>
+#include <wit_penalties.h>
+#include <wit_pickuplitter.h>
+#include <wit_shootbasket.h>
+#include <wit_sprint.h>
+
+#define IMG_WIDTH 320
+#define IMG_HEIGHT 240
+
+// 以下宏定义对应于键盘上的0~9.
+#define STOP			48
+#define AVOIDANCE		49
+#define CLIMBLADDER		50
+#define DUANPANZI		51
+#define LADDERWALKING	52
+#define MARATHON		53
+#define PENALTIES		54
+#define PICKUPLITTER	55
+#define SHOOTBASKET		56
+#define SPRINT			57
+
+void runAvoidance();
+void runClimbladder();
+void runDuanpanzi();
+void runLadderwalking();
+void runMarathon();
+void runPenalties();
+void runPickuplitter();
+void runShootbasket();
+void runSprint();
+
+
+int main(int argc, char *argv[])
+{	
+	if(argc == 1)
+		return 1;
+	switch((int)argv[1][0]) {
+	case AVOIDANCE:
+		runAvoidance();
+		break;
+	case CLIMBLADDER:
+		runClimbladder();
+		break;
+	case DUANPANZI:
+		runDuanpanzi();
+		break;
+	case LADDERWALKING:
+		runLadderwalking();
+		break;
+	case MARATHON:
+		runMarathon();
+		break;
+	case PENALTIES:
+		runPenalties();
+		break;
+	case PICKUPLITTER:
+		runPickuplitter();
+		break;
+	case SHOOTBASKET:
+		runShootbasket();
+		break;
+	case SPRINT:
+		runSprint();
+		break;
+	default:
+		break;
+	}
+	
+	return 0;
+}
+
+void runAvoidance()
+{
+	WitAvoidance *avoidance = new WitAvoidance();
+	// Here is for Avoidance
+	
+}
+
+void runClimbladder()
+{
+	WitClimbladder *climbladder = new WitClimbladder();
+	// Here is for Climbladder
+	
+}
+
+void runDuanpanzi()
+{
+	WitDuanpanzi *duanpanzi = new WitDuanpanzi();
+	// Here is for Duanpanzi
+	
+}
+
+void runLadderwalking()
+{
+	WitLadderwalking *ladderwalking = new WitLadderwalking();
+	// Here is for Ladderwalking
+	
+}
+
+void runMarathon()
+{
+	WitMarathon *marathon = new WitMarathon();
+	// Here is for Penalties
+	
+}
+
+void runPenalties()
+{
+	WitPenalties *penalties = new WitPenalties();
+	// Here is for Penalties
+	
+	penalties->run();
+}
+
+void runPickuplitter()
+{
+	WitPickuplitter *pickuplitter = new WitPickuplitter();
+	// Here is for Pickuplitter
+	
+}
+
+void runShootbasket()
+{
+	WitShootbasket *shootbasket = new WitShootbasket();
+	// Here is for Shootbasket
+	
+}
+
+void runSprint()
+{
+	WitSprint *sprint = new WitSprint();
+	// Here is for Sprint
+	
+}

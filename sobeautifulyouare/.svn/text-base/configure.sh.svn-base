@@ -1,0 +1,42 @@
+#!/bin/sh
+
+if test -d all-build
+then
+	rm -rf all-build/*
+else
+	mkdir all-build
+fi
+
+if test -d bin
+then 
+	rm -rf bin/*
+else
+	mkdir bin
+fi
+
+cd all-build			# now in all-build
+
+mkdir DarwinFramework && cp ../source/data/CMakeLists-DarwinFramework.txt DarwinFramework/CMakeLists.txt
+
+mkdir DarwinLinux && cp ../source/data/CMakeLists-DarwinLinux.txt DarwinLinux/CMakeLists.txt
+
+mkdir WitCommunication && cp ../source/data/CMakeLists-WitCommunication.txt WitCommunication/CMakeLists.txt
+
+mkdir WitMotion && cp ../source/data/CMakeLists-WitMotion.txt WitMotion/CMakeLists.txt
+
+mkdir WitStrategy && cp ../source/data/CMakeLists-WitStrategy.txt WitStrategy/CMakeLists.txt
+
+mkdir WitVisionBlob && cp ../source/data/CMakeLists-WitVisionBlob.txt WitVisionBlob/CMakeLists.txt
+
+mkdir WitVisionCam && cp ../source/data/CMakeLists-WitVisionCam.txt WitVisionCam/CMakeLists.txt
+
+mkdir WitVisionImgproc && cp ../source/data/CMakeLists-WitVisionImgproc.txt WitVisionImgproc/CMakeLists.txt
+
+mkdir WitDemo && cp ../source/data/CMakeLists-WitDemo.txt WitDemo/CMakeLists.txt
+
+cd .. && cp source/data/color.data bin/color.data		# main path
+
+cp source/data/cmake-build.sh all-build/cmake-build.sh
+cp source/data/make-build.sh all-build/make-build.sh
+
+

@@ -1,0 +1,10 @@
+
+#include "wit_sprint.h"
+
+WitSprint::WitSprint()
+{
+}
+
+WitSprint::~WitSprint()
+{
+}

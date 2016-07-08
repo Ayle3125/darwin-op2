@@ -1,0 +1,9 @@
+#ifndef _WIT_FRAME_H_
+#define _WIT_FRAME_H_
+
+struct MyPointf{
+	double x;
+	double y;
+};
+
+#endif // _WIT_FRAME_H_

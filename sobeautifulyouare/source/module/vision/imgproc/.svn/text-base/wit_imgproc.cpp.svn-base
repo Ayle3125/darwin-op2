@@ -1,0 +1,190 @@
+#include "wit_imgproc.h"
+
+WitImgProc::WitImgProc()
+{
+	srcData = (unsigned char *)malloc(IMG_WIDTH*IMG_HEIGHT*3);
+	src = cvCreateImage(cvSize(320,240), IPL_DEPTH_8U, 3);
+}
+
+WitImgProc::~WitImgProc()
+{
+	cvReleaseImage(&src);
+}
+
+void WitImgProc::genImage(unsigned char *srcMat)
+{
+	long int i;
+	for(i=0; i<IMG_WIDTH*IMG_HEIGHT*3; i++)
+		srcData[i] = srcMat[i];
+	memcpy(src->imageData, srcData, src->imageSize);
+}
+
+IplImage* WitImgProc::GetThresholdedImageHSV(IplImage* img, int clrData[6])
+{
+	// Create an HSV format image from image passed 
+	IplImage* imgHSV = cvCreateImage(cvGetSize(img), 
+										img->depth, 
+										img->nChannels );
+	
+	cvCvtColor(img, imgHSV, CV_BGR2HSV);
+	
+	// Create binary thresholded image acc. to max/min HSV range
+	// For detecting blue gloves in Camera-Video - HSV mode
+	IplImage* imgThresh = cvCreateImage(cvGetSize(img), img->depth, 1);
+	cvInRangeS(imgHSV, 
+				cvScalar(clrData[0], clrData[1], clrData[2]), 
+				cvScalar(clrData[3], clrData[4], clrData[5]), 
+				imgThresh );
+				
+	// Tidy up and return thresholded image 
+	cvReleaseImage(&imgHSV);
+	return imgThresh;
+}
+
+void WitImgProc::Run(unsigned char *srcMat, unsigned char *dstMat, int clrData[18], MyPointf *pt)
+{
+	CBlobResult blobs1, blobs2, blobs3;
+	CBlob *currentBlob1, *currentBlob2, *currentBlob3;
+	CvPoint pt1, pt2;
+	CvRect cvRect1, cvRect2, cvRect3;
+	int num_blobs;
+	int key = 0, i;
+	
+	for(i=0; i<6; i++)
+	{
+		data1[i] = clrData[i];
+		data2[i] = clrData[i+6];
+		data3[i] = clrData[i+12];
+	}
+	
+	genImage(srcMat);
+	
+	// Get object's thresholded image 
+	IplImage* imgThresh1 = GetThresholdedImageHSV(src, data1);
+	IplImage* imgThresh2 = GetThresholdedImageHSV(src, data2);
+	IplImage* imgThresh3 = GetThresholdedImageHSV(src, data3);
+	
+	IplImage* dstImage = cvCreateImage(cvGetSize(src), src->depth, 3);
+	
+	// Detect the white blobs from the black background
+	blobs1 = CBlobResult(imgThresh1, NULL, 0);
+	
+	// Exclude white blobs smaller than the given value
+	// The bigger the last parameter, the bigger the blob
+	// to be bor inclusion
+	blobs1.Filter(blobs1, 
+				B_EXCLUDE, 
+				CBlobGetArea(), 
+				B_LESS, 
+				30 );
+				
+	// Attach a bounding rectangle for each blob discovery
+	num_blobs = blobs1.GetNumBlobs();
+	
+	vector< CvPoint > vCenterBlob1;
+	CvPoint ptBuf;
+
+	for(i=0; i<num_blobs; i++)
+	{
+		currentBlob1 = blobs1.GetBlob(i);
+		cvRect1 = currentBlob1->GetBoundingBox();
+			
+		pt1.x = cvRect1.x;
+		pt1.y = cvRect1.y;
+		pt2.x = cvRect1.x + cvRect1.width;
+		pt2.y = cvRect1.y + cvRect1.height;
+			
+		// Attach bounding rect to blob in orginal video 
+		cvRectangle(src, 
+					pt1, 
+					pt2, 
+					cvScalar(0, 0, 255, 0), 
+					1, 
+					8, 
+					0 );
+		
+		ptBuf.x = (pt1.x + pt2.x) / 2;
+		ptBuf.y = (pt1.y + pt2.y) / 2;
+		vCenterBlob1.push_back(ptBuf);
+	}
+	if(num_blobs > 0) {
+		double dCenterX=0, dCenterY=0;
+		for(int i=0; i<vCenterBlob1.size(); i++) {
+			dCenterX += vCenterBlob1[i].x;
+			dCenterY += vCenterBlob1[i].y;
+		}
+		pt->x = dCenterX / vCenterBlob1.size();
+		pt->y = dCenterY / vCenterBlob1.size();
+	}
+//	printf("pt.x=%f, pt.y=%f\n", pt[0].x, pt[0].y);
+
+	blobs2 = CBlobResult(imgThresh2, NULL, 0);
+	blobs2.Filter(blobs2, B_EXCLUDE, CBlobGetArea(), B_LESS, 30 );
+	
+	num_blobs = blobs2.GetNumBlobs();
+	for(i=0; i<num_blobs; i++)
+	{
+		currentBlob2 = blobs2.GetBlob(i);
+		cvRect2 = currentBlob2->GetBoundingBox();	
+		pt1.x = cvRect2.x;
+		pt1.y = cvRect2.y;
+		pt2.x = cvRect2.x + cvRect2.width;
+		pt2.y = cvRect2.y + cvRect2.height;
+			
+		// Attach bounding rect to blob in orginal video 
+		cvRectangle(src, 
+					pt1, 
+					pt2, 
+					cvScalar(0, 255, 0, 0), 
+					1, 
+					8, 
+					0 );
+	}
+	
+	blobs3 = CBlobResult(imgThresh3, NULL, 0);
+	blobs3.Filter(blobs3, B_EXCLUDE, CBlobGetArea(), B_LESS, 30 );
+	
+	num_blobs = blobs3.GetNumBlobs();
+	for(i=0; i<num_blobs; i++)
+	{
+		currentBlob3 = blobs3.GetBlob(i);
+		cvRect3 = currentBlob3->GetBoundingBox();	
+		pt1.x = cvRect3.x;
+		pt1.y = cvRect3.y;
+		pt2.x = cvRect3.x + cvRect3.width;
+		pt2.y = cvRect3.y + cvRect3.height;
+			
+		// Attach bounding rect to blob in orginal video 
+		cvRectangle(src, 
+					pt1, 
+					pt2, 
+					cvScalar(255, 0, 0, 0), 
+					1, 
+					8, 
+					0 );
+	}
+	
+	cvMerge(imgThresh3, imgThresh2, imgThresh1, NULL, dstImage);
+
+	memcpy(dstMat, dstImage->imageData, dstImage->imageSize);
+	
+	// Add the black and white and orginal images
+/*
+	cvShowImage("thresh1", imgThresh1);
+	cvShowImage("thresh2", imgThresh2);
+	cvShowImage("thresh3", imgThresh3);
+	cvShowImage("dstImage", dstImage);
+	cvShowImage("video", src);
+	
+	cvWaitKey(27);
+*/		
+	// Optional - used to slow up the display of frames
+		
+	// Prevent memory leaks by releasing thresholded image...
+	cvReleaseImage(&imgThresh1);
+	cvReleaseImage(&imgThresh2);
+	cvReleaseImage(&imgThresh3);
+	cvReleaseImage(&dstImage);
+}
+
+

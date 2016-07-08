@@ -1,0 +1,33 @@
+#ifndef _WIT_MARATHON_H_
+#define _WIT_MARATHON_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <pthread.h>
+
+#include <highgui.h>
+#include <cv.h>
+#include <BlobResult.h>
+#include <wit_camera.h>
+#include <wit_imgproc.h>
+#include <wit_motion.h>
+#include <wit_communication.h>
+
+#define IMG_WIDTH 320
+#define IMG_HEIGHT 240
+
+class WitMarathon
+{
+public:
+	WitMarathon();
+	~WitMarathon();
+
+private:
+
+protected:
+
+};
+
+#endif // _WIT_MARATION_H_

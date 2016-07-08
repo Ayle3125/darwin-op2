@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ayle/sobeautifulyouare/source/module/communication/communication.cpp
+communication.h
+/home/ayle/sobeautifulyouare/source/module/communication/communication.h
+
+/home/ayle/sobeautifulyouare/source/module/communication/communication.h
+zmq.h
+-
+stdio.h
+-
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+

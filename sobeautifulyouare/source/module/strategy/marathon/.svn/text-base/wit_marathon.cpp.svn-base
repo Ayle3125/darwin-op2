@@ -1,0 +1,10 @@
+
+#include "wit_marathon.h"
+
+WitMarathon::WitMarathon()
+{
+}
+
+WitMarathon::~WitMarathon()
+{
+}

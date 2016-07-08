@@ -1,0 +1,375 @@
+/*
+ *  100: 张开四肢  劈叉
+ *  101: 劈叉恢复，15
+ *  115: front lie down
+ *  130: 大脚射门
+ */
+#include "robcup_goalkeeper.h"
+
+Robcup_goalkeeper::Robcup_goalkeeper()
+{
+    is_new_img = false;
+
+    m_ball_center_2D.X = -1; m_ball_center_2D.Y = -1;
+    m_ball_center_angle.X = -1; m_ball_center_angle.Y = -1;
+    m_line_center_2D.X = -1; m_line_center_2D.Y = -1;
+    m_goalfoot1.X = -1; m_goalfoot1.Y = -1;
+    m_goalfoot2.X = -1; m_goalfoot2.Y = -1;
+    m_ball_found = 0;
+    m_NoBallMaxCount = 10;
+    m_goal_found = 0;
+    m_line_found = 0;
+    m_line_Kvalue = 0;
+
+    m_process_state = FOLLOWBALL;
+	m_dive_status = -1;
+    
+    m_is_checkstatus = true;
+		
+    m_DiveRightAngle = 10;
+    m_DiveLeftAngle = -10;
+    m_DiveTopAngle = -5;//TODO
+}
+Robcup_goalkeeper::~Robcup_goalkeeper()
+{
+}
+
+int Robcup_goalkeeper::run()
+{	
+    debug_print = 1;
+    if ( debug_print ) printf( " robcup_striker run\n");
+    pthread_mutex_init(&mut,NULL);
+    pthread_cond_init(&cond,NULL);
+    thread_create();
+
+    thread_wait();
+
+    return 0;
+}
+
+void Robcup_goalkeeper::ThreadVision() 
+{
+    ballpro = new followball();
+    linepro = new sideline();
+    // robotpro = new findrobot();
+    ballpro = new followball();
+    goalpro = new goalpost();
+    cv::VideoCapture cap(0);
+    if(!cap.isOpened())  // check if we succeeded
+        fprintf(stderr,"Can not open the camera!\n");
+    while (true)
+    {/*
+        pthread_mutex_lock(&mut);//相当于模拟单线程，锁不锁也没关系
+        while( is_new_img == true){
+            pthread_cond_wait(&cond, &mut);
+        }
+        is_new_img = true;
+        pthread_mutex_unlock(&mut);
+*/
+        cap >> frame;
+        flip(frame,frame,-1);
+        if ( debug_print ){
+            cv::imshow("cap", frame);		
+            cv::waitKey(30); 
+        }
+
+    }
+    pthread_exit(NULL);
+
+}
+
+void Robcup_goalkeeper::ThreadMotion() 
+{
+    motion = new Motion();
+    tracker = new BallTracker();
+    follower = new BallFollower();
+    compasspro = new compass();
+    static int m_old_btn = 0;
+    printf("Press the ENTER key to start ROBOCUP!\n");
+	while(StatusCheck::m_is_started == 0)
+	{
+		if ( MotionStatus::BUTTON != m_old_btn ) {
+			break;
+		}
+	}
+    Action::GetInstance()->m_Joint.SetEnableBody(true, true);  //!!!
+    Action::GetInstance()->Start(9);  
+    while(Action::GetInstance()->IsRunning() == true) usleep(8000);
+    Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
+    Walking::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+    MotionManager::GetInstance()->ResetGyroCalibration();
+    MotionManager::GetInstance()->SetEnable(true);
+
+    while ( true )
+    {
+		/*
+        pthread_mutex_lock(&mut);
+        if( is_new_img == true){
+            pthread_cond_signal(&cond);
+        }
+        is_new_img = false;
+        pthread_mutex_unlock(&mut);
+	*/
+		usleep(50*8000);
+        if (  m_is_checkstatus ) {
+			motion->CheckStatus();
+		}
+        if ( m_process_state == FOLLOWBALL ){
+	if( debug_print ) printf("FOLLOWBALL\n");
+            GetImageResult(frame,BALL);
+		//motion->walk(-3, 20, 0);
+            FollowBall();
+        }
+//TODO:还没有加处理两幅图片球的坐标变化判断
+        if ( m_process_state == AFTERDIVE ){
+	if( debug_print ) printf("AFTERDIVE\n");
+			GetImageResult(frame,BALL);
+            AfterDive();
+        }
+		if ( m_process_state == RETURNFOLLOW ){
+	if( debug_print ) printf("RETURNFOLLOW \n");
+			GetImageResult(frame,BALL);
+			GetImageResult(frame,LINE);
+            ReturnFollow();
+        }
+    }
+
+    pthread_exit(NULL);
+}
+
+void Robcup_goalkeeper::thread_create() 
+{
+    if ( debug_print ) printf( "thread_create \n");
+    int temp;
+    memset(&thread, 0, sizeof(thread));
+
+    if((temp = pthread_create(&thread[1], NULL, InternalThreadMotion, this)) != 0){
+        if(debug_print) fprintf(stderr,"ThreadMotion failed!\n");
+    }
+    else{
+        if(debug_print) fprintf(stderr,"ThreadMotion succ!\n");
+    }
+
+    if((temp = pthread_create(&thread[0], NULL, InternalThreadVision, this)) != 0){    
+        if(debug_print) fprintf(stderr,"ThreadVision failed!\n");
+    }
+    else{
+        if(debug_print) fprintf(stderr,"ThreadVision succ!\n");
+    }
+
+}
+
+void Robcup_goalkeeper::thread_wait(void) 
+{
+    if(thread[0] !=0)
+        pthread_join(thread[0],NULL);
+    if(thread[1] !=0) 
+        pthread_join(thread[1],NULL);
+}
+
+
+void Robcup_goalkeeper::GetImageResult(cv::Mat &frame, ImgResultType rs)
+{
+    if ( rs == BALL ){
+        ballpro->imageProcess(frame);
+        if( debug_print ) printf("ball center x:%d y:%d\n", ballpro->center.x,ballpro->center.y);
+        CVpointTo2Dpoint( ballpro->center, m_ball_center_2D);
+    }
+    else if ( rs == GOALPOST ){
+        goalpro->imageProcess(frame);
+        m_goal_found = goalpro->goal_number;
+        CVpointTo2Dpoint(goalpro->goal_foot1, m_goalfoot1);
+        CVpointTo2Dpoint(goalpro->goal_foot2, m_goalfoot2);
+        if( debug_print ) printf("gaol number: %d\n point1 %lf %lf  point2 %lf %lf ",m_goal_found,m_goalfoot1.X,m_goalfoot1.Y,m_goalfoot2.X,m_goalfoot2.Y);
+    }
+    else if ( rs == LINE ){
+        linepro->imageProcess(frame);
+        m_line_found = linepro->line_type;
+        m_line_Kvalue = linepro->k_value;
+        CVpointTo2Dpoint(goalpro->center, m_line_center_2D);
+    }
+}
+
+void Robcup_goalkeeper::ReturnFollow()
+{
+	static int return_time = 0;
+	static int MaxReturnTime = 10;
+   static int LRMoveAngle = 40;
+   if ( tracker->limit_mode != 2){
+   		tracker->ChangeLimit(20, -10, 60, 2); //TODO 守门员检查的视野范围,（tiltMax,tiltMin,Pan,Mode=goalkeeper)
+    }
+    m_ball_found = tracker->SearchAndTracking(m_ball_center_2D); 
+    if ( debug_print == 1 ) printf("returnfollow ballfound:%d \n", m_ball_found);
+    if ( m_ball_found == 1){
+		return_time  = 0;
+		m_process_state = FOLLOWBALL;
+	}
+	else {
+		return_time ++;
+		if ( m_line_found != 0 && m_line_center_2D.Y > -20 ){//TODO
+			if ( m_line_Kvalue >5 ) {//TODO
+				motion->walk(-5,  0, 10);// turn left
+			}	
+			else if (m_line_Kvalue >5){
+				 motion->walk(-5,  0, -10);// turn right
+			}
+			else {
+				m_process_state = FOLLOWBALL;
+			}
+		}
+		motion->walk(-10,0,0);
+	}
+
+}
+
+void Robcup_goalkeeper::FollowBall()
+{
+	static int LRMoveAngle = 10;
+     if ( tracker->limit_mode != 2){
+        tracker->ChangeLimit(20, -10, 65, 2); //TODO 守门员检查的视野范围，（tiltMax,tiltMin,Pan,Mode=goalkeeper)
+    }
+    m_ball_found = tracker->SearchAndTracking(m_ball_center_2D); 
+    m_ball_center_angle = tracker->ball_position;
+    if ( debug_print == 1 ) printf("ballfound:%d \n", m_ball_found);
+    if ( m_ball_found == 1){
+		double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
+        double pan_range = Head::GetInstance()->GetLeftLimitAngle();
+        double pan_percent = pan / pan_range;
+        double tilt = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_TILT);
+        double tilt_min = Head::GetInstance()->GetBottomLimitAngle();		
+        double tilt_range = Head::GetInstance()->GetTopLimitAngle() - tilt_min;
+        double tilt_percent = (tilt - tilt_min) / tilt_range;
+  
+		if( pan < LRMoveAngle && pan > -1.0*LRMoveAngle){ //TODO LRMoveAngle以内不动
+		        if ( debug_print == 1 ) printf("< move angele \n");
+			m_RLstep = 0.0;
+			m_FBstep = 0.0;
+		}
+		else{
+			m_RLstep =  m_MAX_RLstep * pan_percent;
+			m_FBstep = -3.0;
+		}
+
+		if(tilt <= (tilt_min + 10)  && ( tilt_min + m_ball_center_angle.Y < m_DiveTopAngle ) ){//be going to lie down ////TODO 调整参数
+			m_is_checkstatus = false;
+			if ( debug_print){
+				printf("i am going to dive\n");
+				getchar();
+			}
+			if (m_ball_center_angle.X > m_DiveRightAngle){
+					if ( debug_print == 1 ) printf("dive right \n");
+					 motion->walk(-4, -10, -10);// turn right
+					 usleep(8*8000);
+					 Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+					 Action::GetInstance()->Start(115);//dive right
+					 m_dive_status = 0;
+			 }
+			else if ( m_ball_center_angle.X  < m_DiveLeftAngle){
+					if ( debug_print == 1 ) printf("dive left \n");
+					motion->walk(-4, -10, 10);// turn left
+					usleep(8*8000);
+					Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+					Action::GetInstance()->Start(115);
+ 					m_dive_status = 0;
+			}
+			else {
+					if ( debug_print == 1 ) printf("dive mid \n");
+					Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+					Action::GetInstance()->Start(100);
+					m_dive_status = 1;
+			}
+			m_process_state = AFTERDIVE;	
+		}
+    }
+    else{
+		m_RLstep = 0.0;
+		m_FBstep = 0.0;
+    }
+	motion->walk(m_FBstep , m_RLstep, 0);
+}
+
+
+int Robcup_goalkeeper::CompassCheck()
+{// degree 0~360  -> -180~ 180
+    int check_time = 0;
+    int check_result = 1;
+    static int MaxCheckTime = 5; 
+    m_angle_diff_opponentGoal = compasspro->GetAngle()  -  m_OpponentAngle;//任意角度还不行orz
+    if ( m_angle_diff_opponentGoal  < 0 ){
+		m_angle_diff_opponentGoal += 360;
+	}//orz 开幕式太吵 只能啰嗦些
+
+	if ( m_angle_diff_opponentGoal  > 180 ){
+		m_angle_diff_opponentGoal = m_angle_diff_opponentGoal -360;
+	}
+   if ( debug_print ) printf("angle diff: %lf\n", m_angle_diff_opponentGoal);
+   while ( abs(m_angle_diff_opponentGoal) > abs(m_DribbleLeftAngle)  ){
+	check_time++;
+        if ( check_time > MaxCheckTime ) {
+            check_result = 0;
+			break;
+        }
+        if (m_angle_diff_opponentGoal >m_DribbleRightAngle  ) {
+			if ( debug_print == 1 ) printf("turn left \n");
+			motion->walk(-5, 0, 25);
+            //m_RLturn = m_MAX_RLturn *  m_angle_diff_opponentGoal /180.0;// turn left
+            //m_RLstep = -10;//TODO
+        }
+        else {
+			if ( debug_print == 1 ) printf("turn right \n");
+			motion->walk(-5, 0, -25);
+            //m_RLturn = m_MAX_RLturn * ( m_angle_diff_opponentGoal )/180.0;//turn right
+            //m_RLstep = 5;//TODO
+        }//TODO 绕球转
+     /*   m_FBstep = -10 * m_unit_FBstep;
+       motion->walk(m_FBstep, m_RLstep, m_RLturn);
+*/
+       int tmp = m_MAX_RLturn *  m_angle_diff_opponentGoal /180.0;
+	//if ( debug_print == 1 ) printf("%lf   %lf   %lf  \n", m_FBstep, m_RLstep, m_RLturn);
+       usleep( abs(tmp)*1000);
+    }
+	return check_result;
+}
+
+
+void Robcup_goalkeeper::AfterDive()
+{
+	static int time = 0;
+	if ( m_dive_status == 0){
+		time++;
+		if ( time > 100) {//TODO
+		m_is_checkstatus;
+			if ( debug_print == 1 ) printf("wait for enough time\n");
+        	Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+		if ( debug_print){
+				printf("i am going to stand up\n");
+				getchar();
+			}
+			Action::GetInstance()->Start(10);// FORWARD GETUP
+			m_process_state = RETURNFOLLOW;
+		}
+	}
+	else if ( m_dive_status == 1 ){
+		if ( tracker->limit_mode != 0){
+        tracker->ChangeLimit(10, -10, 65, 0);
+    	}
+    	m_ball_found = tracker->SearchAndTracking(m_ball_center_2D); 
+		if ( m_ball_found == -1){
+        	if ( debug_print == 1 ) printf("now no ball\n");
+		m_is_checkstatus;
+	if ( debug_print){
+				printf("i am going to stand up\n");
+				getchar();
+			}
+        	Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+			Action::GetInstance()->Start(101);// GETUP
+			m_process_state = RETURNFOLLOW;
+   		}  
+	}
+}
+
+void Robcup_goalkeeper::CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D)
+{
+    p_2D.X = p_cv.x;
+    p_2D.Y = p_cv.y;
+}

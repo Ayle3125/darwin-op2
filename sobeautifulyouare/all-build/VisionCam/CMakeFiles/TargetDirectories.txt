@@ -1,0 +1,1 @@
+/home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir

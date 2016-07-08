@@ -1,0 +1,135 @@
+#include "wit_motion.h"
+
+WitMotion::WitMotion()
+{
+	linux_cm730 = new LinuxCM730(U2D_DEV_NAME0);
+	cm730 = new CM730(linux_cm730);
+	tracker = new BallTracker();
+	follower = new BallFollower();
+	
+	if(MotionManager::GetInstance()->Initialize(cm730) == false)
+    {
+        linux_cm730->SetPortName(U2D_DEV_NAME1);
+        if(MotionManager::GetInstance()->Initialize(cm730) == false)
+        {
+            printf("Fail to initialize Motion Manager!\n");
+            exit(0);
+        }
+    }
+    
+    MotionManager::GetInstance()->AddModule((MotionModule*)Action::GetInstance());
+    MotionManager::GetInstance()->AddModule((MotionModule*)Head::GetInstance());
+    MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
+    
+    LinuxMotionTimer *motion_timer = new LinuxMotionTimer(MotionManager::GetInstance());
+    motion_timer->Start();
+    
+    firm_ver = 0;
+    if(cm730->ReadByte(JointData::ID_HEAD_PAN, MX28::P_VERSION, &firm_ver, 0)  != CM730::SUCCESS)
+    {
+        fprintf(stderr, "Can't read firmware version from Dynamixel ID %d!! \n\n", JointData::ID_HEAD_PAN);
+        exit(0);
+    }
+    if(0 < firm_ver && firm_ver < 27)
+    {
+#ifdef MX28_1024
+        Action::GetInstance()->LoadFile(MOTION_FILE_PATH);
+#else
+        fprintf(stderr, "MX-28's firmware is not support 4096 resolution!! \n");
+        fprintf(stderr, "Upgrade MX-28's firmware to version 27(0x1B) or higher.\n\n");
+        exit(0);
+#endif
+    }
+    else if(27 <= firm_ver)
+    {
+#ifdef MX28_1024
+        fprintf(stderr, "MX-28's firmware is not support 1024 resolution!! \n");
+        fprintf(stderr, "Remove '#define MX28_1024' from 'MX28.h' file and rebuild.\n\n");
+        exit(0);
+#else
+        Action::GetInstance()->LoadFile((char*)MOTION_FILE_PATH);
+#endif
+    }
+    else
+        exit(0);
+    
+    Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+    MotionManager::GetInstance()->SetEnable(true);
+
+    cm730->WriteByte(CM730::P_LED_PANNEL, 0x01|0x02|0x04, NULL);
+    
+    /////////////////////////////////////////////////////////////////////
+
+	int n = 0;
+	int param[JointData::NUMBER_OF_JOINTS * 5];
+	int wGoalPosition, wStartPosition, wDistance;
+
+	for(int id=JointData::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++)
+	{
+		wStartPosition = MotionStatus::m_CurrentJoints.GetValue(id);
+		wGoalPosition = Walking::GetInstance()->m_Joint.GetValue(id);
+		if( wStartPosition > wGoalPosition )
+			wDistance = wStartPosition - wGoalPosition;
+		else
+			wDistance = wGoalPosition - wStartPosition;
+
+		wDistance >>= 2;
+		if( wDistance < 8 )
+			wDistance = 8;
+
+		param[n++] = id;
+		param[n++] = CM730::GetLowByte(wGoalPosition);
+		param[n++] = CM730::GetHighByte(wGoalPosition);
+		param[n++] = CM730::GetLowByte(wDistance);
+		param[n++] = CM730::GetHighByte(wDistance);
+	}
+	cm730->SyncWrite(MX28::P_GOAL_POSITION_L, 5, JointData::NUMBER_OF_JOINTS - 1, param);	
+    
+    /////////////////////////////////////////////////////////////////////////////
+}
+
+WitMotion::~WitMotion()
+{
+}
+
+void WitMotion::Run(MyPointf *coorf)
+{
+	
+	/////////////////////////////////////////////////////////////////////
+
+	printf("Press the ENTER key to begin!\n");
+	getchar();
+	
+	///////////////////////////////////////////////////////////////////////
+	while(1) {
+    	Point2D ball_pos;
+    	pt.X = coorf->x;
+		pt.Y = coorf->y;
+    	
+    	usleep(1000);
+    	
+    	ball_pos = pt;
+//    	printf("ball_pos.X=%f, ball_pos.Y=%f\n", ball_pos.X, ball_pos.Y);
+    	tracker->Process(pt);
+//    	printf("coor.x=%f, coor.y=%f\n", coorf->x, coorf->y);
+//    	if(Action::GetInstance()->IsRunning() == 0) {
+        	Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
+            Walking::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+			follower->Process(tracker->ball_position);
+
+			if(follower->KickBall != 0) {
+				Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
+	 			Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+
+                if(follower->KickBall == -1) {
+                    Action::GetInstance()->Start(12);   // RIGHT KICK
+                    fprintf(stderr, "RightKick! \n");
+                }
+                else if(follower->KickBall == 1) {
+                    Action::GetInstance()->Start(13);   // LEFT KICK
+                    fprintf(stderr, "LeftKick! \n");
+                }
+            }
+//        }
+    }
+}

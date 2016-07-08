@@ -1,0 +1,33 @@
+#####################################################
+#Project:Framework for Darwin v1.6.0
+#Hardware:PC and Main Controller with linux
+#System version :Linux Ubuntu 12.04 LTS (armel)
+#Modified by Paul From WIT AI LAB on 16th Jun 2013
+#####################################################
+
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6.4 FATAL_ERROR)
+
+SET(MY_MAINSRC_DIR ${PROJECT_SOURCE_DIR}/src)
+SET(MY_MAININCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+SET(MATHSRC_DIR ${MY_MAINSRC_DIR}/math)
+SET(MININISRC_DIR ${MY_MAINSRC_DIR}/minIni)
+SET(MOTIONSRC_DIR ${MY_MAINSRC_DIR}/motion)
+SET(MOTIONMODULESRC_DIR ${MOTIONSRC_DIR}/modules)
+SET(VISIONSRC_DIR ${MY_MAINSRC_DIR}/vision)
+
+SET(MY_SRCS_DIR ${MY_MAINSRC_DIR} ${MATHSRC_DIR}  ${MININISRC_DIR} ${MOTIONSRC_DIR} ${MOTIONMODULESRC_DIR} ${VISIONSRC_DIR})
+SET(MY_INCLUDE_DIR ${MY_MAININCLUDE_DIR} ${MININISRC_DIR})
+
+SET(LIBS_OUT_PATH ${PROJECT_SOURCE_DIR}/../Lib)
+
+INCLUDE_DIRECTORIES(BEFORE ${MY_INCLUDE_DIR})
+
+SET(DARWIN_FRAMEWORK ${MY_MAINSRC_DIR}/CM730.cpp ${MY_MAINSRC_DIR}/MX28.cpp ${MATHSRC_DIR}/Matrix.cpp ${MATHSRC_DIR}/Plane.cpp ${MATHSRC_DIR}/Point.cpp ${MATHSRC_DIR}/Vector.cpp ${MININISRC_DIR}/minIni.c ${MOTIONSRC_DIR}/JointData.cpp ${MOTIONSRC_DIR}/Kinematics.cpp ${MOTIONSRC_DIR}/MotionManager.cpp ${MOTIONSRC_DIR}/MotionStatus.cpp ${MOTIONMODULESRC_DIR}/Action.cpp ${MOTIONMODULESRC_DIR}/Head.cpp ${MOTIONMODULESRC_DIR}/Walking.cpp ${VISIONSRC_DIR}/BallFollower.cpp ${VISIONSRC_DIR}/BallTracker.cpp ${VISIONSRC_DIR}/Camera.cpp ${VISIONSRC_DIR}/ColorFinder.cpp ${VISIONSRC_DIR}/Image.cpp ${VISIONSRC_DIR}/ImgProcess.cpp)
+
+SET(LIBRARY_OUTPUT_PATH ${LIBS_OUT_PATH})
+
+ADD_LIBRARY(darwin_framework SHARED ${DARWIN_FRAMEWORK})
+
+TARGET_LINK_LIBRARIES(darwin_framework pthread)
+
+
