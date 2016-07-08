@@ -90,6 +90,8 @@ opencv2/opencv.hpp
 iostream
 -
 
+/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp
+
 /home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp
 findrobot.h
 -

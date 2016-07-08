@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o"
   "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o"
   "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o"
+  "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o"
   "/home/ayle/sobeautifulyouare/bin/libvision_imgproc.pdb"
   "/home/ayle/sobeautifulyouare/bin/libvision_imgproc.so"
 )

@@ -123,6 +123,33 @@ vision_imgproc/fast:
 	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/build
 .PHONY : vision_imgproc/fast
 
+home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
+
+.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.o
+
+# target to build an object file
+home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
+.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
+
+home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
+
+.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.i
+
+# target to preprocess a source file
+home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
+.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
+
+home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
+
+.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.s
+
+# target to generate assembly for a file
+home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
+.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
+
 home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
 
 .PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.o
@@ -267,6 +294,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vision_imgproc"
+	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.o"
+	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.i"
+	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.s"
 	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.o"
 	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.i"
 	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.s"

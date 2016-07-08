@@ -177,13 +177,38 @@ CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/i
 CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o.provides.build: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
 
 
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o: CMakeFiles/vision_imgproc.dir/flags.make
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o: /home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o -c /home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp
+
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp > CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
+
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp -o CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
+
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.requires:
+
+.PHONY : CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.requires
+
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.provides: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.provides.build
+.PHONY : CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.provides
+
+CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.provides.build: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
+
+
 # Object files for target vision_imgproc
 vision_imgproc_OBJECTS = \
 "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o" \
 "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o" \
 "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o" \
 "CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o" \
-"CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o"
+"CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o" \
+"CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o"
 
 # External object files for target vision_imgproc
 vision_imgproc_EXTERNAL_OBJECTS =
@@ -193,6 +218,7 @@ vision_imgproc_EXTERNAL_OBJECTS =
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
+/home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: CMakeFiles/vision_imgproc.dir/build.make
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: /home/ayle/sobeautifulyouare/bin/libvision_blob.so
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.9
@@ -214,7 +240,7 @@ vision_imgproc_EXTERNAL_OBJECTS =
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.9
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
 /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so: CMakeFiles/vision_imgproc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vision_imgproc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -227,6 +253,7 @@ CMakeFiles/vision_imgproc.dir/requires: CMakeFiles/vision_imgproc.dir/home/ayle/
 CMakeFiles/vision_imgproc.dir/requires: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o.requires
 CMakeFiles/vision_imgproc.dir/requires: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o.requires
 CMakeFiles/vision_imgproc.dir/requires: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o.requires
+CMakeFiles/vision_imgproc.dir/requires: CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o.requires
 
 .PHONY : CMakeFiles/vision_imgproc.dir/requires
 
