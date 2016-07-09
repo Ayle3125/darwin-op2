@@ -3,6 +3,9 @@
 
 Sprint::Sprint()
 {
+	 imgRes = new ColorFindResult;
+	 imgProc = new ColorFind;
+
      m_is_checkstatus = true;
      m_point_center_2D.X = 0;
      m_point_center_2D.Y = 0;
@@ -101,8 +104,15 @@ void Sprint::SprintForward()
 }
 
 
-void Sprint::GetImageResult(cv::Mat &frame)
+int Sprint::GetImageResult(cv::Mat &frame)
 {
+    imgProc->imageProcess(frame,imgRes);
+    ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
+    if ( tmp_result->valid == false ){
+        return -1;
+    }
+    else {
 
+    }
 }
 

@@ -371,7 +371,7 @@ void Robcup_striker::KickAdjust()
     }
 }
 
-void Robcup_striker::GetImageResult(cv::Mat &frame)
+int Robcup_striker::GetImageResult(cv::Mat &frame)
 {
 	
 }

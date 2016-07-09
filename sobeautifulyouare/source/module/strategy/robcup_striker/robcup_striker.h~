@@ -47,7 +47,7 @@ class Robcup_striker:public Strategist
         Point2D m_ball_center_angle;
         Point2D m_line_center_2D;//forbiddenline & sideline
         Point2D m_goalfoot1, m_goalfoot2;
-        int m_line_Kvalue;
+        double m_line_Kvalue;
 
         double m_dribble_pan;
 

@@ -48,7 +48,7 @@ private:
 
 protected:
     virtual void ThreadMotion();
-    virtual void GetImageResult(cv::Mat &frame);
+    virtual int GetImageResult(cv::Mat &frame);
 };
 
 #endif // _SPRINT_H_

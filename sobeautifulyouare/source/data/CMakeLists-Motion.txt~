@@ -83,7 +83,9 @@ INCLUDE_DIRECTORIES(BEFORE ${DARWIN_INCLUDE_DIR} ${MODULE_INCLUDE_DIR})
 ##### - build the darwin framework library              #####
 #############################################################
 
-SET(MOTION_LIB_SRCS ${MODULE_MOTION_DIR}/motion.cpp)
+SET(MOTION_LIB_SRCS ${MODULE_MOTION_DIR}/motion.cpp
+	${MODULE_MOTION_DIR}/compass.cpp
+	${MODULE_MOTION_DIR}/StatusCheck.cpp)
 
 FIND_LIBRARY(DARWIN_FRAMEWORK darwin_framework ${PROJECT_LIBRARY_PATH})
 FIND_LIBRARY(DARWIN_LINUX darwin_linux ${PROJECT_LIBRARY_PATH})

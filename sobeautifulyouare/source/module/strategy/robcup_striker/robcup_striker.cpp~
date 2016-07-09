@@ -69,7 +69,7 @@ cout << tmp << endl;
 }
 */
 
-    //  motion->poseInit();
+      motion->poseInit();
 
 while ( false)
 {
