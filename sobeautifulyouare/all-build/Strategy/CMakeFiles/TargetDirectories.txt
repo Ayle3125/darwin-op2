@@ -1,8 +1,0 @@
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_marathon.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_obstacle.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_fullback.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_goalkeeper.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_penalty.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_striker.dir
-/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_sprint.dir

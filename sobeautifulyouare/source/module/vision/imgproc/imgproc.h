@@ -32,7 +32,7 @@ class ImgProc{
 public:
 	ImgProc();
 	~ImgProc();
-	virtual void imageProcess(cv::Mat img, ImgProcResult &Result) =0;
+	virtual void imageProcess(cv::Mat img, ImgProcResult *Result) =0;
 private:
 protected:
 	ImgProcResult *res;
