@@ -37,7 +37,7 @@ class Robcup_striker:public Strategist
         int m_is_dribble;
 
 
-        /*********Image Process*******************/
+        /*********Process*******************/
 
         int m_ball_found;// 0: noball 1:found 2:found then lost -1:noball for long
         int m_NoBallMaxCount;
@@ -59,8 +59,6 @@ class Robcup_striker:public Strategist
 
         int m_kick_ball_count;
         int m_KickBallMaxCount;
-
-		virtual void GetImageResult(cv::Mat &frame)=0;
 
         /*---------------------------------------*/
 

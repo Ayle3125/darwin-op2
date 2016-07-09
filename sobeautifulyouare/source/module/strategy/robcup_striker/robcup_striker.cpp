@@ -52,7 +52,6 @@ void Robcup_striker::ThreadMotion()
 {
     if(debug_print) fprintf(stderr,"striker begin!\n");
 
-    ballpro = new followball();
     linepro = new sideline();
     // robotpro = new findrobot();
     ballpro = new followball();
@@ -70,7 +69,7 @@ cout << tmp << endl;
 }
 */
 
-    //  motion->poseInit();
+      motion->poseInit();
 
 while ( false)
 {
@@ -372,6 +371,7 @@ void Robcup_striker::KickAdjust()
     }
 }
 
-void Robcup_striker::GetImageResult(cv::Mat &frame){
+void Robcup_striker::GetImageResult(cv::Mat &frame)
+{
 	
 }

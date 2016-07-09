@@ -37,7 +37,7 @@ class Robcup_striker:public Strategist
         int m_is_dribble;
 
 
-        /*********Image Process*******************/
+        /*********Process*******************/
 
         int m_ball_found;// 0: noball 1:found 2:found then lost -1:noball for long
         int m_NoBallMaxCount;
@@ -47,7 +47,7 @@ class Robcup_striker:public Strategist
         Point2D m_ball_center_angle;
         Point2D m_line_center_2D;//forbiddenline & sideline
         Point2D m_goalfoot1, m_goalfoot2;
-        int m_line_Kvalue;
+        double m_line_Kvalue;
 
         double m_dribble_pan;
 

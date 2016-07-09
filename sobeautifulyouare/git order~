@@ -1,5 +1,5 @@
 
-git push origin *
+git push origin **
 git branch
 git add *
 git commit -m "***"

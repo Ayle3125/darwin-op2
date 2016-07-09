@@ -1,0 +1,14 @@
+
+
+
+git checkout -b **
+
+git add *
+git commit -m "***"
+
+git push origin **
+git branch
+
+git status
+
+
