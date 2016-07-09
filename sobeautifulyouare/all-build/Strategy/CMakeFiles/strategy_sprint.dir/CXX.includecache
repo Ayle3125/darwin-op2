@@ -364,11 +364,11 @@ frame.h
 BlobResult.h
 ../../source/module/vision/imgproc/BlobResult.h
 
-/home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp
 sprint.h
-/home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.h
 
-/home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.h
 stdio.h
 -
 stdlib.h

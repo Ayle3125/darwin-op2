@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/strategy.dir/home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.o"
-  "/home/ayle/sobeautifulyouare/bin/libstrategy.pdb"
-  "/home/ayle/sobeautifulyouare/bin/libstrategy.so"
+  "CMakeFiles/strategy.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy.pdb"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy.so"
 )
 
 # Per-language clean rules from dependency scanning.

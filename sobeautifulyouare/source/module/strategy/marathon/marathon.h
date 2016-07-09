@@ -1,32 +1,23 @@
 #ifndef _MARATHON_H_
 #define _MARATHON_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <pthread.h>
+#include <strategy.h>
 
-#include <opencv/highgui.h>
-#include <opencv/cv.h>
-#include <BlobResult.h>
-#include <camera.h>
-#include <imgproc.h>
-#include <motion.h>
-#include <communication.h>
-
-#define IMG_WIDTH 320
-#define IMG_HEIGHT 240
-
-class Marathon
+enum MarathonState{
+    STRAIGHT,
+    CURVE,
+};
+class Marathon:public Strategist
 {
-public:
-	Marathon();
-	~Marathon();
-	int run();
-private:
-	
-protected:
+    public:
+        Marathon();
+        ~Marathon();
+    private:
+        MarathonState m_process_state;
+        double theta;//the slope of the white track
+    protected:
+        virtual void ThreadMotion();
+        virtual void GetImageResult(cv::Mat &frame);
 
 };
 

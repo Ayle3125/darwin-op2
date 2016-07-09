@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/strategy_robcup_striker.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o"
-  "/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_striker.pdb"
-  "/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_striker.so"
+  "CMakeFiles/strategy_robcup_striker.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_striker.pdb"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_striker.so"
 )
 
 # Per-language clean rules from dependency scanning.

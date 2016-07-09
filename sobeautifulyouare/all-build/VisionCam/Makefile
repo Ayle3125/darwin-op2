@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/VisionCam
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/VisionCam
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles /home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ vision_camera/fast:
 	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/build
 .PHONY : vision_camera/fast
 
-home/ayle/sobeautifulyouare/source/module/vision/cam/camera.o: home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/cam/camera.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/vision/cam/camera.i: home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/cam/camera.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/vision/cam/camera.s: home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/cam/camera.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vision_camera"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/cam/camera.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/cam/camera.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/cam/camera.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.s"
 .PHONY : help
 
 

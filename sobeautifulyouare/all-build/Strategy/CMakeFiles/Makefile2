@@ -54,10 +54,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy
 
 #=============================================================================
 # Target rules for target CMakeFiles/strategy.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
 CMakeFiles/strategy.dir/all:
 	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/depend
 	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=1,2 "Built target strategy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=1,2 "Built target strategy"
 .PHONY : CMakeFiles/strategy.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/strategy.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy.dir/rule
 
 # Convenience name for target.
@@ -103,7 +103,7 @@ clean: CMakeFiles/strategy.dir/clean
 CMakeFiles/strategy_marathon.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=3,4 "Built target strategy_marathon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=3,4 "Built target strategy_marathon"
 .PHONY : CMakeFiles/strategy_marathon.dir/all
 
 # Include target in all.
@@ -113,9 +113,9 @@ all: CMakeFiles/strategy_marathon.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_marathon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_marathon.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_marathon.dir/rule
 
 # Convenience name for target.
@@ -140,7 +140,7 @@ clean: CMakeFiles/strategy_marathon.dir/clean
 CMakeFiles/strategy_obstacle.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=5,6 "Built target strategy_obstacle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=5,6 "Built target strategy_obstacle"
 .PHONY : CMakeFiles/strategy_obstacle.dir/all
 
 # Include target in all.
@@ -150,9 +150,9 @@ all: CMakeFiles/strategy_obstacle.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_obstacle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_obstacle.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_obstacle.dir/rule
 
 # Convenience name for target.
@@ -177,7 +177,7 @@ clean: CMakeFiles/strategy_obstacle.dir/clean
 CMakeFiles/strategy_robcup_fullback.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=7,8 "Built target strategy_robcup_fullback"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=7,8 "Built target strategy_robcup_fullback"
 .PHONY : CMakeFiles/strategy_robcup_fullback.dir/all
 
 # Include target in all.
@@ -187,9 +187,9 @@ all: CMakeFiles/strategy_robcup_fullback.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_robcup_fullback.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_robcup_fullback.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_robcup_fullback.dir/rule
 
 # Convenience name for target.
@@ -214,7 +214,7 @@ clean: CMakeFiles/strategy_robcup_fullback.dir/clean
 CMakeFiles/strategy_robcup_goalkeeper.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=9,10 "Built target strategy_robcup_goalkeeper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=9,10 "Built target strategy_robcup_goalkeeper"
 .PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/all
 
 # Include target in all.
@@ -224,9 +224,9 @@ all: CMakeFiles/strategy_robcup_goalkeeper.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_robcup_goalkeeper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_robcup_goalkeeper.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/rule
 
 # Convenience name for target.
@@ -251,7 +251,7 @@ clean: CMakeFiles/strategy_robcup_goalkeeper.dir/clean
 CMakeFiles/strategy_robcup_penalty.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=11,12 "Built target strategy_robcup_penalty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=11,12 "Built target strategy_robcup_penalty"
 .PHONY : CMakeFiles/strategy_robcup_penalty.dir/all
 
 # Include target in all.
@@ -261,9 +261,9 @@ all: CMakeFiles/strategy_robcup_penalty.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_robcup_penalty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_robcup_penalty.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_robcup_penalty.dir/rule
 
 # Convenience name for target.
@@ -288,7 +288,7 @@ clean: CMakeFiles/strategy_robcup_penalty.dir/clean
 CMakeFiles/strategy_robcup_striker.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=13,14 "Built target strategy_robcup_striker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=13,14 "Built target strategy_robcup_striker"
 .PHONY : CMakeFiles/strategy_robcup_striker.dir/all
 
 # Include target in all.
@@ -298,9 +298,9 @@ all: CMakeFiles/strategy_robcup_striker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_robcup_striker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_robcup_striker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_robcup_striker.dir/rule
 
 # Convenience name for target.
@@ -325,7 +325,7 @@ clean: CMakeFiles/strategy_robcup_striker.dir/clean
 CMakeFiles/strategy_sprint.dir/all:
 	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/depend
 	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=15,16 "Built target strategy_sprint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=15,16 "Built target strategy_sprint"
 .PHONY : CMakeFiles/strategy_sprint.dir/all
 
 # Include target in all.
@@ -335,9 +335,9 @@ all: CMakeFiles/strategy_sprint.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/strategy_sprint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/strategy_sprint.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : CMakeFiles/strategy_sprint.dir/rule
 
 # Convenience name for target.

@@ -90,25 +90,25 @@ opencv2/opencv.hpp
 iostream
 -
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp
 findrobot.h
 -
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp
 followball.h
 -
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp
 goalpost.h
 -
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp
 imgproc.h
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.h
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.h
 stdlib.h
 -
 stdio.h
@@ -120,11 +120,11 @@ opencv/cv.h
 opencv/highgui.h
 -
 frame.h
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/frame.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/frame.h
 BlobResult.h
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/BlobResult.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/BlobResult.h
 
-/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp
 sideline.h
 -
 

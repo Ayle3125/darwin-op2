@@ -394,17 +394,33 @@ iostream
 opencv2/opencv.hpp
 -
 
+../../source/module/vision/imgproc/imgproc.h
+stdlib.h
+-
+stdio.h
+-
+unistd.h
+-
+opencv/cv.h
+-
+opencv/highgui.h
+-
+frame.h
+../../source/module/vision/imgproc/frame.h
+BlobResult.h
+../../source/module/vision/imgproc/BlobResult.h
+
 ../../source/module/vision/imgproc/sideline.h
 opencv2/opencv.hpp
 -
 iostream
 -
 
-/home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp
 strategy.h
-/home/ayle/sobeautifulyouare/source/module/strategy/strategy.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.h
 
-/home/ayle/sobeautifulyouare/source/module/strategy/strategy.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.h
 compass.h
 -
 StatusCheck.h
@@ -428,6 +444,8 @@ opencv/cv.h
 BlobResult.h
 -
 camera.h
+-
+imgproc.h
 -
 followball.h
 -

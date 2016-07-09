@@ -1,23 +1,8 @@
 #ifndef _ROBCUP_STRIKER_H_
 #define _ROBCUP_STRIKER_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <pthread.h>
-
 #include <strategy.h>
-#include <opencv/highgui.h>
-#include <opencv/cv.h>
-#include <BlobResult.h>
-#include <camera.h>
-#include <followball.h>
-#include <goalpost.h>
-#include <sideline.h>
-#include <findrobot.h>
-#include <motion.h>
-#include <communication.h>
+
 
 enum StrikerState{
     FINDBALL,
@@ -95,6 +80,7 @@ class Robcup_striker:public Strategist
 
     protected:
         virtual void ThreadMotion();
+		virtual void GetImageResult(cv::Mat &frame);
 
 
 };

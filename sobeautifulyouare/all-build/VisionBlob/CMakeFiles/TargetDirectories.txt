@@ -1,1 +1,1 @@
-/home/ayle/sobeautifulyouare/all-build/VisionBlob/CMakeFiles/vision_blob.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionBlob/CMakeFiles/vision_blob.dir

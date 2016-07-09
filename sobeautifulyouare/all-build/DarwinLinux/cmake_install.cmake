@@ -1,4 +1,4 @@
-# Install script for directory: /home/ayle/sobeautifulyouare/all-build/DarwinLinux
+# Install script for directory: /home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinLinux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ayle/sobeautifulyouare/all-build/DarwinLinux/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinLinux/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

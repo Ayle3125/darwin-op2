@@ -311,6 +311,8 @@ BlobResult.h
 -
 camera.h
 -
+imgproc.h
+-
 followball.h
 -
 goalpost.h
@@ -432,17 +434,33 @@ iostream
 opencv2/opencv.hpp
 -
 
+../../source/module/vision/imgproc/imgproc.h
+stdlib.h
+-
+stdio.h
+-
+unistd.h
+-
+opencv/cv.h
+-
+opencv/highgui.h
+-
+frame.h
+../../source/module/vision/imgproc/frame.h
+BlobResult.h
+../../source/module/vision/imgproc/BlobResult.h
+
 ../../source/module/vision/imgproc/sideline.h
 opencv2/opencv.hpp
 -
 iostream
 -
 
-/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp
 robcup_goalkeeper.h
-/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.h
 
-/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.h
 stdio.h
 -
 stdlib.h

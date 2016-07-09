@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

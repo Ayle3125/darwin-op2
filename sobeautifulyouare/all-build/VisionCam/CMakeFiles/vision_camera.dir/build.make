@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/VisionCam
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/VisionCam
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vision_camera.dir/depend.make
@@ -57,49 +57,49 @@ include CMakeFiles/vision_camera.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/vision_camera.dir/flags.make
 
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o: CMakeFiles/vision_camera.dir/flags.make
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o: /home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o -c /home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o: CMakeFiles/vision_camera.dir/flags.make
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o: /home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o -c /home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp
 
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp > CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp > CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.i
 
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp -o CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp -o CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.s
 
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires:
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires:
 
-.PHONY : CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires
+.PHONY : CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires
 
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides: CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires
-	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides.build
-.PHONY : CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides: CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vision_camera.dir/build.make CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides.build
+.PHONY : CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides
 
-CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides.build: CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
+CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.provides.build: CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
 
 
 # Object files for target vision_camera
 vision_camera_OBJECTS = \
-"CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
+"CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
 
 # External object files for target vision_camera
 vision_camera_EXTERNAL_OBJECTS =
 
-/home/ayle/sobeautifulyouare/bin/libvision_camera.so: CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
-/home/ayle/sobeautifulyouare/bin/libvision_camera.so: CMakeFiles/vision_camera.dir/build.make
-/home/ayle/sobeautifulyouare/bin/libvision_camera.so: CMakeFiles/vision_camera.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ayle/sobeautifulyouare/bin/libvision_camera.so"
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so: CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so: CMakeFiles/vision_camera.dir/build.make
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so: CMakeFiles/vision_camera.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vision_camera.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/vision_camera.dir/build: /home/ayle/sobeautifulyouare/bin/libvision_camera.so
+CMakeFiles/vision_camera.dir/build: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so
 
 .PHONY : CMakeFiles/vision_camera.dir/build
 
-CMakeFiles/vision_camera.dir/requires: CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires
+CMakeFiles/vision_camera.dir/requires: CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o.requires
 
 .PHONY : CMakeFiles/vision_camera.dir/requires
 
@@ -108,6 +108,6 @@ CMakeFiles/vision_camera.dir/clean:
 .PHONY : CMakeFiles/vision_camera.dir/clean
 
 CMakeFiles/vision_camera.dir/depend:
-	cd /home/ayle/sobeautifulyouare/all-build/VisionCam && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ayle/sobeautifulyouare/all-build/VisionCam /home/ayle/sobeautifulyouare/all-build/VisionCam /home/ayle/sobeautifulyouare/all-build/VisionCam /home/ayle/sobeautifulyouare/all-build/VisionCam /home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/vision_camera.dir/depend
 

@@ -134,57 +134,57 @@ string
 wx/wx.h
 -
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp
 stdio.h
 -
 FSR.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/FSR.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/FSR.h
 CM730.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.h
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/MotionStatus.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MotionStatus.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp
 MX28.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp
 math.h
 -
 Matrix.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp
 Plane.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp
 math.h
 -
 Point.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp
 math.h
 -
 Vector.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp
 MX28.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MX28.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MX28.h
 JointData.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.h
 MotionManager.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp
 math.h
 -
 Kinematics.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp
 stdio.h
 -
 math.h
@@ -192,95 +192,95 @@ math.h
 unistd.h
 -
 FSR.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/FSR.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/FSR.h
 MX28.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MX28.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MX28.h
 MotionManager.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp
 string.h
 -
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MotionStatus.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MotionStatus.h
 Action.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp
 stdio.h
 -
 MX28.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MX28.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MX28.h
 Kinematics.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Kinematics.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Kinematics.h
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MotionStatus.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MotionStatus.h
 Head.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp
 stdio.h
 -
 math.h
 -
 Vector.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Vector.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Vector.h
 Matrix.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Matrix.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Matrix.h
 MX28.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MX28.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MX28.h
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MotionStatus.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/MotionStatus.h
 Kinematics.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Kinematics.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Kinematics.h
 Walking.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp
 math.h
 -
 Head.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Head.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Head.h
 Camera.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.h
 ImgProcess.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.h
 BallTracker.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.h
 Walking.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Walking.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Walking.h
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/MotionStatus.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/MotionStatus.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp
 Camera.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp
 stdlib.h
 -
 ColorFinder.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.h
 ImgProcess.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp
 stdlib.h
 -
 string.h
 -
 Image.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.h
 
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp
 string.h
 -
 ImgProcess.h
-/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.h
 

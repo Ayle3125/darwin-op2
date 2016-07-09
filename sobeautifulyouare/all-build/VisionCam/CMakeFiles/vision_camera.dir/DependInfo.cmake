@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp" "/home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

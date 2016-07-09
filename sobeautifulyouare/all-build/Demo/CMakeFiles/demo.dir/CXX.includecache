@@ -287,29 +287,7 @@ LinuxDARwIn.h
 ../../source/module/motion/LinuxDARwIn.h
 
 ../../source/module/strategy/marathon/marathon.h
-stdio.h
--
-stdlib.h
--
-unistd.h
--
-string.h
--
-pthread.h
--
-opencv/highgui.h
--
-opencv/cv.h
--
-BlobResult.h
--
-camera.h
--
-imgproc.h
--
-motion.h
--
-communication.h
+strategy.h
 -
 
 ../../source/module/strategy/obstacle/obstacle.h
@@ -441,37 +419,7 @@ communication.h
 -
 
 ../../source/module/strategy/robcup_striker/robcup_striker.h
-stdio.h
--
-stdlib.h
--
-unistd.h
--
-string.h
--
-pthread.h
--
 strategy.h
--
-opencv/highgui.h
--
-opencv/cv.h
--
-BlobResult.h
--
-camera.h
--
-followball.h
--
-goalpost.h
--
-sideline.h
--
-findrobot.h
--
-motion.h
--
-communication.h
 -
 
 ../../source/module/strategy/sprint/sprint.h
@@ -524,6 +472,8 @@ opencv/cv.h
 BlobResult.h
 -
 camera.h
+-
+imgproc.h
 -
 followball.h
 -
@@ -668,7 +618,7 @@ opencv2/opencv.hpp
 iostream
 -
 
-/home/ayle/sobeautifulyouare/source/demo/main.cpp
+/home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp
 stdio.h
 -
 stdlib.h

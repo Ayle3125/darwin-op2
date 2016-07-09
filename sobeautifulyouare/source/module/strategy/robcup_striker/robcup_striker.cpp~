@@ -6,6 +6,8 @@
 
 Robcup_striker::Robcup_striker()
 {
+	//imgRes = new ImgProcResult();//TODO
+	//imgProc = new ImgProc();
 
     m_process_state = FINDBALL;
 
@@ -48,9 +50,9 @@ Robcup_striker::~Robcup_striker()
 
 void Robcup_striker::ThreadMotion() 
 {
-	if(debug_print) fprintf(stderr,"striker begin!\n");
+    if(debug_print) fprintf(stderr,"striker begin!\n");
 
-	ballpro = new followball();
+    ballpro = new followball();
     linepro = new sideline();
     // robotpro = new findrobot();
     ballpro = new followball();
@@ -58,74 +60,73 @@ void Robcup_striker::ThreadMotion()
 
     tracker = new BallTracker();
     follower = new BallFollower();
-
-
-  //  motion->poseInit();
-
-/* compasspro dbg
-	compasspro->loadConfig();
-	while ( false ){
-		motion->walk(-5, 0, -25);
-		double tmp = compasspro->GetAngle();
+    /* //compasspro dbg
+       compasspro->loadConfig();
+       while ( false ){
+       motion->walk(-5, 0, -25);
+       double tmp = compasspro->GetAngle();
 #include <iostream>
-		cout << tmp << endl;
-	}
+cout << tmp << endl;
+}
 */
-    while ( false)
-    {
 
-        pthread_mutex_lock(&mut);
-        if( is_new_img == true){
-            pthread_cond_signal(&cond);
-        }
-        is_new_img = false;
-        pthread_mutex_unlock(&mut);
+    //  motion->poseInit();
 
-		while( is_new_img == false) usleep(8000);
+while ( false)
+{
+       /*
+       pthread_mutex_lock(&mut);
+       if( is_new_img == true){
+       pthread_cond_signal(&cond);
+       }
+       is_new_img = false;
+       pthread_mutex_unlock(&mut);
+       */
+    while( is_new_img == false) usleep(8000);
 
-        motion->CheckStatus();
-        usleep(5*8000);//TODO
-        if( m_process_state == FINDBALL){
-			if ( debug_print) printf("state :  FINDBALL\n");
-            GetImageResult(frame,BALL);
-/*
-	double tilt,pan;
-	scanf("%lf%lf", &pan, &tilt);
-	 Head::GetInstance()->MoveByAngle(pan,tilt);
-	    GetImageResult(frame,GOALPOST);
+    motion->CheckStatus();
+    usleep(5*8000);//TODO
+    if( m_process_state == FINDBALL){
+        if ( debug_print) printf("state :  FINDBALL\n");
+        //GetImageResult(frame,BALL);
+        	/*
+           double tilt,pan;
+           scanf("%lf%lf", &pan, &tilt);
+           Head::GetInstance()->MoveByAngle(pan,tilt);
+           GetImageResult(frame,GOALPOST);
 
-	double x,y,a;
-	scanf("%lf%lf%lf", &x, &y, &a);
-	motion->walk(x,y,a);
-	usleep(10*8000);
-*/
-            FindBall();
-        }        
-        if ( m_process_state == DRIBBLE ){
-	    usleep(5*8000);
-            if ( debug_print) printf("state : DRIBBLE\n");
-            GetImageResult(frame,BALL);
-		//motion->walk(0, 0, 0);
-            Dribble();
-	   //m_process_state = KICK;
-        }
-        if ( m_process_state == KICK ){
-			if ( debug_print) printf("state : KICK\n");
-            GetImageResult(frame,BALL);
-            //GetImageResult(frame,LINE);
-            KickAdjust();
-        }
+           double x,y,a;
+           scanf("%lf%lf%lf", &x, &y, &a);
+           motion->walk(x,y,a);
+           usleep(10*8000);
+         	*/
+        FindBall();
+    }        
+    if ( m_process_state == DRIBBLE ){
+        usleep(5*8000);
+        if ( debug_print) printf("state : DRIBBLE\n");
+        //GetImageResult(frame,BALL);
+        //motion->walk(0, 0, 0);
+        Dribble();
+        //m_process_state = KICK;
     }
+    if ( m_process_state == KICK ){
+        if ( debug_print) printf("state : KICK\n");
+        //GetImageResult(frame,BALL);
+        //GetImageResult(frame,LINE);
+        KickAdjust();
+    }
+}
 
-    pthread_exit(NULL);
+pthread_exit(NULL);
 }
 
 void Robcup_striker::FindBall()
 {
-	static int no_ball_count = 0;
-	static const int MaxNoBallCount = 5; 
-	static int found_count = 0;
-	static int MaxFoundCount = 200;
+    static int no_ball_count = 0;
+    static const int MaxNoBallCount = 5; 
+    static int found_count = 0;
+    static int MaxFoundCount = 200;
     if ( tracker->limit_mode != 0){
         tracker->ChangeLimit(20, -10, 30, 0);
     }
@@ -133,48 +134,48 @@ void Robcup_striker::FindBall()
 
     m_ball_found = tracker->SearchAndTracking(m_ball_center_2D); 
     if ( debug_print == 1 ) printf("ballfound:%d \n", m_ball_found);
-	no_ball_count = 0;
+    no_ball_count = 0;
     if ( m_ball_found == 1){//found
-	found_count++;
-	if ( debug_print == 1 ){
-			printf("\n*****************************%d\n",found_count);
-		}
-	if (  found_count >  MaxFoundCount) {
-		 MaxFoundCount = 10;
-		found_count = 0;
-		 m_FBstep = 0.0;
-        m_RLturn = 0.0;
-        motion->walk(m_FBstep, 0, m_RLturn);
-	usleep(80*8000);
-       double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
-	if ( pan > 0) {
-		Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
+        found_count++;
+        if ( debug_print == 1 ){
+            printf("\n*****************************%d\n",found_count);
+        }
+        if (  found_count >  MaxFoundCount) {
+            MaxFoundCount = 10;
+            found_count = 0;
+            m_FBstep = 0.0;
+            m_RLturn = 0.0;
+            motion->walk(m_FBstep, 0, m_RLturn);
+            usleep(80*8000);
+            double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
+            if ( pan > 0) {
+                Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
                 Action::GetInstance()->Start(140);   // Long shot
                 fprintf(stderr, "LeftKick! \n");
-	}
-	else {
-		Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
-                Action::GetInstance()->Start(130);   // Long shot
-                fprintf(stderr, "RightKick! \n");
-	}
-	}
-        follower->Process(tracker->ball_position);
-	//usleep(5*8000);
-        if ( follower->IsClose == 1 ){
-		if ( debug_print == 1 ){
-			printf("kick ready");
-		//	getchar();
-		}
-/*
-			//motion->walk(0, 0, 0);//stop to check compass
-            if ( m_is_dribble == 1 ){
-                m_process_state = DRIBBLE;
             }
             else {
-                m_process_state = KICK;
+                Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
+                Action::GetInstance()->Start(130);   // Long shot
+                fprintf(stderr, "RightKick! \n");
             }
-*/
-		}//TODO !!! dirbble is not use now
+        }
+        follower->Process(tracker->ball_position);
+        //usleep(5*8000);
+        if ( follower->IsClose == 1 ){
+            if ( debug_print == 1 ){
+                printf("kick ready");
+                //	getchar();
+            }
+            /*
+            //motion->walk(0, 0, 0);//stop to check compass
+            if ( m_is_dribble == 1 ){
+            m_process_state = DRIBBLE;
+            }
+            else {
+            m_process_state = KICK;
+            }
+            */
+        }//TODO !!! dirbble is not use now
     }
     else if ( m_ball_found == -1){// the area now can not find
         if ( debug_print == 1 ) printf("go straight\n");
@@ -185,19 +186,19 @@ void Robcup_striker::FindBall()
     }
     else if ( m_ball_found == 2){// found then lost
         if ( debug_print == 1 ) printf("go back\n");
-/*
-       double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
-	if ( pan > 0) {
-		Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
-                Action::GetInstance()->Start(130);   // Long shot
-                fprintf(stderr, "RightKick! \n");
-	}
-	else {
-		Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
-                Action::GetInstance()->Start(130);   // Long shot
-                fprintf(stderr, "RightKick! \n");
-	}
-   */
+        /*
+           double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
+           if ( pan > 0) {
+           Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
+           Action::GetInstance()->Start(130);   // Long shot
+           fprintf(stderr, "RightKick! \n");
+           }
+           else {
+           Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);   
+           Action::GetInstance()->Start(130);   // Long shot
+           fprintf(stderr, "RightKick! \n");
+           }
+           */
 
         m_FBstep = -10.0;
         m_RLturn = 0.0;
@@ -206,12 +207,12 @@ void Robcup_striker::FindBall()
         usleep(50*8000);
     }
     else{ //finding
-	no_ball_count ++;
-//	if ( no_ball_count >MaxNoBallCount) {
+        no_ball_count ++;
+        //	if ( no_ball_count >MaxNoBallCount) {
         m_FBstep = 0.0;
         m_RLturn = 0.0;
         motion->walk(m_FBstep, 0, m_RLturn);
-//	}
+        //	}
     }
 }
 
@@ -224,19 +225,19 @@ int Robcup_striker::FindGoal()
     static const int max_noGoalCount = 100;
     static const int m_dribble_pan = 30;
     if ( goalpro->goal_number == 0){//no goal //however i don't think it is useful...so maybe use in the future...201604Robocup
-/*
-        if ( tracker->limit_mode != 1){
-            tracker->ChangeLimit(20, 10, 30, 1);//TODO
-        }
-        NoGoalCount++;
-        if ( NoGoalCount > max_noGoalCount ){//can not find, dribble first
-            NoGoalCount = 0;
-            // m_process_state = DRIBBLE;
+        /*
+           if ( tracker->limit_mode != 1){
+           tracker->ChangeLimit(20, 10, 30, 1);//TODO
+           }
+           NoGoalCount++;
+           if ( NoGoalCount > max_noGoalCount ){//can not find, dribble first
+           NoGoalCount = 0;
+        // m_process_state = DRIBBLE;
         }
         else {
-            tracker->Search(0);
+        tracker->Search(0);
         }
-*/
+        */
         goal_result = 0;
     }
     else if ( m_goal_found == 2 ){
@@ -268,26 +269,26 @@ void Robcup_striker::Dribble()
     if ( m_ball_found == 1){//found
         no_ball_count = 0;
         follower->Process(tracker->ball_position);
-		CompassCheck();
+        CompassCheck();
         dribble_ball_count++;
         if ( dribble_ball_count > CheckTime ){
-			GetImageResult(frame,GOALPOST);
+           // GetImageResult(frame,GOALPOST);
             dribble_ball_count = 0;
             int tmp = FindGoal();
             if ( tmp == 2 ){
                 double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
                 double pan_range = Head::GetInstance()->GetLeftLimitAngle(); 
-				double pan_percent = pan / pan_range;
+                double pan_percent = pan / pan_range;
                 if ( pan >-1*m_dribble_pan ){
-					  if ( debug_print == 1 ) printf("绕球左转\n");
+                    if ( debug_print == 1 ) printf("绕球左转\n");
                     motion->walk(-5, 25, -5);//TODO
                 }
                 else  if  ( pan > m_dribble_pan ){
-					  if ( debug_print == 1 ) printf("绕球右转\n");
+                    if ( debug_print == 1 ) printf("绕球右转\n");
                     motion->walk(-5, 30, 8);
                 }
                 int tmp = 100*pan_percent;
-				usleep( abs(tmp)*8000);//TODO
+                usleep( abs(tmp)*8000);//TODO
             }
             else if (tmp == -1 ){
                 m_is_dribble = 0;
@@ -371,3 +372,6 @@ void Robcup_striker::KickAdjust()
     }
 }
 
+void GetImageResult(cv::Mat &frame){
+	
+}

@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/Motion
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Motion
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles /home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,86 +123,86 @@ motion/fast:
 	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/build
 .PHONY : motion/fast
 
-home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.o: home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.o
-
-# target to build an object file
-home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o
-
-home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.i: home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.i
-
-# target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i
-
-home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.s: home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.s
-
-# target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s
-
-home/ayle/sobeautifulyouare/source/module/motion/compass.o: home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.o
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/compass.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/motion/compass.i: home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/compass.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/motion/compass.s: home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/compass.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/motion/motion.o: home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/motion.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/motion/motion.i: home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/motion.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/motion/motion.s: home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/motion.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.s
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.o
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.o
+
+# target to build an object file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.o
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.i
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.i
+
+# target to preprocess a source file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.i
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.s
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.s
+
+# target to generate assembly for a file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.s
 
 # Help Target
 help:
@@ -213,15 +213,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... motion"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/compass.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/compass.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/compass.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/motion.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/motion.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/motion/motion.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.s"
 .PHONY : help
 
 

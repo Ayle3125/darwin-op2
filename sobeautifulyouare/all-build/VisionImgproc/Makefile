@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/VisionImgproc
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/VisionImgproc
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles /home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionImgproc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,167 +123,167 @@ vision_imgproc/fast:
 	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/build
 .PHONY : vision_imgproc/fast
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.o
-
-# target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
-
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.i
-
-# target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
-
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.s
-
-# target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
-
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.o: home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.i: home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.s: home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s:
-	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.cpp.s
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.o
+
+# target to build an object file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.o
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.i
+
+# target to preprocess a source file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.i
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.s
+
+# target to generate assembly for a file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_imgproc.dir/build.make CMakeFiles/vision_imgproc.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.cpp.s
 
 # Help Target
 help:
@@ -294,24 +294,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vision_imgproc"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/bayes.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/findrobot.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/followball.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/goalpost.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/imgproc.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/vision/imgproc/sideline.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/bayes.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/findrobot.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/followball.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/goalpost.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/imgproc.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/imgproc/sideline.s"
 .PHONY : help
 
 

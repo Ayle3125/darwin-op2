@@ -6,6 +6,8 @@
 
 Robcup_striker::Robcup_striker()
 {
+	//imgRes = new ImgProcResult();//TODO
+	//imgProc = new ImgProc();
 
     m_process_state = FINDBALL;
 
@@ -72,7 +74,7 @@ cout << tmp << endl;
 
 while ( false)
 {
-    /*
+       /*
        pthread_mutex_lock(&mut);
        if( is_new_img == true){
        pthread_cond_signal(&cond);
@@ -86,8 +88,8 @@ while ( false)
     usleep(5*8000);//TODO
     if( m_process_state == FINDBALL){
         if ( debug_print) printf("state :  FINDBALL\n");
-        GetImageResult(frame,BALL);
-        /*
+        //GetImageResult(frame,BALL);
+        	/*
            double tilt,pan;
            scanf("%lf%lf", &pan, &tilt);
            Head::GetInstance()->MoveByAngle(pan,tilt);
@@ -97,20 +99,20 @@ while ( false)
            scanf("%lf%lf%lf", &x, &y, &a);
            motion->walk(x,y,a);
            usleep(10*8000);
-           */
+         	*/
         FindBall();
     }        
     if ( m_process_state == DRIBBLE ){
         usleep(5*8000);
         if ( debug_print) printf("state : DRIBBLE\n");
-        GetImageResult(frame,BALL);
+        //GetImageResult(frame,BALL);
         //motion->walk(0, 0, 0);
         Dribble();
         //m_process_state = KICK;
     }
     if ( m_process_state == KICK ){
         if ( debug_print) printf("state : KICK\n");
-        GetImageResult(frame,BALL);
+        //GetImageResult(frame,BALL);
         //GetImageResult(frame,LINE);
         KickAdjust();
     }
@@ -270,7 +272,7 @@ void Robcup_striker::Dribble()
         CompassCheck();
         dribble_ball_count++;
         if ( dribble_ball_count > CheckTime ){
-            GetImageResult(frame,GOALPOST);
+           // GetImageResult(frame,GOALPOST);
             dribble_ball_count = 0;
             int tmp = FindGoal();
             if ( tmp == 2 ){
@@ -370,3 +372,6 @@ void Robcup_striker::KickAdjust()
     }
 }
 
+void Robcup_striker::GetImageResult(cv::Mat &frame){
+	
+}

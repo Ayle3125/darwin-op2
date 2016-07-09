@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/strategy_robcup_penalty.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o"
-  "/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_penalty.pdb"
-  "/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_penalty.so"
+  "CMakeFiles/strategy_robcup_penalty.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_penalty.pdb"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_penalty.so"
 )
 
 # Per-language clean rules from dependency scanning.

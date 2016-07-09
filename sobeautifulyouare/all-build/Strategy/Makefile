@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -214,221 +214,221 @@ strategy_sprint/fast:
 	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/build
 .PHONY : strategy_sprint/fast
 
-home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.o: home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.o
-
-# target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o
-
-home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.i: home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.i
-
-# target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i
-
-home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.s: home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.s
-
-# target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s
-
-home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.o: home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o
-
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.i: home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.s: home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_marathon.dir/build.make CMakeFiles/strategy_marathon.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.o: home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.i: home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.s: home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_obstacle.dir/build.make CMakeFiles/strategy_obstacle.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.o: home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.i: home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.s: home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_robcup_fullback.dir/build.make CMakeFiles/strategy_robcup_fullback.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.o: home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.i: home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.s: home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.o: home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.i: home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.s: home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_robcup_penalty.dir/build.make CMakeFiles/strategy_robcup_penalty.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.o: home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.i: home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.s: home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_robcup_striker.dir/build.make CMakeFiles/strategy_robcup_striker.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.cpp.s
 
-home/ayle/sobeautifulyouare/source/module/strategy/strategy.o: home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/strategy.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.o:
-	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/strategy/strategy.i: home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/strategy.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.i:
-	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/strategy/strategy.s: home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/strategy.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.s:
-	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/strategy/strategy.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy_sprint.dir/build.make CMakeFiles/strategy_sprint.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.cpp.s
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.o
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.o
+
+# target to build an object file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.o:
+	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.o
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.i
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.i
+
+# target to preprocess a source file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.i:
+	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.i
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.s
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.s
+
+# target to generate assembly for a file
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.s:
+	$(MAKE) -f CMakeFiles/strategy.dir/build.make CMakeFiles/strategy.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.cpp.s
 
 # Help Target
 help:
@@ -446,30 +446,30 @@ help:
 	@echo "... strategy_marathon"
 	@echo "... strategy_obstacle"
 	@echo "... strategy"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/marathon/marathon.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/obstacle/obstacle.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/sprint/sprint.s"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/strategy.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/strategy.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/strategy/strategy.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/marathon/marathon.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/obstacle/obstacle.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_fullback/robcup_fullback.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_penalty/robcup_penalty.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_striker/robcup_striker.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/sprint/sprint.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/strategy.s"
 .PHONY : help
 
 

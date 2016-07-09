@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/Demo
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Demo
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Demo
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Demo/CMakeFiles /home/ayle/sobeautifulyouare/all-build/Demo/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Demo/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Demo/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Demo/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Demo/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ demo/fast:
 	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
 .PHONY : demo/fast
 
-home/ayle/sobeautifulyouare/source/demo/main.o: home/ayle/sobeautifulyouare/source/demo/main.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.o: home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/demo/main.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/demo/main.cpp.o:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/home/ayle/sobeautifulyouare/source/demo/main.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/demo/main.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.o:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.o
 
-home/ayle/sobeautifulyouare/source/demo/main.i: home/ayle/sobeautifulyouare/source/demo/main.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.i: home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/demo/main.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/demo/main.cpp.i:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/home/ayle/sobeautifulyouare/source/demo/main.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/demo/main.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.i:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.i
 
-home/ayle/sobeautifulyouare/source/demo/main.s: home/ayle/sobeautifulyouare/source/demo/main.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.s: home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/demo/main.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/demo/main.cpp.s:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/home/ayle/sobeautifulyouare/source/demo/main.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/demo/main.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.s:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... demo"
-	@echo "... home/ayle/sobeautifulyouare/source/demo/main.o"
-	@echo "... home/ayle/sobeautifulyouare/source/demo/main.i"
-	@echo "... home/ayle/sobeautifulyouare/source/demo/main.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/demo/main.s"
 .PHONY : help
 
 

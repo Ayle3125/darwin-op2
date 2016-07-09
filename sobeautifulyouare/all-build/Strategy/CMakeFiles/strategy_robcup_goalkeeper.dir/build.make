@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Strategy
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy
 
 # Include any dependencies generated for this target.
 include CMakeFiles/strategy_robcup_goalkeeper.dir/depend.make
@@ -57,75 +57,75 @@ include CMakeFiles/strategy_robcup_goalkeeper.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/strategy_robcup_goalkeeper.dir/flags.make
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o: CMakeFiles/strategy_robcup_goalkeeper.dir/flags.make
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o: /home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o -c /home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o: CMakeFiles/strategy_robcup_goalkeeper.dir/flags.make
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o: /home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o -c /home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp > CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp > CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.i
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp -o CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp -o CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.s
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires:
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires:
 
-.PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires
+.PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires
-	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides.build
-.PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires
+	$(MAKE) -f CMakeFiles/strategy_robcup_goalkeeper.dir/build.make CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides.build
+.PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides.build: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
+CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.provides.build: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
 
 
 # Object files for target strategy_robcup_goalkeeper
 strategy_robcup_goalkeeper_OBJECTS = \
-"CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o"
+"CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o"
 
 # External object files for target strategy_robcup_goalkeeper
 strategy_robcup_goalkeeper_EXTERNAL_OBJECTS =
 
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: CMakeFiles/strategy_robcup_goalkeeper.dir/build.make
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_ts.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libvision_blob.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libvision_blob.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libvision_camera.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libvision_imgproc.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libmotion.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libcommunication.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libdarwin_framework.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/sobeautifulyouare/bin/libdarwin_linux.so
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
-/home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: CMakeFiles/strategy_robcup_goalkeeper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so"
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: CMakeFiles/strategy_robcup_goalkeeper.dir/build.make
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_ts.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_blob.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_blob.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_imgproc.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libmotion.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libcommunication.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libdarwin_framework.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libdarwin_linux.so
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
+/home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so: CMakeFiles/strategy_robcup_goalkeeper.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/strategy_robcup_goalkeeper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/strategy_robcup_goalkeeper.dir/build: /home/ayle/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so
+CMakeFiles/strategy_robcup_goalkeeper.dir/build: /home/ayle/code/git/soccer/sobeautifulyouare/bin/libstrategy_robcup_goalkeeper.so
 
 .PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/build
 
-CMakeFiles/strategy_robcup_goalkeeper.dir/requires: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires
+CMakeFiles/strategy_robcup_goalkeeper.dir/requires: CMakeFiles/strategy_robcup_goalkeeper.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/strategy/robcup_goalkeeper/robcup_goalkeeper.cpp.o.requires
 
 .PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/requires
 
@@ -134,6 +134,6 @@ CMakeFiles/strategy_robcup_goalkeeper.dir/clean:
 .PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/clean
 
 CMakeFiles/strategy_robcup_goalkeeper.dir/depend:
-	cd /home/ayle/sobeautifulyouare/all-build/Strategy && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ayle/sobeautifulyouare/all-build/Strategy /home/ayle/sobeautifulyouare/all-build/Strategy /home/ayle/sobeautifulyouare/all-build/Strategy /home/ayle/sobeautifulyouare/all-build/Strategy /home/ayle/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_goalkeeper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_goalkeeper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/strategy_robcup_goalkeeper.dir/depend
 

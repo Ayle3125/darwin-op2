@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp" "/home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/motion/compass.cpp" "/home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/compass.cpp.o"
-  "/home/ayle/sobeautifulyouare/source/module/motion/motion.cpp" "/home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir/home/ayle/sobeautifulyouare/source/module/motion/motion.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/compass.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp" "/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/motion/motion.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

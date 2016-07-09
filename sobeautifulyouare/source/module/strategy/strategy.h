@@ -29,6 +29,7 @@
 #include <opencv/cv.h>
 #include <BlobResult.h>
 #include <camera.h>
+#include <imgproc.h>
 #include <followball.h>
 #include <goalpost.h>
 #include <sideline.h>
@@ -82,7 +83,9 @@ class Strategist {
 
         /*------------------Image---------------------*/
         cv::Mat frame;
-        void GetImageResult(cv::Mat &frame, ImgResultType rs);
+		ImgProcResult *imgRes;
+		ImgProc *imgProc;
+        virtual void GetImageResult(cv::Mat &frame)=0;
         void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
 
         /*------------------compass-------------------*/

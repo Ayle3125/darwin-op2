@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/Communication
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Communication
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/Communication
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Communication
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Communication/CMakeFiles /home/ayle/sobeautifulyouare/all-build/Communication/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Communication/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Communication/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/Communication/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/Communication/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ communication/fast:
 	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/build
 .PHONY : communication/fast
 
-home/ayle/sobeautifulyouare/source/module/communication/communication.o: home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.o: home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/communication/communication.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.o:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.o
 
-home/ayle/sobeautifulyouare/source/module/communication/communication.i: home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.i: home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/communication/communication.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.i:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.i
 
-home/ayle/sobeautifulyouare/source/module/communication/communication.s: home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.s: home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/module/communication/communication.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/module/communication/communication.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.s:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... communication"
-	@echo "... home/ayle/sobeautifulyouare/source/module/communication/communication.o"
-	@echo "... home/ayle/sobeautifulyouare/source/module/communication/communication.i"
-	@echo "... home/ayle/sobeautifulyouare/source/module/communication/communication.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.s"
 .PHONY : help
 
 

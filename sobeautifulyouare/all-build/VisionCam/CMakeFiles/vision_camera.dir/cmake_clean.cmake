@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/vision_camera.dir/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
-  "/home/ayle/sobeautifulyouare/bin/libvision_camera.pdb"
-  "/home/ayle/sobeautifulyouare/bin/libvision_camera.so"
+  "CMakeFiles/vision_camera.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.pdb"
+  "/home/ayle/code/git/soccer/sobeautifulyouare/bin/libvision_camera.so"
 )
 
 # Per-language clean rules from dependency scanning.

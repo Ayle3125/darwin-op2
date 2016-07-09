@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ayle/sobeautifulyouare/all-build/DarwinFramework
+CMAKE_SOURCE_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ayle/sobeautifulyouare/all-build/DarwinFramework
+CMAKE_BINARY_DIR = /home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinFramework
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles /home/ayle/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles /home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,545 +123,545 @@ darwin_framework/fast:
 	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/build
 .PHONY : darwin_framework/fast
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.o
-
-# target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o
-
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i
-
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.i
-
-# target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i
-
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s
-
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.s
-
-# target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s
-
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o
-
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.cpp.s
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.o: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.o
 
 # target to build an object file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.o
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.i: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.i
 
 # target to preprocess a source file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.i
 
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.s: home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s
 
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.s
 
 # target to generate assembly for a file
-home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s
-.PHONY : home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.cpp.s
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.o: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.o
+
+# target to build an object file
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.o
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.i: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.i
+
+# target to preprocess a source file
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.i
+
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.s: home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s
+
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.s
+
+# target to generate assembly for a file
+home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s:
+	$(MAKE) -f CMakeFiles/darwin_framework.dir/build.make CMakeFiles/darwin_framework.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s
+.PHONY : home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.cpp.s
 
 # Help Target
 help:
@@ -672,66 +672,66 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... darwin_framework"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/CM730.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/MX28.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Plane.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Point.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/math/Vector.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/Image.s"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.o"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.i"
-	@echo "... home/ayle/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/CM730.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/MX28.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Matrix.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Plane.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Point.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/math/Vector.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/JointData.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/Kinematics.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionManager.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/MotionStatus.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Action.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Head.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/motion/modules/Walking.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallFollower.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/BallTracker.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Camera.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ColorFinder.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/Image.s"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.o"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.i"
+	@echo "... home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/vision/ImgProcess.s"
 .PHONY : help
 
 
