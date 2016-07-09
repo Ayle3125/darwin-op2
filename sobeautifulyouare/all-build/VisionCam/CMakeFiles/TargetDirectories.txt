@@ -1,1 +1,1 @@
-/home/ayle/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir
+/home/abraham/abraham/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir
