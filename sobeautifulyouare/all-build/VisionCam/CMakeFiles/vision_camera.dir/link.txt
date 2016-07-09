@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC    -shared -Wl,-soname,libvision_camera.so -o /home/zhou/zhou/soccer/sobeautifulyouare/bin/libvision_camera.so CMakeFiles/vision_camera.dir/home/zhou/zhou/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp.o -ldl -lrt 
