@@ -29,6 +29,12 @@ public:
         rect = tmp->rect;
         radius = tmp->radius;
     }
+    void operator=(ColorFindResult &res)
+    {
+        center = res.center;
+        rect = res.rect;
+        radius = res.radius;
+    }
 };
 
 class ColorFind : public ImgProc
@@ -39,7 +45,7 @@ public:
     ColorFind() : MyResult(){filter.load("ball.txt");}
     ~ColorFind(){}
     void load(const std::string &file_path);
-    virtual void imageProcess(cv::Mat img, ImgProcResult &Result);
+    virtual void imageProcess(cv::Mat img, ImgProcResult *Result);
 
 private:
     void drawResult(cv::Mat &drawing, int Tag = 0);

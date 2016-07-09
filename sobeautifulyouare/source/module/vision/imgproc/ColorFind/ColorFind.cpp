@@ -7,7 +7,7 @@ void ColorFind::load(const string &file_path)
     filter.load(file_path);
 }
 
-void ColorFind::imageProcess(cv::Mat img, ImgProcResult &Result)
+void ColorFind::imageProcess(cv::Mat img, ImgProcResult *Result)
 {
     filter.filt(img, filter_res);
     clear();
@@ -51,7 +51,7 @@ void ColorFind::imageProcess(cv::Mat img, ImgProcResult &Result)
         MyResult.rect = minRect[most_possible];
         MyResult.valid = true;
     }
-    Result = MyResult;
+    (*dynamic_cast<ColorFindResult*>(Result)) = MyResult;
 #ifdef QT_DEBUG
     Mat ball_dis = Mat::zeros(filter_res.size(), CV_8UC3);
     if(most_possible != -1){
