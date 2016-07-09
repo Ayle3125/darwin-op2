@@ -11,7 +11,7 @@
 #include <imgproc.h>
 #include <motion.h>
 
-#include <strategy>
+#include <strategy.h>
 #include <communication.h>
 #include <obstacle.h>
 #include <marathon.h>
