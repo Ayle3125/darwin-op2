@@ -1,10 +1,10 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/demo.dir/home/ayle/sobeautifulyouare/source/demo/main.cpp.o"
-  "/home/ayle/sobeautifulyouare/bin/demo.pdb"
-  "/home/ayle/sobeautifulyouare/bin/demo"
+FILE(REMOVE_RECURSE
+  "CMakeFiles/demo.dir/home/zhou/zhou/soccer/sobeautifulyouare/source/demo/main.cpp.o"
+  "/home/zhou/zhou/soccer/sobeautifulyouare/bin/demo.pdb"
+  "/home/zhou/zhou/soccer/sobeautifulyouare/bin/demo"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/demo.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/demo.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

@@ -238,37 +238,37 @@ string
 arpa/inet.h
 -
 
-/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.cpp
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/StatusCheck.cpp
 stdio.h
 -
 unistd.h
 -
 StatusCheck.h
-/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/StatusCheck.h
 Head.h
-/home/ayle/sobeautifulyouare/source/module/motion/Head.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/Head.h
 Action.h
-/home/ayle/sobeautifulyouare/source/module/motion/Action.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/Action.h
 Walking.h
-/home/ayle/sobeautifulyouare/source/module/motion/Walking.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/Walking.h
 MotionStatus.h
-/home/ayle/sobeautifulyouare/source/module/motion/MotionStatus.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/MotionStatus.h
 MotionManager.h
-/home/ayle/sobeautifulyouare/source/module/motion/MotionManager.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/MotionManager.h
 LinuxActionScript.h
-/home/ayle/sobeautifulyouare/source/module/motion/LinuxActionScript.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/LinuxActionScript.h
 
-/home/ayle/sobeautifulyouare/source/module/motion/StatusCheck.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/StatusCheck.h
 sys/time.h
 -
 CM730.h
-/home/ayle/sobeautifulyouare/source/module/motion/CM730.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/CM730.h
 
-/home/ayle/sobeautifulyouare/source/module/motion/compass.cpp
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/compass.cpp
 compass.h
-/home/ayle/sobeautifulyouare/source/module/motion/compass.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/compass.h
 
-/home/ayle/sobeautifulyouare/source/module/motion/compass.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/compass.h
 stdio.h
 -
 stdlib.h
@@ -286,11 +286,11 @@ errno.h
 time.h
 -
 
-/home/ayle/sobeautifulyouare/source/module/motion/motion.cpp
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/motion.cpp
 motion.h
-/home/ayle/sobeautifulyouare/source/module/motion/motion.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/motion.h
 
-/home/ayle/sobeautifulyouare/source/module/motion/motion.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/motion.h
 stdlib.h
 -
 stdio.h
@@ -298,7 +298,7 @@ stdio.h
 unistd.h
 -
 frame.h
-/home/ayle/sobeautifulyouare/source/module/motion/frame.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/frame.h
 LinuxDARwIn.h
-/home/ayle/sobeautifulyouare/source/module/motion/LinuxDARwIn.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/motion/LinuxDARwIn.h
 

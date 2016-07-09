@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ayle/sobeautifulyouare/source/module/communication/communication.cpp
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/communication/communication.cpp
 communication.h
-/home/ayle/sobeautifulyouare/source/module/communication/communication.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/communication/communication.h
 
-/home/ayle/sobeautifulyouare/source/module/communication/communication.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/communication/communication.h
 zmq.h
 -
 stdio.h

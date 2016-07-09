@@ -1,1 +1,1 @@
-/home/ayle/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir
+/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Motion/CMakeFiles/motion.dir

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.cpp
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/vision/cam/camera.cpp
 camera.h
-/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/vision/cam/camera.h
 
-/home/ayle/sobeautifulyouare/source/module/vision/cam/camera.h
+/home/zhou/zhou/soccer/sobeautifulyouare/source/module/vision/cam/camera.h
 stdio.h
 -
 stdlib.h

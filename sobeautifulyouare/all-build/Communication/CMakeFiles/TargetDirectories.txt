@@ -1,1 +1,1 @@
-/home/ayle/sobeautifulyouare/all-build/Communication/CMakeFiles/communication.dir
+/home/zhou/zhou/soccer/sobeautifulyouare/all-build/Communication/CMakeFiles/communication.dir
