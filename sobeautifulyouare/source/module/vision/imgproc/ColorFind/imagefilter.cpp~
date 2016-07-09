@@ -1,0 +1,49 @@
+#include "imagefilter.h"
+#include <fstream>
+
+using namespace std;
+using namespace cv;
+
+void imageFilter::load(string &file_path)
+{
+    ifstream in(file_path.c_str(), ios::in);
+    for(int i = 0; i < 256; ++i){
+        for(int j = 0; j < 256; ++j){
+            in >> map_list[i][j];
+        }
+    }
+}
+
+void imageFilter::filt(const cv::Mat &in, cv::Mat &out)
+{
+    img_res = in.clone();
+    cvtColor(img_res, img_YUV, CV_BGR2YUV);
+    int rows = img_YUV.rows;
+    int cols = img_YUV.cols;
+    int step = img_YUV.channels();
+    for(int i = 0; i < rows; ++i){
+        uchar* data = img_YUV.ptr<uchar>(i);
+        uchar* dataBGR = img_res.ptr<uchar>(i);
+        for(int j = 0; j < cols * step; j += step){
+            if(map_list[data[j + 1]][data[j + 2]] != 0){
+                dataBGR[j + 0] = 255;
+                dataBGR[j + 1] = 255;
+                dataBGR[j + 2] = 255;
+            }
+        }
+    }
+    int size_dilate = 2, size_erode = 2;
+    Mat element_dilate =
+            getStructuringElement(MORPH_RECT,
+                                  Size(2 * size_dilate + 1, 2 * size_dilate + 1),
+                                  Point(size_dilate, size_dilate));
+    Mat element_erode =
+            getStructuringElement(MORPH_RECT,
+                                  Size(2 * size_erode + 1, 2 * size_erode + 1),
+                                  Point(size_erode, size_erode));
+
+    dilate(img_res, img_res, element_dilate);
+    erode(img_res, img_res, element_erode);
+    out = img_res.clone();
+}
+
