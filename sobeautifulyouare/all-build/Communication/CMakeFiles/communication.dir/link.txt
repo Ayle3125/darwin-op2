@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC   -shared -Wl,-soname,libcommunication.so -o /home/ayle/code/git/soccer/sobeautifulyouare/bin/libcommunication.so CMakeFiles/communication.dir/home/ayle/code/git/soccer/sobeautifulyouare/source/module/communication/communication.cpp.o -lzmq -ldl -lrt 

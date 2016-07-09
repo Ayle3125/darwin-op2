@@ -1,1 +1,0 @@
-/home/ayle/code/git/soccer/sobeautifulyouare/all-build/DarwinFramework/CMakeFiles/darwin_framework.dir
