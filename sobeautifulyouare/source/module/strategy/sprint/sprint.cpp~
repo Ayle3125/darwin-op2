@@ -26,7 +26,13 @@ Sprint::~Sprint()
 {
 }
 
-
+int Sprint::run()
+{
+    debug_print = 1;
+   
+    ThreadMotion();
+	return 0;
+}
 
 void Sprint::ThreadMotion()
 {
