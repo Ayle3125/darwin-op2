@@ -1,5 +1,6 @@
 #ifndef FINDLINE
 #define FINDLINE
+#define QT_NO_DEBUG
 
 #include "imgproc.h"
 #include <vector>

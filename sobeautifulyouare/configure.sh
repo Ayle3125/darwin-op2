@@ -35,7 +35,7 @@ mkdir VisionImgproc && cp ../source/data/CMakeLists-VisionImgproc.txt VisionImgp
 mkdir Demo && cp ../source/data/CMakeLists-Demo.txt Demo/CMakeLists.txt
 
 cd .. && cp source/data/color.data bin/color.data		# main path
-
+cp source/data/ball.txt bin/ball.txt
 cp source/data/cmake-build.sh all-build/cmake-build.sh
 chmod +x all-build/cmake-build.sh
 cp source/data/make-build.sh all-build/make-build.sh
