@@ -44,7 +44,7 @@ void Sprint::ThreadMotion()
     while(true)
     {
 	    motion->CheckStatus();
-        GetImageResult(frame);
+        GetImageResult();
         usleep(10*8000);
         if (  m_is_checkstatus ) {
             motion->CheckStatus();
@@ -93,8 +93,9 @@ void Sprint::SprintForward()
 }
 
 
-int Sprint::GetImageResult(cv::Mat &frame)
+int Sprint::GetImageResult()
 {
+	while ( is_new_img == false ) usleep(8000);
     imgProc->imageProcess(frame,imgRes);
     ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
     if ( tmp_result->valid == false ){
@@ -104,5 +105,6 @@ int Sprint::GetImageResult(cv::Mat &frame)
         m_point_center_2D.X = tmp_result->center.x;
         m_point_center_2D.Y = tmp_result->center.y;
     }
+	is_new_img = false;
 }
 
