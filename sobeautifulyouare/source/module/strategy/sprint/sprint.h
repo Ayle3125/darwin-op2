@@ -42,7 +42,6 @@ private:
     double m_FitFBStep;
     double m_FitMaxRLTurn;
     double LRMoveAngle;
-
     /*---------------------------*/
     int debug_print;
 

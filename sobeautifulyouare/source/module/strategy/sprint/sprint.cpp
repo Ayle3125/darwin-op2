@@ -41,7 +41,6 @@ void Sprint::ThreadMotion()
     
 	motion->poseInit();
 
-   
     while(true)
     {
 	    motion->CheckStatus();
@@ -56,30 +55,20 @@ void Sprint::ThreadMotion()
 
 }
 
-/*void Robcup_goalkeeper::GetImageResult(cv::Mat &frame,ImgProcResult Result)      //In this part We have to visit the point.
-{
-    findline->imageProcess(frame,Result);
-    CVpointTo2Dpoint(Result->point,m_point_center_2D);
-}*/
-
 void Sprint::SprintForward()
 {
     if(debug_print) printf("SprintForward \n");
     if ( tracker->limit_mode != 2){
-       tracker->ChangeLimit(12, -10, 50, 2);
+       tracker->ChangeLimit(12, -30, 50, 2);        //tracker to find line
     }
     m_point_found = tracker->SearchAndTracking(m_point_center_2D);
     tracker->Process(tracker->ball_position);   //tracker the point
 
-    if(  m_point_found == 1)
+    if(  m_point_found == 1)//find ball
     {
         double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
         double pan_range = Head::GetInstance()->GetLeftLimitAngle();
         double pan_percent = pan / pan_range;
-        double tilt = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_TILT);
-        double tilt_min = Head::GetInstance()->GetBottomLimitAngle();
-        double tilt_range = Head::GetInstance()->GetTopLimitAngle() - tilt_min;
-        double tilt_percent = (tilt - tilt_min) / tilt_range;
 
         if( pan < LRMoveAngle && pan > -1.0*LRMoveAngle){ //TODO LRMoveAngle以内不动
             m_RLTurn = m_RLTurn_straight;
@@ -100,7 +89,7 @@ void Sprint::SprintForward()
         m_RLTurn = m_RLTurn_straight;
         m_FBStep = m_FBStep_straight;
     }
-    motion->walk(m_FBStep , m_RLTurn, 0);
+    motion->walk(m_FBStep , 0,m_RLTurn );
 }
 
 
@@ -112,7 +101,8 @@ int Sprint::GetImageResult(cv::Mat &frame)
         return -1;
     }
     else {
-
+        m_point_center_2D.X = tmp_result->center.x;
+        m_point_center_2D.Y = tmp_result->center.y;
     }
 }
 
