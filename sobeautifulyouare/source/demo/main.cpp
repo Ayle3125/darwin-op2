@@ -10,7 +10,6 @@
 #include <camera.h>
 #include <imgproc.h>
 #include <motion.h>
-
 #include <strategy.h>
 #include <communication.h>
 #include <obstacle.h>

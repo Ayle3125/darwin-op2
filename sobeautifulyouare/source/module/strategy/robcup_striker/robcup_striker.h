@@ -1,23 +1,8 @@
 #ifndef _ROBCUP_STRIKER_H_
 #define _ROBCUP_STRIKER_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <pthread.h>
-
 #include <strategy.h>
-#include <opencv/highgui.h>
-#include <opencv/cv.h>
-#include <BlobResult.h>
-#include <camera.h>
-#include <followball.h>
-#include <goalpost.h>
-#include <sideline.h>
-#include <findrobot.h>
-#include <motion.h>
-#include <communication.h>
+
 
 enum StrikerState{
     FINDBALL,
@@ -52,7 +37,7 @@ class Robcup_striker:public Strategist
         int m_is_dribble;
 
 
-        /*********Image Process*******************/
+        /*********Process*******************/
 
         int m_ball_found;// 0: noball 1:found 2:found then lost -1:noball for long
         int m_NoBallMaxCount;
@@ -62,7 +47,7 @@ class Robcup_striker:public Strategist
         Point2D m_ball_center_angle;
         Point2D m_line_center_2D;//forbiddenline & sideline
         Point2D m_goalfoot1, m_goalfoot2;
-        int m_line_Kvalue;
+        double m_line_Kvalue;
 
         double m_dribble_pan;
 
@@ -95,6 +80,7 @@ class Robcup_striker:public Strategist
 
     protected:
         virtual void ThreadMotion();
+		virtual int GetImageResult(cv::Mat &frame);
 
 
 };

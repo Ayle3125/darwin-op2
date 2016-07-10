@@ -29,6 +29,8 @@
 #include <opencv/cv.h>
 #include <BlobResult.h>
 #include <camera.h>
+#include <imgproc.h>
+#include <ColorFind.h>
 #include <followball.h>
 #include <goalpost.h>
 #include <sideline.h>
@@ -39,27 +41,27 @@
 #define IMG_WIDTH 320
 #define IMG_HEIGHT 240
 #define OPPONENTGOAL (0)
-	// or 180 can not other now
+// or 180 can not other now
 enum ImgResultType{
     BALL,
     GOALPOST,
     GOALKEEPER,
-	LINE,
-	
+    LINE,
+
 };
 class Strategist {
-	public:
-    	Strategist();
+    public:
+        Strategist();
         int run();
 
-	private:
-		bool debug_print;
+    private:
+        bool debug_print;
 
-	protected:
-		Motion *motion;
+    protected:
+        Motion *motion;
         compass *compasspro;
 
-        /***************thread********************/
+        /*------------------thread--------------------*/
         pthread_t thread[2];
         pthread_mutex_t mut;
         pthread_cond_t cond;
@@ -79,16 +81,18 @@ class Strategist {
         virtual void ThreadMotion() = 0; 
         void ThreadCreate();
         void ThreadWait(void);
-        
+
         /*------------------Image---------------------*/
-		cv::Mat frame;
-		void GetImageResult(cv::Mat &frame, ImgResultType rs);
+        cv::Mat frame;
+		ImgProcResult *imgRes;
+		ImgProc *imgProc;
+        virtual int GetImageResult(cv::Mat &frame)=0;
         void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
 
-        /*------------------compass---------------------*/
-		int CompassCheck();
-		double m_angle_diff_opponentGoal;//angle from opponent goal
-		double m_OpponentAngle;
+        /*------------------compass-------------------*/
+        int CompassCheck();
+        double m_angle_diff_opponentGoal;//angle from opponent goal
+        double m_OpponentAngle;
         double m_DribbleRightAngle;
         double m_DribbleLeftAngle;
 };

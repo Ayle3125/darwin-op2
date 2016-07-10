@@ -47,7 +47,7 @@ class Marathon:public Strategist{
         int debug_print;
     protected:
         virtual void ThreadMotion();
-        virtual int GetImageResult(cv::Mat &frame);
+        virtual void GetImageResult(cv::Mat &frame);
 
 };
 

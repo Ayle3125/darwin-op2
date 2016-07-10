@@ -1,0 +1,8 @@
+
+git push origin **
+git branch
+git add *
+git commit -m "***"
+git status
+
+git checkout -b **

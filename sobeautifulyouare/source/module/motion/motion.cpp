@@ -137,8 +137,22 @@ void Motion::Run(MyPointf *coorf)
 
 void Motion::poseInit()
 {
+	//static int m_old_btn = 0;
+    printf("Press the ENTER key to stand up!\n");
+/*	while(StatusCheck::m_is_started == 0)
+	{
+		if ( MotionStatus::BUTTON != m_old_btn ) {
+			break;
+		}
+	}
+*/
+	getchar();
+    Action::GetInstance()->m_Joint.SetEnableBody(true, true);  //!!!
+    Action::GetInstance()->Start(9);  
+    while(Action::GetInstance()->IsRunning() == true) usleep(8000);
     Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
     Walking::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+    MotionManager::GetInstance()->ResetGyroCalibration();
     MotionManager::GetInstance()->SetEnable(true);
 }
 

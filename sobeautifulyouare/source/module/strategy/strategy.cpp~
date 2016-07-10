@@ -10,7 +10,7 @@
    static const double VIEW_H_ANGLE = 58.0; //degree
    static int WIDTH = 320;
    static int HEIGHT = 240;
-   */
+*/
 
 #include "strategy.h"
 

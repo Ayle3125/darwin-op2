@@ -104,15 +104,8 @@ void Sprint::SprintForward()
 }
 
 
-int Sprint::GetImageResult(cv::Mat &frame)
+void Sprint::GetImageResult(cv::Mat &frame)
 {
-    imgProc->imageProcess(frame,imgRes);
-    ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
-    if ( tmp_result->valid == false ){
-        return -1;
-    }
-    else {
 
-    }
 }
 

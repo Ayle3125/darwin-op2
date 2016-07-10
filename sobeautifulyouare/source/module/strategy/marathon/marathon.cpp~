@@ -96,7 +96,7 @@ void Marathon::ThreadMotion(){
     }
 }
 
-int Marathon::GetImageResult(cv::Mat &frame)
+void Marathon::GetImageResult(cv::Mat &frame)
 {
 
 }
