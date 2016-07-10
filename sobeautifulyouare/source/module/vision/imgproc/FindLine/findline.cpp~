@@ -56,7 +56,6 @@ void FindLine::imageProcess(cv::Mat img, ImgProcResult *Result)
         end.y /= cnt;
         //line( cdst, begin, end, Scalar(0,0,255), 3, CV_AA);
         dynamic_cast<FindLineResult*>(Result)->slope = CalK(begin.x, begin.y, end.x, end.y);
-        dynamic_cast<FindLineResult*>(Result)->center = Point((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         dynamic_cast<FindLineResult*>(Result)->valid = true;
        }else{
         dynamic_cast<FindLineResult*>(Result)->valid = false;
