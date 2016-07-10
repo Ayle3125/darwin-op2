@@ -5,7 +5,7 @@ Marathon::Marathon(){
 	//imgRes = new ImgProcResult();
 	//imgProc = new ImgProc();
     
-    execute = true;
+    m_execute = true;
     m_process_state = STRAIGHT;
 //TODO
     m_NoLineMaxCount = 6;
@@ -41,7 +41,7 @@ Marathon::~Marathon(){
 void Marathon::ThreadMotion(){
     motion->poseInit();
     Walking::GetInstance()->Start();
-    while ( execute ){//always true
+    while ( m_execute ){//always true
         motion->CheckStatus();
         if ( m_process_state == STRAIGHT ){
             if ( m_nolooktime < m_NolookMaxTime ){
@@ -50,7 +50,7 @@ void Marathon::ThreadMotion(){
                 motion->walk(m_FBstep, m_RLstep, m_RLturn);
             }
             else {
-                if ( m_FBstep > 10 ) {
+                if ( m_FBstep > 10 ) {//TODO
                     m_FBstep -= m_unit_FBstep;
                 }
                 while ( is_new_img == false ) usleep(8000);
@@ -98,6 +98,14 @@ void Marathon::ThreadMotion(){
 
 int Marathon::GetImageResult(cv::Mat &frame)
 {
+    imgProc->imageProcess(frame,imgRes);
+    ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);//TODO
+    if ( tmp_result->valid == false ){
+        return -1;
+    }
+    else {
+
+    }
 
 }
 

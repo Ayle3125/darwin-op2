@@ -14,7 +14,7 @@ class Marathon:public Strategist{
     private:
         BallTracker *tracker;
         /*************Process****************/
-        bool execute;
+        bool m_execute;
         MarathonState m_process_state;
 
         int m_NoLineMaxCount;
@@ -24,13 +24,14 @@ class Marathon:public Strategist{
         int m_StraightJudgeCount;
         int m_straight_count;
         Point2D m_line_center_2D;
-        double m_line_theta;//the slope of the white track
+        double m_line_theta;//the angle of the white track
         double m_CurveTheta;
 
         int m_NolookMaxTime;
         int m_nolooktime;
 
         int LostDispose();//return 1 back to line, can't judge the direction
+
         /*************Motion Order****************/
         double m_FBstep;
         double m_unit_FBstep;

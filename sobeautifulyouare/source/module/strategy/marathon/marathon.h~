@@ -31,6 +31,7 @@ class Marathon:public Strategist{
         int m_nolooktime;
 
         int LostDispose();//return 1 back to line, can't judge the direction
+
         /*************Motion Order****************/
         double m_FBstep;
         double m_unit_FBstep;
@@ -47,7 +48,7 @@ class Marathon:public Strategist{
         int debug_print;
     protected:
         virtual void ThreadMotion();
-        virtual void GetImageResult(cv::Mat &frame);
+        virtual int GetImageResult(cv::Mat &frame);
 
 };
 
