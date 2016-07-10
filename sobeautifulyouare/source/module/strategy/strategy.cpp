@@ -63,6 +63,8 @@ void Strategist::ThreadCreate()
 void Strategist::ThreadVision() 
 {
     cv::VideoCapture cap(0);
+	cap.set( CV_CAP_PROP_FRAME_WIDTH, IMG_WIDTH); 
+	cap.set( CV_CAP_PROP_FRAME_HEIGHT, IMG_HEIGHT);
     if(!cap.isOpened())  // check if we succeeded
         fprintf(stderr,"Can not open the camera!\n");
     while (true)

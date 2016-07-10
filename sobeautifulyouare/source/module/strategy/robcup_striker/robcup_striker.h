@@ -80,7 +80,7 @@ class Robcup_striker:public Strategist
 
     protected:
         virtual void ThreadMotion();
-		virtual int GetImageResult(cv::Mat &frame);
+		virtual int GetImageResult();
 
 
 };

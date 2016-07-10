@@ -30,7 +30,7 @@
 #include <BlobResult.h>
 #include <camera.h>
 #include <imgproc.h>
-#include <ColorFind.h>
+#include <ColorFind/ColorFind.h>
 #include <followball.h>
 #include <goalpost.h>
 #include <sideline.h>

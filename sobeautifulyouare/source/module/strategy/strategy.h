@@ -86,7 +86,7 @@ class Strategist {
         cv::Mat frame;
 		ImgProcResult *imgRes;
 		ImgProc *imgProc;
-        virtual int GetImageResult(cv::Mat &frame)=0;
+        virtual int GetImageResult()=0;
         void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
 
         /*------------------compass-------------------*/

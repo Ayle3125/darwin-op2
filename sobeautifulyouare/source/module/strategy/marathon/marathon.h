@@ -14,9 +14,11 @@ class Marathon:public Strategist{
         ~Marathon();
     private:
         BallTracker *tracker;
+		BallFollower *follower;
         /*************Process****************/
         bool m_execute;
         MarathonState m_process_state;
+		int m_pre_action;// 1:move left  0:go straight  -1:move right  
 
         int m_NoLineMaxCount;
         int m_no_line_found;
@@ -26,14 +28,14 @@ class Marathon:public Strategist{
         int m_straight_count;
         Point2D m_line_center_2D;
 		double m_CenterDiff;
-        double m_line_theta;//the radian of the white track
-        double m_CurveTheta;
+        double m_line_theta;//the angle of the white track  /:negative  \:positive
+        double m_CurveTheta;//65~75 degree
 
         int m_NolookMaxTime;
         int m_nolooktime;
 
         int LostDispose();//return 1 back to line, can't judge the direction
-		void RLFixed();
+		int RLFixed();// 0:no need  1:need to fix
 
         /*************Motion Order****************/
 		double m_FBstep_straight;
@@ -54,7 +56,7 @@ class Marathon:public Strategist{
         int debug_print;
     protected:
         virtual void ThreadMotion();
-        virtual int GetImageResult(cv::Mat &frame);
+        virtual int GetImageResult();
 
 };
 
