@@ -62,10 +62,10 @@ void FindLine::imageProcess(cv::Mat img, ImgProcResult *Result)
         dynamic_cast<FindLineResult*>(Result)->valid = false;
        }
     }
-#ifdef QT_NO_DEBUG
+
     namedWindow("source");
     namedWindow("detected lines");
     imshow("source", src);
     imshow("detected lines", cdst);
-#endif
+
 }

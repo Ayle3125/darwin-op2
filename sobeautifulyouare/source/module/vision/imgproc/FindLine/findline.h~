@@ -8,17 +8,20 @@ class FindLineResult : public ImgProcResult
 public:
      double slope;
      bool valid;
+     cv::Point center;
      FindLineResult() : slope(0.0), valid(false) {}
      virtual void operator=(ImgProcResult &res)
      {
          FindLineResult *tmp = dynamic_cast<FindLineResult*>(&res);
          slope = tmp->slope;
-         valid = tmp->slope;
+         valid = tmp->valid;
+         center = tmp->center;
      }
      void operator=(FindLineResult &res)
      {
          slope = res.slope;
-         valid = res.slope;
+         valid = res.valid;
+         center = res.center;
      }
 };
 
