@@ -16,8 +16,6 @@
 
 Strategist::Strategist()
 {
-    //compasspro = new compass();
-    //motion = new Motion();
 
     is_new_img = false;
 

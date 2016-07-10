@@ -2,6 +2,7 @@
 #define _MARATHON_H_
 
 #include <strategy.h>
+#include <FindLine/findline.h>
 
 enum MarathonState{
     STRAIGHT,
@@ -24,24 +25,29 @@ class Marathon:public Strategist{
         int m_StraightJudgeCount;
         int m_straight_count;
         Point2D m_line_center_2D;
-        double m_line_theta;//the angle of the white track
+		double m_CenterDiff;
+        double m_line_theta;//the radian of the white track
         double m_CurveTheta;
 
         int m_NolookMaxTime;
         int m_nolooktime;
 
         int LostDispose();//return 1 back to line, can't judge the direction
+		void RLFixed();
 
         /*************Motion Order****************/
+		double m_FBstep_straight;
         double m_FBstep;
         double m_unit_FBstep;
         double m_MAX_FBstep;
 
-        double m_RLturn;
+        double m_RLturn_straight;
+		double m_RLturn;
         double m_unit_RLturn;
         double m_MAX_RLturn;
 
-        double m_RLstep;
+        double m_RLstep_straight;
+		double m_RLstep;
         double m_unit_RLstep;
         double m_MAX_RLstep;
         /*------------------------------------*/

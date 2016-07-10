@@ -95,10 +95,11 @@ void Strategist::ThreadWait(void)
     if(thread[1] !=0) 
         pthread_join(thread[1],NULL);
 }
-
+ /*
 void Strategist::GetImageResult(cv::Mat &frame, ImgResultType rs)
 {
-    /*
+	
+   
        if ( rs == BALL ){
        ballpro->imageProcess(frame);
        if( debug_print ) printf("ball center x:%d y:%d\n", ballpro->center.x,ballpro->center.y);
@@ -117,8 +118,9 @@ void Strategist::GetImageResult(cv::Mat &frame, ImgResultType rs)
        m_line_Kvalue = linepro->k_value;
        CVpointTo2Dpoint(goalpro->center, m_line_center_2D);
        }
-       */
+      
 }
+ */
 
 int Strategist::CompassCheck()
 {// degree 0~360  -> -180~ 180
