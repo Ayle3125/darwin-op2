@@ -42,7 +42,7 @@ class ColorFind : public ImgProc
 
 /*******开放的接口********/
 public:
-    ColorFind() : MyResult(){filter.load("ball.txt");}
+    ColorFind() : filter(), MyResult(){filter.load("ball.txt");}
     ~ColorFind(){}
     void load(const std::string &file_path);
     virtual void imageProcess(cv::Mat img, ImgProcResult *Result);
