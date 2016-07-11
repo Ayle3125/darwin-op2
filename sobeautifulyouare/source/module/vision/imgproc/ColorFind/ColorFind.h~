@@ -31,9 +31,9 @@ public:
     }
     void operator=(ColorFindResult &res)
     {
-        center = tmp->center;
-        rect = tmp->rect;
-        radius = tmp->radius;
+        center = res.center;
+        rect = res.rect;
+        radius = res.radius;
     }
 };
 
