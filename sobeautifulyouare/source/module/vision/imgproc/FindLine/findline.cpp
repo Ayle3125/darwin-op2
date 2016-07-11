@@ -39,7 +39,9 @@ void FindLine::imageProcess(cv::Mat img, ImgProcResult *Result)
        Point begin(0, 0), end(0, 0);
        int cnt = 0;
        for( size_t i = 0; i < lines.size(); i++ ){
-           //line( cdst, Point(lines[i][0], lines[i][1]), Point(lines[i][2], lines[i][3]), Scalar(255,0,0), 3, CV_AA);
+#ifdef QT_NO_DEBUG
+           line( cdst, Point(lines[i][0], lines[i][1]), Point(lines[i][2], lines[i][3]), Scalar(255,0,0), 3, CV_AA);
+#endif
            double k = CalK(lines[i][0], lines[i][1], lines[i][2], lines[i][3]);
            if(fabs(k) > PI / 6){
             begin.x += lines[i][0];
@@ -54,7 +56,9 @@ void FindLine::imageProcess(cv::Mat img, ImgProcResult *Result)
         begin.y /= cnt;
         end.x /= cnt;
         end.y /= cnt;
-        //line( cdst, begin, end, Scalar(0,0,255), 3, CV_AA);
+#ifdef QT_NO_DEBUG
+        line( cdst, begin, end, Scalar(0,0,255), 3, CV_AA);
+#endif
         dynamic_cast<FindLineResult*>(Result)->slope = CalK(begin.x, begin.y, end.x, end.y);
         dynamic_cast<FindLineResult*>(Result)->center = Point((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         dynamic_cast<FindLineResult*>(Result)->valid = true;
@@ -62,10 +66,11 @@ void FindLine::imageProcess(cv::Mat img, ImgProcResult *Result)
         dynamic_cast<FindLineResult*>(Result)->valid = false;
        }
     }
+#ifdef QT_NO_DEBUG
 
     namedWindow("source");
     namedWindow("detected lines");
     imshow("source", src);
     imshow("detected lines", cdst);
-
+#endif
 }
