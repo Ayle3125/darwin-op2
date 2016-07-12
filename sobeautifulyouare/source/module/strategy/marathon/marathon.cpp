@@ -32,7 +32,7 @@ Marathon::Marathon()
     m_MAX_FBstep = 30; 
     m_RLturn = 0.425;
     m_RLturn_straight = 0.425;
-    m_unit_RLturn = 1.0;
+    m_unit_RLturn = 2.0;
     m_MAX_RLturn = 35;
     m_RLstep_straight = 0;
     m_RLstep = 0;
@@ -73,7 +73,7 @@ void Marathon::ThreadMotion(){
                 if ( tmp_img_result == -1 ){
                     if ( debug_print ) fprintf(stderr,"Can't find the track!\n");
                     m_no_line_found++;
-                    if (m_no_line_found > m_NoLineMaxCount ){
+                    if (m_no_line_found > 0 ){
                         LostDispose();      //m_pre_action = 0?
                     }
                 }
@@ -90,6 +90,7 @@ void Marathon::ThreadMotion(){
                         }
                         else {
                             m_curve_count = 0;
+			    m_RLturn = m_RLturn_straight;
                         }                    
 
                     }
@@ -113,18 +114,26 @@ void Marathon::ThreadMotion(){
                     }
                 }
                 else {
+					double RLgoalTurn = 0;
                     m_straight_count = 0;
                     if ( m_line_theta < 0) {
                         if ( debug_print ) fprintf(stderr,"I should turn right\n");
+						RLgoalTurn = -1*(m_line_theta + 90)/180  * m_MAX_RLturn;
 						m_pre_action = -1;
-                        m_RLturn = -4;
+                        //m_RLturn = -4;
                     }
                     else {
                         if ( debug_print ) fprintf(stderr,"I should turn left\n");
+						RLgoalTurn = (90 - m_line_theta )/180 * m_MAX_RLturn;
 						m_pre_action = 1;
-                        m_RLturn = 5;
+                        //m_RLturn = 5;
                     } 
-                    motion->walk(m_FBstep, m_RLstep, m_RLturn);
+					if(m_RLturn < RLgoalTurn)
+						m_RLturn += m_unit_RLturn;
+					else if(m_RLturn > RLgoalTurn)
+						m_RLturn -= m_unit_RLturn;
+					Walking::GetInstance()->A_MOVE_AMPLITUDE = m_RLturn;
+                   // motion->walk(m_FBstep, m_RLstep, m_RLturn);
                 }
             }
         }
@@ -143,7 +152,7 @@ int Marathon::GetImageResult()
         m_line_theta = ( tmp_result->slope ) *180/3.141592;
         m_line_center_2D.X = tmp_result->center.x;
         m_line_center_2D.Y = tmp_result->center.y;
-      //  if ( debug_print ) fprintf(stderr,"theta:%lf  line center: %lf %lf \n",m_line_theta,m_line_center_2D.X,m_line_center_2D.Y);
+        if ( debug_print ) fprintf(stderr,"theta:%lf  line center: %lf %lf \n",m_line_theta,m_line_center_2D.X,m_line_center_2D.Y);
     }
     is_new_img = false;
 }
@@ -153,10 +162,10 @@ int Marathon::LostDispose()
     if ( debug_print ) fprintf(stderr,"I should dispose the lost\n");
     if ( m_process_state == CURVE ){
 		if ( m_pre_action == 1 ){
-            motion->walk(10,0,3);// turn left
+            motion->walk(10,0,5);// turn left
 		}
         else if ( m_pre_action == -1 ){
-            motion->walk(10,0,-2);// turn right
+            motion->walk(10,0,-4);// turn right
         }
         else {
             motion->walk(-10,0,-5);// go back
@@ -173,22 +182,28 @@ int Marathon::LostDispose()
             motion->walk(-10,0,-5);// go back
         } 
     }
-    usleep(8000);
+    usleep(8*8000);
 }
 
 int Marathon::RLFixed()
 {
     int tmp_return = 0;
+	int goal = 0;
     double diff = m_line_center_2D.X - ( IMG_WIDTH/2 );
     if ( fabs ( diff  ) > m_CenterDiff ){
         tmp_return =1;
-        m_RLstep =  m_MAX_RLstep * diff / ( IMG_WIDTH/2 );//change Y
+        goal=  m_MAX_RLturn * 0.5*diff / ( IMG_WIDTH/2 );//change Y
         m_pre_action = 1;
         if ( diff > 0 ){
-            m_RLstep *= -1;
+            goal*= -1;
             m_pre_action *=-1;
         }
+	if(m_RLturn < goal)
+						m_RLturn += m_unit_RLturn;
+					else if(m_RLturn > goal)
+						m_RLturn -= m_unit_RLturn;
+					//Walking::GetInstance()->A_MOVE_AMPLITUDE = m_RLturn;
     }
-   // if ( debug_print ) fprintf(stderr,"RLstep: %lf\n", m_RLstep);
+   if ( debug_print ) fprintf(stderr,"RLturn: %lf\n", m_RLturn);
     return tmp_return;
 }
