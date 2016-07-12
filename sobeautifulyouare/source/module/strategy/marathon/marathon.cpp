@@ -14,7 +14,7 @@ Marathon::Marathon()
     m_no_line_found = 0;
     m_CurveJudgeCount = 3;
     m_curve_count = 0;
-    m_StraightJudgeCount = 6;
+    m_StraightJudgeCount = 10;
     m_straight_count = 0;
     m_line_center_2D.X = -1;
     m_line_center_2D.Y = -1;
@@ -30,8 +30,8 @@ Marathon::Marathon()
     m_FBstep_straight = 10;
     m_unit_FBstep = 0.3;
     m_MAX_FBstep = 30; 
-    m_RLturn = 0;
-    m_RLturn_straight = 0;
+    m_RLturn = 0.425;
+    m_RLturn_straight = 0.425;
     m_unit_RLturn = 1.0;
     m_MAX_RLturn = 35;
     m_RLstep_straight = 0;
@@ -57,6 +57,7 @@ void Marathon::ThreadMotion(){
     int tmp_img_result, tmp_RL_return;
     while ( m_execute ){//always true
         motion->CheckStatus();
+	if ( debug_print ) fprintf(stderr,"state %d\n",m_process_state);
         if ( m_process_state == STRAIGHT ){
             if ( m_nolooktime < m_NolookMaxTime ){
                 m_nolooktime++;
@@ -64,7 +65,7 @@ void Marathon::ThreadMotion(){
                 m_pre_action = 0;
                 motion->walk(m_FBstep, m_RLstep, m_RLturn);
             }
-            else {
+            else {//if ( m_nolooktime < m_NolookMaxTime ) finish speed up
                 if ( m_FBstep > m_FBstep_straight ) {//TODO
                     m_FBstep -= m_unit_FBstep;
                 }
@@ -73,13 +74,13 @@ void Marathon::ThreadMotion(){
                     if ( debug_print ) fprintf(stderr,"Can't find the track!\n");
                     m_no_line_found++;
                     if (m_no_line_found > m_NoLineMaxCount ){
-                        LostDispose();
+                        LostDispose();      //m_pre_action = 0?
                     }
                 }
-                else {
+                else {//tmp_img_result == -1 has find line
                     m_no_line_found = 0;
                     tmp_RL_return = RLFixed();// judge center first, avoid false judging curve track
-                    if ( tmp_RL_return == 0 ){
+                    if ( tmp_RL_return == 0 ){//haven't leave too much
 
                         if ( (m_line_theta < m_CurveTheta) && (m_line_theta> -1*m_CurveTheta) ){
                             m_curve_count++;
@@ -98,6 +99,7 @@ void Marathon::ThreadMotion(){
         }
         else if ( m_process_state == CURVE ){
             m_nolooktime = 0;
+	    m_FBstep = m_FBstep_straight;
             tmp_img_result = GetImageResult();
             if ( tmp_img_result == -1 ){
                 LostDispose();
@@ -112,15 +114,15 @@ void Marathon::ThreadMotion(){
                 }
                 else {
                     m_straight_count = 0;
-                    if ( m_line_theta > 0) {
+                    if ( m_line_theta < 0) {
                         if ( debug_print ) fprintf(stderr,"I should turn right\n");
 						m_pre_action = -1;
-                        m_RLturn = -10;
+                        m_RLturn = -4;
                     }
                     else {
                         if ( debug_print ) fprintf(stderr,"I should turn left\n");
 						m_pre_action = 1;
-                        m_RLturn = 10;
+                        m_RLturn = 5;
                     } 
                     motion->walk(m_FBstep, m_RLstep, m_RLturn);
                 }
@@ -141,7 +143,7 @@ int Marathon::GetImageResult()
         m_line_theta = ( tmp_result->slope ) *180/3.141592;
         m_line_center_2D.X = tmp_result->center.x;
         m_line_center_2D.Y = tmp_result->center.y;
-        if ( debug_print ) fprintf(stderr,"theta:%lf  line center: %lf %lf \n",m_line_theta,m_line_center_2D.X,m_line_center_2D.Y);
+      //  if ( debug_print ) fprintf(stderr,"theta:%lf  line center: %lf %lf \n",m_line_theta,m_line_center_2D.X,m_line_center_2D.Y);
     }
     is_new_img = false;
 }
@@ -151,10 +153,10 @@ int Marathon::LostDispose()
     if ( debug_print ) fprintf(stderr,"I should dispose the lost\n");
     if ( m_process_state == CURVE ){
 		if ( m_pre_action == 1 ){
-            motion->walk(1,0,-10);// turn left
+            motion->walk(10,0,3);// turn left
 		}
         else if ( m_pre_action == -1 ){
-            motion->walk(1,0,-10);// turn right
+            motion->walk(10,0,-2);// turn right
         }
         else {
             motion->walk(-10,0,-5);// go back
@@ -180,13 +182,13 @@ int Marathon::RLFixed()
     double diff = m_line_center_2D.X - ( IMG_WIDTH/2 );
     if ( fabs ( diff  ) > m_CenterDiff ){
         tmp_return =1;
-        m_RLstep =  m_MAX_RLstep * diff / ( IMG_WIDTH/2 );
+        m_RLstep =  m_MAX_RLstep * diff / ( IMG_WIDTH/2 );//change Y
         m_pre_action = 1;
         if ( diff > 0 ){
             m_RLstep *= -1;
-            m_pre_action *= -1;
+            m_pre_action *=-1;
         }
     }
-    if ( debug_print ) fprintf(stderr,"RLstep: %lf\n", m_RLstep);
+   // if ( debug_print ) fprintf(stderr,"RLstep: %lf\n", m_RLstep);
     return tmp_return;
 }
