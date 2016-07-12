@@ -28,7 +28,7 @@ void Ladder::ThreadMotion()
 
 }
 
-int Ladder::GetImageResult(cv::Mat &frame)
+int Ladder::GetImageResult()
 {
     imgProc->imageProcess(frame,imgRes);
     ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);

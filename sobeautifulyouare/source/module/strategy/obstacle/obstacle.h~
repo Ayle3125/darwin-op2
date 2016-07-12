@@ -54,7 +54,7 @@ class Obstacle:public Strategist
 
     protected:
         virtual void ThreadMotion();
-        int GetImageResult_obstacle(int result_type);
+        int GetImageResult(int result_type);
 
 };
 

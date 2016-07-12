@@ -31,6 +31,7 @@
 #include <camera.h>
 #include <imgproc.h>
 #include <ColorFind/ColorFind.h>
+#include <FindLine/findline.h>
 #include <followball.h>
 #include <goalpost.h>
 #include <sideline.h>
@@ -40,8 +41,7 @@
 
 #define IMG_WIDTH 320
 #define IMG_HEIGHT 240
-#define OPPONENTGOAL (0)
-// or 180 can not other now
+#define OPPONENTGOAL (0) // or 180 can not other now
 enum ImgResultType{
     BALL,
     GOALPOST,
@@ -53,6 +53,7 @@ class Strategist {
     public:
         Strategist();
         int run();
+		int vision_exe;
 
     private:
         bool debug_print;
@@ -60,6 +61,8 @@ class Strategist {
     protected:
         Motion *motion;
         compass *compasspro;
+		bool is_cap;
+		
 
         /*------------------thread--------------------*/
         pthread_t thread[2];
@@ -86,7 +89,7 @@ class Strategist {
         cv::Mat frame;
 		ImgProcResult *imgRes;
 		ImgProc *imgProc;
-        virtual int GetImageResult(cv::Mat &frame)=0;
+        virtual int GetImageResult();
         void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
 
         /*------------------compass-------------------*/

@@ -36,7 +36,6 @@ class Robcup_penalty
         followball *ballpro; 
 	 	
 
-        Point2D m_ball_center_2D;
         int m_process_state;
 
 		void FindBall();

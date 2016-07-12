@@ -44,7 +44,7 @@ void Sprint::ThreadMotion()
     while(true)
     {
 	    motion->CheckStatus();
-        GetImageResult(frame);
+        GetImageResult();
         usleep(10*8000);
         if (  m_is_checkstatus ) {
             motion->CheckStatus();
@@ -93,7 +93,7 @@ void Sprint::SprintForward()
 }
 
 
-int Sprint::GetImageResult()
+int Sprint::GetImageResult(int result_type)
 {
 	while ( is_new_img == false ) usleep(8000);
     imgProc->imageProcess(frame,imgRes);

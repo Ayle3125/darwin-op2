@@ -39,7 +39,7 @@ Obstacle::~Obstacle()
 {
 }
 
-int Obstacle::GetImageResult_obstacle(int result_type)
+int Obstacle::GetImageResultobstacle(int result_type)
 {
     while ( is_new_img == false ) usleep(8000);
     imgProc->imageProcess(frame,imgRes);

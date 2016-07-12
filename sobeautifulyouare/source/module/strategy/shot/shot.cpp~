@@ -31,7 +31,7 @@ void Shot::ThreadMotion()
 int Shot::GetImageResult(cv::Mat &frame)
 {
     imgProc->imageProcess(frame,imgRes);
-    //ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
+    ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
     if ( tmp_result->valid == false ){
         return -1;
     }

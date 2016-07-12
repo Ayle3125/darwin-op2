@@ -7,8 +7,6 @@
 #include "frame.h"
 #include "LinuxDARwIn.h"
 
-#define IMG_WIDTH	320
-#define IMG_HEIGHT	240
 
 #define SCRIPT_FILE_PATH    "script.asc"
 #define U2D_DEV_NAME0       "/dev/ttyUSB0"

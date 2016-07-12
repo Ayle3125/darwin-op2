@@ -3,18 +3,18 @@
 
 #include <strategy.h>
 
-class Shot:public Strategist
+class Fira_penalty:public Strategist
 {
 public:
-	Shot();
-	~Shot();
+	Fira_penalty();
+	~Fira_penalty();
 private:
 
     int debug_print;
 
 protected:
     virtual void ThreadMotion();
-    virtual int GetImageResult(cv::Mat &frame);
+    virtual int GetImageResult(int result_type);
 };
 
 #endif // _FIRA_PENALTY_H_

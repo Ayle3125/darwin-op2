@@ -2,7 +2,6 @@
 #define _MARATHON_H_
 
 #include <strategy.h>
-#include <FindLine/findline.h>
 
 enum MarathonState{
     STRAIGHT,

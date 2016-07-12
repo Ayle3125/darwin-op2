@@ -129,7 +129,7 @@ void Marathon::ThreadMotion(){
     }
 }
 
-int Marathon::GetImageResult()
+int Marathon::GetImageResult(int result_type)
 {
 	while ( is_new_img == false ) usleep(8000);
     imgProc->imageProcess(frame,imgRes);
@@ -150,9 +150,28 @@ int Marathon::LostDispose()
 {    
     if ( debug_print ) fprintf(stderr,"I should dispose the lost\n");
     if ( m_process_state == CURVE ){
-
+		if ( m_pre_action == 1 ){
+            motion->walk(1,0,-10);// turn left
+		}
+        else if ( m_pre_action == -1 ){
+            motion->walk(1,0,-10);// turn right
+        }
+        else {
+            motion->walk(-10,0,-5);// go back
+        }
     }
-
+    else if ( m_process_state == STRAIGHT ){
+		if ( m_pre_action == 1 ){
+            motion->walk(1, -10 ,-5);// move left
+		}
+        else if ( m_pre_action == -1 ){
+            motion->walk(1, 10,-5);// move right
+        }
+        else {
+            motion->walk(-10,0,-5);// go back
+        } 
+    }
+    usleep(8000);
 }
 
 int Marathon::RLFixed()
@@ -165,7 +184,7 @@ int Marathon::RLFixed()
         m_pre_action = 1;
         if ( diff > 0 ){
             m_RLstep *= -1;
-            m_pre_action *=1;
+            m_pre_action *= -1;
         }
     }
     if ( debug_print ) fprintf(stderr,"RLstep: %lf\n", m_RLstep);

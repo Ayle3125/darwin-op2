@@ -1,13 +1,13 @@
-#ifndef _SHOT_H_
-#define _SHOT_H_
+#ifndef _GOLF_H_
+#define _GOLF_H_
 
 #include <strategy.h>
 
-class Shot:public Strategist
+class Golf:public Strategist
 {
 public:
-	Shot();
-	~Shot();
+	Golf();
+	~Golf();
 private:
 
     int debug_print;

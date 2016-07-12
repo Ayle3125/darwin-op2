@@ -24,44 +24,43 @@ using namespace Robot;
 
 class Motion{
 
-public:
-	Motion();
-	~Motion();
-	void init_motion();
-	void sprint_init();
-	void tuner_ARM_SWING_GAIN(double value);
+    public:
+        Motion();
+        ~Motion();
+        void init_motion();
+        void sprint_init();
+        void tuner_ARM_SWING_GAIN(double value);
 
-	void walk_x_move_amplitude(double FBStep = 0.0);
-	void walk_a_move_amplitude(double RLTurn = 0.0);
-	void walk_h_move_amplitude(double HTStep = 40);
-	void walk_y_move_amplitude(double RLStep = 0.0);
-	void walk_star();
-	int get_walking_phrase();
-	void stop_walking();
-	void walking(double ht, double fb, double al, double rl);
-	void set_walking_time(double t);
+        void walk_x_move_amplitude(double FBStep = 0.0);
+        void walk_a_move_amplitude(double RLTurn = 0.0);
+        void walk_h_move_amplitude(double HTStep = 40);
+        void walk_y_move_amplitude(double RLStep = 0.0);
+        void walk_star();
+        int get_walking_phrase();
+        void stop_walking();
+        void walking(double ht, double fb, double al, double rl);
+        void set_walking_time(double t);
+        void walk(double FBstep, double RLstep, double RLturn);
 
-//	void head_move_angle(double pan, double tilt);
+        void CheckStatus();
 
-	void CheckStatus();
+        void shutdown();
+    private:
+        Point2D pt;
 
-	void shutdown();
-private:
-	Point2D pt;
-	
-	BallTracker *tracker;
-	BallFollower *follower;
-	
-	LinuxCM730 *linux_cm730;
-	CM730 *cm730;
-	
-	int firm_ver;
-	
-public:
-	void Run(MyPointf *coorf);
+        BallTracker *tracker;
+        BallFollower *follower;
 
-public:
-	void poseInit();
+        LinuxCM730 *linux_cm730;
+        CM730 *cm730;
+
+        int firm_ver;
+
+    public:
+        void Run(MyPointf *coorf);
+
+    public:
+        void poseInit();
 
 };
 

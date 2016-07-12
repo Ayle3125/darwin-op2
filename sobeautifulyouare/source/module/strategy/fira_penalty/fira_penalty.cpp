@@ -28,7 +28,7 @@ void Fira_penalty::ThreadMotion()
 
 }
 
-int Fira_penalty::GetImageResult(cv::Mat &frame)
+int Fira_penalty::GetImageResult()
 {
     imgProc->imageProcess(frame,imgRes);
     ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);

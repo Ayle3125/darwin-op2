@@ -19,9 +19,6 @@
 #include <motion.h>
 #include <communication.h>
 
-#define IMG_WIDTH 320
-#define IMG_HEIGHT 240
-
 class Robcup_penalty
 {
     public:

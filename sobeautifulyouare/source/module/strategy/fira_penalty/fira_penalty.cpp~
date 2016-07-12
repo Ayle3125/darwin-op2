@@ -28,10 +28,10 @@ void Fira_penalty::ThreadMotion()
 
 }
 
-int Fira_penalty::GetImageResult(cv::Mat &frame)
+int Fira_penalty::GetImageResult(int result_type)
 {
     imgProc->imageProcess(frame,imgRes);
-    //ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
+    ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
     if ( tmp_result->valid == false ){
         return -1;
     }

@@ -184,7 +184,7 @@ int Marathon::RLFixed()
         m_pre_action = 1;
         if ( diff > 0 ){
             m_RLstep *= -1;
-            m_pre_action *=1;
+            m_pre_action *= -1;
         }
     }
     if ( debug_print ) fprintf(stderr,"RLstep: %lf\n", m_RLstep);

@@ -54,7 +54,14 @@ class Robcup_goalkeeper
         void AfterDive();
 		void ReturnFollow();
 
+		
+		//compass
 		int CompassCheck();// check compass
+        double m_angle_diff_opponentGoal;//angle from opponent goal
+		double m_OpponentAngle;
+        double m_DribbleRightAngle;
+        double m_DribbleLeftAngle;
+        
 
         /*************thread********************/
         pthread_t thread[2];

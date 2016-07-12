@@ -16,6 +16,7 @@
 
 Strategist::Strategist()
 {
+	vision_exe = 1;
 
     is_new_img = false;
 
@@ -67,7 +68,7 @@ void Strategist::ThreadVision()
 	cap.set( CV_CAP_PROP_FRAME_HEIGHT, IMG_HEIGHT);
     if(!cap.isOpened())  // check if we succeeded
         fprintf(stderr,"Can not open the camera!\n");
-    while (true)
+    while (vision_exe)
     {
         /*pthread_mutex_lock(&mut);//相当于模拟单线程，锁不锁也没关系
           while( is_new_img == true){

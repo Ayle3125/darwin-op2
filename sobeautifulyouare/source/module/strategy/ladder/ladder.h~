@@ -17,4 +17,4 @@ protected:
     virtual int GetImageResult(cv::Mat &frame);
 };
 
-#endif // _GOLF_H_
+#endif // _LADDER_H_

@@ -28,7 +28,7 @@ void Golf::ThreadMotion()
 
 }
 
-int Golf::GetImageResult(cv::Mat &frame)
+int Golf::GetImageResult()
 {
     imgProc->imageProcess(frame,imgRes);
     ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
