@@ -17,7 +17,7 @@
 Strategist::Strategist()
 {
     vision_exe = 1;
-    is_cap = 1;
+    is_cap = true;
     is_new_img = false;
 
     m_angle_diff_opponentGoal = 0;

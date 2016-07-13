@@ -19,6 +19,10 @@
 #include <robcup_penalty.h>
 #include <robcup_striker.h>
 #include <sprint.h>
+#include <ladder.h>
+#include <golf.h>
+#include <fira_penalty.h>
+#include <shot.h>
 
 #define IMG_WIDTH 320
 #define IMG_HEIGHT 240
@@ -32,6 +36,10 @@
 #define ROBCUP_GOALKEEPER	53
 #define ROBCUP_PENALTY		54
 #define SPRINT			55
+#define LADDER			56
+#define GOLF			57
+#define SHOT			58
+#define FIRA_PENALTY	59
 
 void runObstacle();
 void runMarathon();
@@ -40,6 +48,11 @@ void runRobcup_fullback();
 void runRobcup_goalkeeper();
 void runRobcup_penalty();
 void runSprint();
+void runLadder();
+void runGolf();
+void runShot();
+void runFira_penalty();
+
 
 int main(int argc, char *argv[])
 {	
@@ -67,6 +80,18 @@ int main(int argc, char *argv[])
 	case SPRINT:
 		runSprint();
 		break;
+	case LADDER:
+		runLadder();
+		break;
+	case GOLF:
+		runGolf();
+		break;
+	case SHOT:
+		runShot();
+		break;
+	case FIRA_PENALTY:
+		runFira_penalty();
+		break;
 	default:
 		break;
 	}
@@ -90,11 +115,9 @@ void runMarathon()
 
 void runRobcup_striker()
 {
-	//Robcup_striker *robcup_striker = new Robcup_striker();
+	Robcup_striker *robcup_striker = new Robcup_striker();
 	// Here is for Robcup_striker
-	//robcup_striker->run();
-	Strategist *strategy = new Robcup_striker();
-	strategy->run();
+	robcup_striker->run();
 }
 
 void runRobcup_fullback()
@@ -123,4 +146,32 @@ void runSprint()
 	Sprint *sprint = new Sprint();
 	// Here is for Sprint
 	sprint->run();
+}
+
+void runLadder()
+{
+	Ladder *ladder = new Ladder();
+	// Here is for Sprint
+	ladder->run();
+}
+
+void runGolf()
+{
+	Golf *golf = new Golf();
+	// Here is for Sprint
+	golf->run();
+}
+
+void runShot()
+{
+	Shot *shot = new Shot();
+	// Here is for Sprint
+	shot->run();
+}
+
+void runFira_penalty()
+{
+	Fira_penalty *fira_penalty = new Fira_penalty();
+	// Here is for Sprint
+	fira_penalty->run();
 }

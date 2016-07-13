@@ -62,6 +62,7 @@ class Strategist {
         Motion *motion;
         compass *compasspro;
 		bool is_cap;
+		bool is_checkstatus;
 		
 
         /*------------------thread--------------------*/

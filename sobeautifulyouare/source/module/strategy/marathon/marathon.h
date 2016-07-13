@@ -44,6 +44,7 @@ class Marathon:public Strategist{
 
         double m_RLturn_straight;
 		double m_RLturn;
+		double m_RLturn_goal;
         double m_unit_RLturn;
         double m_MAX_RLturn;
 
