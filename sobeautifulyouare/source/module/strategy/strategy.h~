@@ -31,7 +31,10 @@
 #include <camera.h>
 #include <imgproc.h>
 #include <ColorFind/ColorFind.h>
+<<<<<<< HEAD
 #include <FindLine/findline.h>
+=======
+>>>>>>> origin/zhoudongyang
 #include <followball.h>
 #include <goalpost.h>
 #include <sideline.h>
