@@ -14,7 +14,7 @@ private:
 
 protected:
     virtual void ThreadMotion();
-    virtual int GetImageResult(cv::Mat &frame);
+    virtual int GetImageResult();
 };
 
 #endif // _GOLF_H_

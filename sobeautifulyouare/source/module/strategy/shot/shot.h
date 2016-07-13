@@ -17,4 +17,4 @@ protected:
     virtual int GetImageResult();
 };
 
-#endif // _GOLF_H_
+#endif // _SHOT_H_

@@ -28,7 +28,7 @@ void Shot::ThreadMotion()
 
 }
 
-int Shot::GetImageResult(cv::Mat &frame)
+int Shot::GetImageResult()
 {
     imgProc->imageProcess(frame,imgRes);
     ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);

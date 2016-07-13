@@ -62,6 +62,7 @@ class Strategist {
         Motion *motion;
         compass *compasspro;
 		bool is_cap;
+		bool is_checkstatus;
 		
 
         /*------------------thread--------------------*/
@@ -89,7 +90,7 @@ class Strategist {
         cv::Mat frame;
 		ImgProcResult *imgRes;
 		ImgProc *imgProc;
-        virtual int GetImageResult();
+        virtual int GetImageResult(){};
         void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
 
         /*------------------compass-------------------*/

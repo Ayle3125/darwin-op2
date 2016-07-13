@@ -3,7 +3,7 @@
 
 Shot::Shot()
 {
-	
+	debug_print = 1; 
 }
 
 Shot::~Shot()

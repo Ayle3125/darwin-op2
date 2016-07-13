@@ -44,6 +44,7 @@ class Marathon:public Strategist{
 
         double m_RLturn_straight;
 		double m_RLturn;
+		double m_RLturn;
         double m_unit_RLturn;
         double m_MAX_RLturn;
 
@@ -55,7 +56,7 @@ class Marathon:public Strategist{
         int debug_print;
     protected:
         virtual void ThreadMotion();
-        virtual int GetImageResult(int result_type);
+        virtual int GetImageResult();
 
 };
 
