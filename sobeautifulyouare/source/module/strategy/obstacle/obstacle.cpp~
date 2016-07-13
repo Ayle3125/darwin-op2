@@ -84,7 +84,7 @@ void Obstacle::ThreadMotion()
 {
     motion = new Motion();
     motion->poseInit();
-    is_cap = false;
+    //is_cap = false;
     //Head::GetInstance()->MoveByAngle(0,10);
     Walking::GetInstance()->Start();
     motion->walk(m_FBstep_straight, m_RLstep_straight, m_RLturn_straight);
@@ -92,7 +92,7 @@ void Obstacle::ThreadMotion()
     while ( m_execute ){//always true
         motion->CheckStatus();
         if ( m_process_state == BEFORE1){
-            is_cap = true;
+            //is_cap = true;
             tmp_img_result = GetImageResult_obstacle(1);
             if ( tmp_img_result == -1 ){
                 if ( debug_print ) fprintf(stderr,"Can't find the Obstacle!\n");
@@ -134,9 +134,7 @@ void Obstacle::ThreadMotion()
                         m_pre_state = BEFORE2;
                         m_process_state = TURN;
                     }
-                    else {
-                        motion->walk(m_FBstep,m_RLstep,m_RLturn);
-                    }
+                    motion->walk(m_FBstep,m_RLstep,m_RLturn);
                 }
 			}
 
@@ -145,7 +143,7 @@ void Obstacle::ThreadMotion()
 
         }
         else if ( m_process_state == LAST){
-
+			//TODO 
         }
         else if ( m_process_state == TURN ){//根据线的斜率和位置调整
             static double Line_check = 250; 
@@ -229,7 +227,7 @@ int Obstacle::RLFixed()
     return tmp_return;
 }
 
-void ChangeObstacleColor()
+void Obstacle::ChangeObstacleColor()
 {
 
 }

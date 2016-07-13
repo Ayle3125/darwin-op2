@@ -36,6 +36,7 @@ class Obstacle:public Strategist
                                          */
         cv::Point m_obstacle_pts[4];
         Point2D m_obstacle_center_2D;
+		double m_ObstacleCenterNeed[2];
         double m_ObstacleDiff;
         Point2D m_line_center_2D;
         double m_line_theta;//the angle of the white track  /:negative  \:positive
@@ -76,7 +77,7 @@ class Obstacle:public Strategist
 
     protected:
         virtual void ThreadMotion();
-        int GetImageResult_obstacle(int result_type);
+        int GetImageResult_obstacle(int result_type);//type: 0:line 1:obstacle
 
 };
 
