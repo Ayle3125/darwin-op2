@@ -36,8 +36,9 @@ mkdir Demo && cp ../source/data/CMakeLists-Demo.txt Demo/CMakeLists.txt
 
 cd .. && cp source/data/color.data bin/color.data		# main path
 cp source/data/ball.txt bin/ball.txt
-cp source/data/ball.txt bin/redbox.txt
-cp source/data/ball.txt bin/yellowbox.txt
+cp source/data/redbox.txt bin/redbox.txt
+cp source/data/yellowbox.txt bin/yellowbox.txt
+cp source/data/bluebox.txt bin/bluebox.txt
 cp source/data/cmake-build.sh all-build/cmake-build.sh
 chmod +x all-build/cmake-build.sh
 cp source/data/make-build.sh all-build/make-build.sh
