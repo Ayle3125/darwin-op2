@@ -31,10 +31,7 @@
 #include <camera.h>
 #include <imgproc.h>
 #include <ColorFind/ColorFind.h>
-<<<<<<< HEAD
 #include <FindLine/findline.h>
-=======
->>>>>>> origin/zhoudongyang
 #include <followball.h>
 #include <goalpost.h>
 #include <sideline.h>
@@ -44,6 +41,9 @@
 
 #define IMG_WIDTH 320
 #define IMG_HEIGHT 240
+#define VIEW_V_ANGLE (46.0)
+#define VIEW_H_ANGLE (58.0)
+
 #define OPPONENTGOAL (0) // or 180 can not other now
 enum ImgResultType{
     BALL,
@@ -55,6 +55,7 @@ enum ImgResultType{
 class Strategist {
     public:
         Strategist();
+        ~Strategist();
         int run();
 		int vision_exe;
 

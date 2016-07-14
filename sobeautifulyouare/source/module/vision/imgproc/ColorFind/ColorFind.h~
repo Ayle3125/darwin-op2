@@ -5,7 +5,7 @@
 #include <vector>
 #include "imagefilter.h"
 #include "imgproc.h"
-#define QT_NO_DEBUG
+
 class ColorFindResult : public ImgProcResult
 {
 public:

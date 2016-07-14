@@ -80,7 +80,7 @@ int BallTracker::SearchAndTracking(Point2D pos)
     static int          found_count     = 0;
     static int          not_found_count = 0;
     static bool         if_find = false;
-    static int          bear_not_found_count = 4;
+    static int          bear_not_found_count = 7;
     static const int    max_found_count = 0;
     static const double max_x_offset    = 3.0;
 
@@ -94,12 +94,14 @@ int BallTracker::SearchAndTracking(Point2D pos)
 	NoBallCount++;
         if(if_find && NoBallCount < bear_not_found_count)
         {
-            Head::GetInstance()->MoveTracking();
+            //Head::GetInstance()->MoveTracking();
+		return 0;
         }
         else
         {
 	    if ( if_find ) {
 			if_find = false;
+			Head::GetInstance()->MoveBackTracking();
 			return 2;
 	     }
             if(NoBallCount > NotFoundMaxCount){
@@ -147,11 +149,9 @@ int BallTracker::SearchAndTracking(Point2D pos)
         offset.X *= (Camera::VIEW_H_ANGLE / (double)Camera::WIDTH); // pixel per angle
         offset.Y *= (Camera::VIEW_V_ANGLE / (double)Camera::HEIGHT); // pixel per angle
 	double head_tilt_angle =  Head::GetInstance()->GetTiltAngle();//TODO
-		if ( ( head_tilt_angle + offset.Y ) > TiltTopLimit ) {
-			offset.Y-=10;
-		}
+		
         ball_position = offset;
-        Head::GetInstance()->MoveTracking(ball_position);
+        Head::GetInstance()->MoveTracking(ball_position*0.2);
 		return 1;
 		}
 		else {
@@ -200,7 +200,7 @@ void BallTracker::Process(Point2D pos)
         offset.X *=(Camera::VIEW_H_ANGLE / (double)Camera::WIDTH); // pixel per angle // change by ayle
         offset.Y *= (Camera::VIEW_V_ANGLE / (double)Camera::HEIGHT); // pixel per angle
         ball_position = offset;
-        //Head::GetInstance()->MoveTracking(ball_position);
+        Head::GetInstance()->MoveTracking(ball_position);
     }
 }
 

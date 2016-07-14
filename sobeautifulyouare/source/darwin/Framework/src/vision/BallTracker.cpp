@@ -197,10 +197,10 @@ void BallTracker::Process(Point2D pos)
         Point2D center = Point2D(Camera::WIDTH/2, Camera::HEIGHT/2);
         Point2D offset = pos - center;
         offset *= -1; // Inverse X-axis, Y-axis 如果图片中心为(0,0) 像素点左负右正、上负下正，实际角度相反
-        offset.X *=(Camera::VIEW_H_ANGLE / (double)Camera::WIDTH); // pixel per angle // change by ayle
+        offset.X *=(Camera::VIEW_H_ANGLE / (double)Camera::WIDTH); // pixel per angle 
         offset.Y *= (Camera::VIEW_V_ANGLE / (double)Camera::HEIGHT); // pixel per angle
         ball_position = offset;
-        //Head::GetInstance()->MoveTracking(ball_position);
+        Head::GetInstance()->MoveTracking(ball_position);
     }
 }
 
