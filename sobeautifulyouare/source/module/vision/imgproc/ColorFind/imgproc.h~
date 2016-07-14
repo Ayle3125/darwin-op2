@@ -1,8 +1,15 @@
 #ifndef _IMG_PROC_H_
 #define _IMG_PROC_H_
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
+
+#include "frame.h"
+#include "BlobResult.h"
 
 using std::vector;
 

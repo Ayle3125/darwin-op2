@@ -10,7 +10,10 @@ class ColorFindResult : public ImgProcResult
 {
 public:
     cv::Point2f center;
+    cv::Point2f leftUp;
+    cv::Point2f rightDown;
     cv::RotatedRect rect;
+    double area;
     float radius;
     bool valid;
     
@@ -28,12 +31,18 @@ public:
         center = tmp->center;
         rect = tmp->rect;
         radius = tmp->radius;
+	area = tmp->area;
+	leftUp = tmp->leftUp;
+	rightDown = tmp->rightDown;
     }
     void operator=(ColorFindResult &res)
     {
         center = res.center;
         rect = res.rect;
         radius = res.radius;
+	area = res.area;
+        leftUp = res.leftUp;
+	rightDown = res.rightDown;
     }
 };
 
