@@ -190,12 +190,13 @@ int Marathon::RLFixed()
     double diff = m_line_center_2D.X - ( IMG_WIDTH/2 );
     if ( fabs ( diff  ) > m_CenterDiff ){
         tmp_return =1;
-        m_RLturn_goal=  m_MAX_RLturn * 0.5*diff / ( IMG_WIDTH/2 );//change Y
-        m_pre_action = 1;
+        m_RLturn_goal=  -1*m_MAX_RLturn * 0.5*diff / ( IMG_WIDTH/2 );//change Y
         if ( diff > 0 ){
-            m_RLturn_goal*= -1;
-            m_pre_action *=-1;
+            m_pre_action = -1;
         }
+		else {
+			m_pre_action = 1;
+		}
         if(m_RLturn < m_RLturn_goal){
             m_RLturn += 0.5*m_unit_RLturn;
         }

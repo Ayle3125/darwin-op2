@@ -90,6 +90,10 @@ Motion::Motion()
 
 Motion::~Motion()
 {
+	Walking::GetInstance()->Stop();
+    while(Walking::GetInstance()->IsRunning() == 1) usleep(8000);
+	Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+	Action::GetInstance()->Start(15);
 }
 
 void Motion::Run(MyPointf *coorf)

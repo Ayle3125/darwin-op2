@@ -28,6 +28,10 @@ Strategist::Strategist()
     debug_print = 1;
 }
 
+Strategist::~Strategist()
+{
+}
+
 int Strategist::run()
 {	
     if ( debug_print ) printf( "srategy run\n");

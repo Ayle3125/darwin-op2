@@ -15,6 +15,7 @@ enum ObstacleState{
     BEFORE3,
     LAST,
     TURN,
+    TURNNEXT,
 };
 
 class Obstacle:public Strategist
@@ -25,34 +26,31 @@ class Obstacle:public Strategist
     private:
 
         /*************Image****************/
-        ImgProcResult *m_imgRes_line, *m_imgRes_color;
-        ImgProc *m_imgProc_line, *m_imgProc_color;
-        int m_pixel_num;
-        int m_PixelJudgeNum;
+        double m_pixel_num;
+        double m_PixelJudgeNum;
         cv::RotatedRect m_obstacle_rect;/*center:x,y	
                                          *size:width,height
                                          *angle:The rotation angle in a clockwise direction. 
                                          *void points(Point2f pts[]):会把四个顶点放在pts[],左下cd？和motion冲突
                                          */
         cv::Point m_obstacle_pts[4];
-        Point2D m_obstacle_center_2D;
+        cv::Point2f m_obstacle_center;
+		double m_ObstacleCenterNeed[3];
         double m_ObstacleDiff;
-        Point2D m_line_center_2D;
-        double m_line_theta;//the angle of the white track  /:negative  \:positive
 
         /*************Process****************/
         ObstacleState m_process_state;
         ObstacleState m_pre_state;
-        int m_NolookMaxTime;
-        int m_nolooktime;
+
         bool m_execute;
         int m_pre_action;// 1:move left  0:go straight  -1:move right  
 
         int LostDispose();
+		int HeadTracker(cv::Point2f);
         int TurnAdjust(int direction);
         int CheckLine();
         int RLFixed();
-        void ChangeObstacleColor();
+        void ChangeObstacleColor(int number);
 
         /*************Motion Order****************/
         double m_FBstep_straight;
@@ -76,7 +74,8 @@ class Obstacle:public Strategist
 
     protected:
         virtual void ThreadMotion();
-        int GetImageResult_obstacle(int result_type);
+		virtual int GetImageResult();
+        int GetImageResult_obstacle(int result_type);//type: 0:line 1:obstacle //abandon= =
 
 };
 

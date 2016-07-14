@@ -41,6 +41,9 @@
 
 #define IMG_WIDTH 320
 #define IMG_HEIGHT 240
+#define VIEW_V_ANGLE (46.0)
+#define VIEW_H_ANGLE (58.0)
+
 #define OPPONENTGOAL (0) // or 180 can not other now
 enum ImgResultType{
     BALL,
@@ -52,6 +55,7 @@ enum ImgResultType{
 class Strategist {
     public:
         Strategist();
+        ~Strategist();
         int run();
 		int vision_exe;
 
