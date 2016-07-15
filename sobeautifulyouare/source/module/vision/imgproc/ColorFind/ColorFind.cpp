@@ -11,10 +11,6 @@ void ColorFind::imageProcess(cv::Mat img, ImgProcResult *Result)
 {
     filter.filt(img, filter_res);
     clear();
-    cvtColor(filter_res, filter_res, CV_BGR2GRAY);
-    equalizeHist(filter_res, filter_res);
-    threshold(filter_res,filter_res,196,255,THRESH_BINARY_INV);
-    blur(filter_res, filter_res, Size(3,3));
 #ifdef QT_NO_DEBUG
     namedWindow("filter_res");
     imshow("filter_res", filter_res);
