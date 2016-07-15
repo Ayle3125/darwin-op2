@@ -34,6 +34,7 @@ public:
 	area = tmp->area;
 	leftUp = tmp->leftUp;
 	rightDown = tmp->rightDown;
+	valid = tmp->valid;
     }
     void operator=(ColorFindResult &res)
     {
@@ -43,6 +44,7 @@ public:
 	area = res.area;
         leftUp = res.leftUp;
 	rightDown = res.rightDown;
+	valid = res.valid;
     }
 };
 

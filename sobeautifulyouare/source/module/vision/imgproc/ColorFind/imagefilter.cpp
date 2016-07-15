@@ -59,13 +59,14 @@ void imageFilter::filt(const cv::Mat &in, cv::Mat &out)
     erode(img_res, img_res, element_erode);
     cvtColor(img_res, img_res, CV_BGR2GRAY);
     equalizeHist(img_res, img_res);
-    threshold(img_res,img_res,196,255,THRESH_BINARY_INV);
+    threshold(img_res,img_res, 196,255,THRESH_BINARY_INV);
     blur(img_res, img_res, Size(3,3));
     Mat tmp = in.clone();
 
     colorFilter(tmp);
 
-    img_res = filted_img_hs;
+    img_res = filted_img_hs * 0.5 + filted_img_rgb * 0.5;
+//threshold(img_res,img_res,128,255,THRESH_BINARY);
     out = img_res.clone();
 }
 
