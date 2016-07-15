@@ -10,9 +10,8 @@
 #include <strategy.h>
 
 enum ObstacleState{
-    BEFORE1,
-    BEFORE2,
-    BEFORE3,
+    BEFOREODD,
+    BEFOREEVEN,
     LAST,
     TURN,
     TURNNEXT,
@@ -49,7 +48,6 @@ class Obstacle:public Strategist
         int LostDispose();
 		int HeadTracker(cv::Point2f);
         int TurnAdjust(int direction);
-        int CheckLine();
         int RLFixed();
         void ChangeObstacleColor(int number);
 
