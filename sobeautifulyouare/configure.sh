@@ -41,6 +41,9 @@ cp source/data/yellowbox.txt bin/yellowbox.txt
 cp source/data/bluebox.txt bin/bluebox.txt
 cp source/data/blue.txt bin/blue.txt
 cp source/data/red.txt bin/red.txt
+cp source/data/blue.jpg bin/blue.jpg
+cp source/data/red.jpg bin/red.jpg
+cp source/data/yellow.jpg bin/yellow.jpg
 cp source/data/cmake-build.sh all-build/cmake-build.sh
 chmod +x all-build/cmake-build.sh
 cp source/data/make-build.sh all-build/make-build.sh
