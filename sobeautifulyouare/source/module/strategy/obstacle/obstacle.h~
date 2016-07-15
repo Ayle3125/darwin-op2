@@ -10,8 +10,8 @@
 #include <strategy.h>
 
 enum ObstacleState{
-    BEFOREODD,
-    BEFOREEVEN,
+    BEFOREODD,// 1,3
+    BEFOREEVEN,// 2
     LAST,
     TURN,
     TURNNEXT,

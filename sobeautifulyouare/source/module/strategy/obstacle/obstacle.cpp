@@ -7,18 +7,18 @@ Obstacle::Obstacle()
     imgProc = new ColorFind();
 
     m_pixel_num = 0;
-    m_PixelJudgeNum[0] = 1000;
+    m_PixelJudgeNum[0] = 100;
     m_PixelJudgeNum[1] = 100;
     m_PixelJudgeNum[2] = 100;//TODO
     m_obstacle_center.x =0;
     m_obstacle_center.y =0;
     m_ObstacleDiff = 10;
-    m_ObstacleCenterNeed[0] = 310;
-    m_ObstacleCenterNeed[1] = 45;
-    m_ObstacleCenterNeed[2] = 280;
+    m_ObstacleCenterNeed[0] = 300;
+    m_ObstacleCenterNeed[1] = 60;
+    m_ObstacleCenterNeed[2] = 290;
     m_TurnPan[0] = 65;
     m_TurnPan[1] = 65;
-    m_TurnPan[2] = 65;
+    m_TurnPan[2] = 55;
 
 
     m_execute = 1;
@@ -62,6 +62,7 @@ int Obstacle::GetImageResult()
         m_obstacle_rect = tmp_result->rect;
         m_obstacle_center = tmp_result->center;
         if ( debug_print ) fprintf(stderr,"color leftup: %lf %lf \n",  tmp_result->leftUp.x,  tmp_result->leftUp.y);
+        if ( debug_print ) fprintf(stderr,"color rightdown: %lf %lf \n",  tmp_result->rightDown.x,  tmp_result->rightDown.y);
         if ( debug_print ) fprintf(stderr,"pixle:%lf  color center: %lf %lf \n",m_pixel_num,m_obstacle_center.x,m_obstacle_center.y);
     }
 
@@ -85,7 +86,7 @@ void Obstacle::ThreadMotion()
     motion->poseInit();
     Walking::GetInstance()->Start();
     while (0){
-        ChangeObstacleColor(2);	
+        ChangeObstacleColor(1);	
         m_process_state = LAST;
         Head::GetInstance()->MoveByAngle(0,TILT);
         motion->walk(0,0,0);
@@ -186,7 +187,7 @@ void Obstacle::ThreadMotion()
                     tilt = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_TILT);
                     fprintf(stderr,"pan:%lf  tilt:%lf!\n",pan,tilt);
                 }
-                if ( fabs(pan) > m_TurnPan[TURN_count] ){ //TODO ?
+                if ( fabs(pan) > m_TurnPan[TURN_count] && fabs( m_obstacle_center.x - IMG_WIDTH/2 ) > 50 ){ //TODO ?
                     TURN_count++;
                     ChangeObstacleColor(TURN_count);
                     if ( debug_print ) fprintf(stderr,"**************************************************state turn to next!\n");
@@ -216,39 +217,46 @@ void Obstacle::ThreadMotion()
         else if ( m_process_state == TURNNEXT){
             double LR = 1.0;// +L -R
             tmp_img_result = GetImageResult();
-            if ( tmp_img_result == 0 ){
-                if ( debug_print ) fprintf(stderr,"Find the next Obstacle!\n");
-                HeadTracker(m_obstacle_center);
-            }
+
             pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
-            if ( pan < 0 ){
+            if ( m_pre_state == BEFOREEVEN ){
                 LR *= -1;
-                pan *= -1;
             }
-            if ( pan < unit_pan && tmp_img_result==0 ){
+
+            if ( fabs(pan) < 10 ){
                 if ( debug_print ) fprintf(stderr,"**************************************************state turn next to before!\n");
-                if ( m_pre_state == BEFOREODD ){
-                    m_process_state = BEFOREEVEN;
-                }
-                else {
-                    m_process_state = BEFOREODD;
+                if (tmp_img_result==0){
+                    if ( m_pre_state == BEFOREODD ){
+                        m_process_state = BEFOREEVEN;
+                    }
+                    else {
+                        m_process_state = BEFOREODD;
+                    }
                 }
             }
             else {
-                pan -= unit_pan;
+                Head::GetInstance()->MoveByAngleOffset(LR*3*unit_pan,0);
             }
-            Head::GetInstance()->MoveByAngle(LR*pan,TILT);
             if ( debug_print ) fprintf(stderr,"pan:%lf  tilt:%lf!\n",MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN),MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_TILT));
-            m_RLturn_goal = LR*pan*m_MAX_RLturn/pan_range;
-            if ( debug_print ) fprintf(stderr,"RLturn_goal: %lf !\n",m_RLturn_goal);
-            if(m_RLturn < m_RLturn_goal){
-                m_RLturn += 0.3*m_unit_RLturn;
+            if ( tmp_img_result == 0 ){
+                if ( debug_print ) fprintf(stderr,"Find the next Obstacle!\n");
+                //HeadMove(m_obstacle_center);
+
+                m_RLturn_goal = LR*pan*m_MAX_RLturn/pan_range;
+                if ( debug_print ) fprintf(stderr,"RLturn_goal: %lf !\n",m_RLturn_goal);
+                if(m_RLturn < m_RLturn_goal){
+                    m_RLturn += 0.5*m_unit_RLturn;
+                }
+                else{
+                    m_RLturn -= 0.5*m_unit_RLturn;
+                }
+                m_FBstep = 1.0;
+                motion->walk(m_FBstep,m_RLstep,m_RLturn);
             }
-            else{
-                m_RLturn -= 0.3*m_unit_RLturn;
+            else {
+                motion->walk(0,0,0);
+
             }
-            m_FBstep = 1.0;
-            motion->walk(m_FBstep,m_RLstep,m_RLturn);
         }
     }
 }
@@ -283,7 +291,6 @@ int Obstacle::LostDispose()
 
 }
 
-
 int Obstacle::RLFixed()
 {
     int tmp_return = 0;
@@ -311,6 +318,7 @@ int Obstacle::RLFixed()
 
 void Obstacle::ChangeObstacleColor(int number)
 {
+    Head::GetInstance()->InitTracking();
     ColorFind *tmp_proc = dynamic_cast<ColorFind *>(imgProc);
     if ( number == 0 ){
         tmp_proc->load("redbox.txt");
@@ -344,9 +352,25 @@ int Obstacle::HeadTracker(cv::Point2f pos)
         offset.X = pos.x - IMG_WIDTH/2;
         offset.Y = pos.y - IMG_HEIGHT/2;
         offset *= -1; // Inverse X-axis, Y-axis 
-        offset.X *=0.5*(VIEW_H_ANGLE / IMG_WIDTH); // pixel per angle 
-        offset.Y *= 0.5*(VIEW_V_ANGLE / IMG_HEIGHT);
+        offset.X *= 0.9*(VIEW_H_ANGLE / IMG_WIDTH); // pixel per angle 
+        offset.Y *= 0.3*(VIEW_V_ANGLE / IMG_HEIGHT);
         //offset.Y =0;
         Head::GetInstance()->MoveTracking(offset);
     }
+}
+
+
+int Obstacle::HeadMove(cv::Point2f pos)
+{
+    double offset;
+    offset = pos.x - IMG_WIDTH/2;
+    if ( fabs(offset)>10 ){
+
+    }
+    else {
+    }
+    //offset.Y = pos.y - IMG_HEIGHT/2;
+    offset *= -1; // Inverse X-axis, Y-axis 
+    offset *= 0.5*(VIEW_H_ANGLE / IMG_WIDTH); 
+    Head::GetInstance()->MoveByAngleOffset(offset,0);
 }
