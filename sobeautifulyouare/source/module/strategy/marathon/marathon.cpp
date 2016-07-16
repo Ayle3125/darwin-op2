@@ -33,7 +33,7 @@ Marathon::Marathon()
     m_RLturn = 0.425;
     m_RLturn_goal = 0;
     m_RLturn_straight = 0.425;
-    m_unit_RLturn = 2.0;
+    m_unit_RLturn = 5.0;
     m_MAX_RLturn = 35;
     m_RLstep_straight = 0;
     m_RLstep = 0;

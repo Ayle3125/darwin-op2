@@ -13,16 +13,17 @@ Obstacle::Obstacle()
     m_obstacle_center.x =0;
     m_obstacle_center.y =0;
     m_ObstacleDiff = 10;
-    m_ObstacleCenterNeed[0] = 300;
-    m_ObstacleCenterNeed[1] = 60;
-    m_ObstacleCenterNeed[2] = 290;
+    m_ObstacleCenterNeed[0] = 280;
+    m_ObstacleCenterNeed[1] = 50;
+    m_ObstacleCenterNeed[2] = 267;
     m_TurnPan[0] = 65;
-    m_TurnPan[1] = 65;
+    m_TurnPan[1] = 57;
     m_TurnPan[2] = 55;
 
 
     m_execute = 1;
     m_pre_action = 0;
+    m_pre_state = LAST;
     m_process_state = BEFOREODD;
 
     //TODO go straight first    
@@ -85,12 +86,26 @@ void Obstacle::ThreadMotion()
     int TURN_count = 0;
     motion->poseInit();
     Walking::GetInstance()->Start();
-    while (0){
-        ChangeObstacleColor(1);	
-        m_process_state = LAST;
+    while (0){ if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RL:%lf color:%d\n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE,TURN_count);
+
+        static int last_count=0;
+        //turn right
         Head::GetInstance()->MoveByAngle(0,TILT);
-        motion->walk(0,0,0);
-        tmp_img_result = GetImageResult();
+        if (last_count==1){
+            motion->walk(m_FBstep_straight,m_RLstep_straight,m_RLturn_straight);
+
+        }
+        else{
+            motion->walk(1,0,-10);
+            motion->walk(1,0,-10);
+            //   motion->walk(m_FBstep,m_RLstep,m_RLturn);
+            int  tmp = 0;
+            while(1){
+                printf("%d\n",tmp++);
+                usleep(620*8000);
+            }
+            last_count =1;
+        }
     }
     int obstacle_num_odd=0;
     while ( m_execute ){//always true
@@ -148,22 +163,21 @@ void Obstacle::ThreadMotion()
             }
         }
         else if ( m_process_state == LAST){ //TODO finishing line?
-            if (m_pre_state == BEFOREODD){
-                //turn right
-                Head::GetInstance()->MoveByAngle(0,TILT);
-                m_RLturn_goal = -20;
-            }
-            else {
-                m_RLturn_goal = 20;
-            }
-            if(m_RLturn < m_RLturn_goal){
-                m_RLturn += m_unit_RLturn;
+
+            static int last_count=0;
+            //turn right
+            Head::GetInstance()->MoveByAngle(0,TILT);
+            if (last_count==1){
+                motion->walk(m_FBstep_straight,m_RLstep_straight,m_RLturn_straight);
+
             }
             else{
-                m_RLturn -= m_unit_RLturn;
+                motion->walk(1,0,-10);
+                motion->walk(1,0,-10);
+                //   motion->walk(m_FBstep,m_RLstep,m_RLturn);
+                int  tmp = 0;
+                last_count =1;
             }
-            m_FBstep = 10.0;
-            motion->walk(m_FBstep,m_RLstep,m_RLturn);
         }
         else if ( m_process_state == TURN ){
             tmp_img_result = GetImageResult();
@@ -197,7 +211,7 @@ void Obstacle::ThreadMotion()
                     else {
                         m_process_state = TURNNEXT;
                     }
-                }
+                }	
                 else {
                     turn_count++;
                 }
@@ -219,7 +233,7 @@ void Obstacle::ThreadMotion()
             tmp_img_result = GetImageResult();
 
             pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
-            if ( m_pre_state == BEFOREEVEN ){
+            if ( pan > 0){
                 LR *= -1;
             }
 
@@ -227,11 +241,20 @@ void Obstacle::ThreadMotion()
                 if ( debug_print ) fprintf(stderr,"**************************************************state turn next to before!\n");
                 if (tmp_img_result==0){
                     if ( m_pre_state == BEFOREODD ){
-                        m_process_state = BEFOREEVEN;
+                        if (TURN_count >1){
+                            m_process_state = LAST;
+                        }
+                        else{
+                            m_process_state = BEFOREEVEN;
+                        }
                     }
                     else {
                         m_process_state = BEFOREODD;
                     }
+                }
+                else {
+
+                    HeadTracker(m_obstacle_center);
                 }
             }
             else {
@@ -242,7 +265,7 @@ void Obstacle::ThreadMotion()
                 if ( debug_print ) fprintf(stderr,"Find the next Obstacle!\n");
                 //HeadMove(m_obstacle_center);
 
-                m_RLturn_goal = LR*pan*m_MAX_RLturn/pan_range;
+                m_RLturn_goal = pan*m_MAX_RLturn/pan_range;
                 if ( debug_print ) fprintf(stderr,"RLturn_goal: %lf !\n",m_RLturn_goal);
                 if(m_RLturn < m_RLturn_goal){
                     m_RLturn += 0.5*m_unit_RLturn;
@@ -352,25 +375,9 @@ int Obstacle::HeadTracker(cv::Point2f pos)
         offset.X = pos.x - IMG_WIDTH/2;
         offset.Y = pos.y - IMG_HEIGHT/2;
         offset *= -1; // Inverse X-axis, Y-axis 
-        offset.X *= 0.9*(VIEW_H_ANGLE / IMG_WIDTH); // pixel per angle 
+        offset.X *= 0.5*(VIEW_H_ANGLE / IMG_WIDTH); // pixel per angle 
         offset.Y *= 0.3*(VIEW_V_ANGLE / IMG_HEIGHT);
         //offset.Y =0;
         Head::GetInstance()->MoveTracking(offset);
     }
-}
-
-
-int Obstacle::HeadMove(cv::Point2f pos)
-{
-    double offset;
-    offset = pos.x - IMG_WIDTH/2;
-    if ( fabs(offset)>10 ){
-
-    }
-    else {
-    }
-    //offset.Y = pos.y - IMG_HEIGHT/2;
-    offset *= -1; // Inverse X-axis, Y-axis 
-    offset *= 0.5*(VIEW_H_ANGLE / IMG_WIDTH); 
-    Head::GetInstance()->MoveByAngleOffset(offset,0);
 }

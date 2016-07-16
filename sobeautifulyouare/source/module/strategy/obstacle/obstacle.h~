@@ -47,6 +47,7 @@ class Obstacle:public Strategist
 
         int LostDispose();
 		int HeadTracker(cv::Point2f);
+		int HeadMove(cv::Point2f);
         int TurnAdjust(int direction);
         int RLFixed();
         void ChangeObstacleColor(int number);
