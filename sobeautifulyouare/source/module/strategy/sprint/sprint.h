@@ -3,6 +3,8 @@
 
 #include <strategy.h>
 
+#define IMG_WIDTH 320
+#define IMG_HEIGHT 240
 
 class Sprint:public Strategist
 {
@@ -22,6 +24,9 @@ private:
     /*******image process********/
 
     void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
+    int m_no_point_found;
+    int m_NopointMaxCount;
+    void LostDispose();
 
     /******motion**************/
     void SprintForward();
@@ -37,9 +42,16 @@ private:
     double m_RLTurn_straight;
     double m_RLTurn_left;
     double m_RLTurn_right;
+    double m_RLturn_degree;
+    double m_RLturn_max;
     double m_FitFBStep;
     double m_FitMaxRLTurn;
     double LRMoveAngle;
+    int m_pre_action;
+
+    double m_percent_CenterDiff;
+    int m_Xoffset;
+    int m_target_Xoffset;
     /*---------------------------*/
     int debug_print;
 
