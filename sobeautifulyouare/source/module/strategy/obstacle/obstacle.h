@@ -10,9 +10,8 @@
 #include <strategy.h>
 
 enum ObstacleState{
-    BEFORE1,
-    BEFORE2,
-    BEFORE3,
+    BEFOREODD,// 1,3
+    BEFOREEVEN,// 2
     LAST,
     TURN,
     TURNNEXT,
@@ -27,7 +26,7 @@ class Obstacle:public Strategist
 
         /*************Image****************/
         double m_pixel_num;
-        double m_PixelJudgeNum;
+        double m_PixelJudgeNum[3];
         cv::RotatedRect m_obstacle_rect;/*center:x,y	
                                          *size:width,height
                                          *angle:The rotation angle in a clockwise direction. 
@@ -36,6 +35,7 @@ class Obstacle:public Strategist
         cv::Point m_obstacle_pts[4];
         cv::Point2f m_obstacle_center;
 		double m_ObstacleCenterNeed[3];
+		double m_TurnPan[3];
         double m_ObstacleDiff;
 
         /*************Process****************/
@@ -48,7 +48,6 @@ class Obstacle:public Strategist
         int LostDispose();
 		int HeadTracker(cv::Point2f);
         int TurnAdjust(int direction);
-        int CheckLine();
         int RLFixed();
         void ChangeObstacleColor(int number);
 
