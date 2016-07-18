@@ -65,7 +65,7 @@ void imageFilter::filt(const cv::Mat &in, cv::Mat &out)
 
     colorFilter(tmp);
 
-    img_res = img_res * 0.3 + filted_img_hs * 0.5 + filted_img_rgb * 0.5;
+    img_res = img_res * 0.3 + filted_img_hs * 0.8 + filted_img_rgb * 0.2;
     threshold(img_res,img_res,55,255,THRESH_BINARY);
     out = img_res.clone();
 }
