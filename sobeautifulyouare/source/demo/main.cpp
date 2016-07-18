@@ -56,122 +56,127 @@ void runFira_penalty();
 
 int main(int argc, char *argv[])
 {	
-	if(argc == 1)
-		return 1;
-	switch((int)argv[1][0]) {
-	case OBSTACLE:
-		runObstacle();
-		break;
-	case MARATHON:
-		runMarathon();
-		break;
-	case ROBCUP_STRIKER:
-		runRobcup_striker();
-		break;
-	case ROBCUP_FULLBACK:
-		runRobcup_fullback();
-		break;
-	case ROBCUP_GOALKEEPER:
-		runRobcup_goalkeeper();
-		break;
-	case ROBCUP_PENALTY:
-		runRobcup_penalty();
-		break;
-	case SPRINT:
-		runSprint();
-		break;
-	case LADDER:
-		runLadder();
-		break;
-	case GOLF:
-		runGolf();
-		break;
-	case SHOT:
-		runShot();
-		break;
-	case FIRA_PENALTY:
-		runFira_penalty();
-		break;
-	default:
-		break;
-	}
+    if(argc == 1)
+        return 1;
+    switch((int)argv[1][0]) {
+        case OBSTACLE:
+            runObstacle();
+            break;
+        case MARATHON:
+            runMarathon();
+            break;
+        case ROBCUP_STRIKER:
+            runRobcup_striker();
+            break;
+        case ROBCUP_FULLBACK:
+            runRobcup_fullback();
+            break;
+        case ROBCUP_GOALKEEPER:
+            runRobcup_goalkeeper();
+            break;
+        case ROBCUP_PENALTY:
+            runRobcup_penalty();
+            break;
+        case SPRINT:
+            runSprint();
+            break;
+        case LADDER:
+            runLadder();
+            break;
+        case GOLF:
+            runGolf();
+            break;
+        case SHOT:
+            runShot();
+            break;
+        case FIRA_PENALTY:
+            runFira_penalty();
+            break;
+        default:
+            printf("Please input the choice(e.g:sudo ./demo 1):\n");
+            printf("%2d:obstacle,         %2d:Marathon,           %2d:Robcup_striker\n", OBSTACLE-48, MARATHON-48, ROBCUP_STRIKER-48);
+            printf("%2d:Robcup_fullback,  %2d:Robcup_goalkeeper,  %2d:runRobcup_penalty\n", ROBCUP_FULLBACK-48, ROBCUP_GOALKEEPER-48, ROBCUP_PENALTY-48);
+            printf("%2d:Sprint,           %2d:Ladder,             %2d:Golf\n", SPRINT-48, LADDER-48, GOLF-48);
+            printf("%2d:Shot,             %2d:Fira_penalty:     \n", SHOT-48, FIRA_PENALTY-48);
+            break;
+    }
 
-	return 0;
+    return 0;
 }
 
 void runObstacle()
 {
-	Obstacle *obstacle = new Obstacle();
-	// Here is for Obstacle
-	obstacle->run();
+    Obstacle *obstacle = new Obstacle();
+    // Here is for Obstacle
+    obstacle->run();
 }
 
 void runMarathon()
 {
-	Marathon *marathon = new Marathon();
-	// Here is for Marathon
-	marathon->run();
+    Marathon *marathon = new Marathon();
+    // Here is for Marathon
+    marathon->run();
 }
 
 void runRobcup_striker()
 {
-	Robcup_striker *robcup_striker = new Robcup_striker();
-	// Here is for Robcup_striker
-	robcup_striker->run();
+    Robcup_striker *robcup_striker = new Robcup_striker();
+    // Here is for Robcup_striker
+    robcup_striker->run();
 }
 
 void runRobcup_fullback()
 {
-	Robcup_fullback *robcup_fullback = new Robcup_fullback();
-	// Here is for Robcup_fullback
-	robcup_fullback->run();
+    Robcup_fullback *robcup_fullback = new Robcup_fullback();
+    // Here is for Robcup_fullback
+    robcup_fullback->run();
 }
 
 void runRobcup_goalkeeper()
 {
-	Robcup_goalkeeper *robcup_goalkeeper = new Robcup_goalkeeper();
-	// Here is for Robcup_goalkeeper
-	robcup_goalkeeper->run();
+    Robcup_goalkeeper *robcup_goalkeeper = new Robcup_goalkeeper();
+    // Here is for Robcup_goalkeeper
+    robcup_goalkeeper->run();
 }
 
 void runRobcup_penalty()
 {
-	Robcup_penalty *robcup_penalty = new Robcup_penalty();
-	// Here is for Robcup_penalty
-	robcup_penalty->run();
+    Robcup_penalty *robcup_penalty = new Robcup_penalty();
+    // Here is for Robcup_penalty
+    robcup_penalty->run();
 }
 
 void runSprint()
 {
-	Sprint *sprint = new Sprint();
-	// Here is for Sprint
-	sprint->run();
+    Sprint *sprint = new Sprint();
+    // Here is for Sprint
+    sprint->run();
 }
 
 void runLadder()
 {
-	Ladder *ladder = new Ladder();
-	// Here is for Sprint
-	ladder->run();
+    Ladder *ladder = new Ladder();
+    // Here is for Sprint
+    ladder->run();
 }
 
 void runGolf()
 {
-	Golf *golf = new Golf();
-	// Here is for Sprint
-	golf->run();
+    Golf *golf = new Golf();
+    // Here is for Sprint
+    golf->run();
 }
 
 void runShot()
 {
-	Shot *shot = new Shot();
-	// Here is for Sprint
-	shot->run();
+    Shot *shot = new Shot();
+    // Here is for Sprint
+    shot->run();
 }
 
 void runFira_penalty()
 {
-	Fira_penalty *fira_penalty = new Fira_penalty();
-	// Here is for Sprint
-	fira_penalty->run();
+    Fira_penalty *fira_penalty = new Fira_penalty();
+    // Here is for Sprint
+    fira_penalty->run();
 }

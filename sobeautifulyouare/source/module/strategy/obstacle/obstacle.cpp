@@ -9,7 +9,7 @@ Obstacle::Obstacle()
     m_pixel_num = 0;
     m_PixelJudgeNum[0] = 100;
     m_PixelJudgeNum[1] = 100;
-    m_PixelJudgeNum[2] = 100;//TODO
+    m_PixelJudgeNum[2] = 100;//abandon
     m_obstacle_center.x =0;
     m_obstacle_center.y =0;
     m_ObstacleDiff = 10;
@@ -26,7 +26,13 @@ Obstacle::Obstacle()
     m_pre_state = LAST;
     m_process_state = BEFOREODD;
 
+    TURN_count = 0;
+
     //TODO go straight first    
+    pan = 0;
+    tilt = 10;
+    unit_pan = 0.5;
+	pan_range = Head::GetInstance()->GetLeftLimitAngle(); 
     m_FBstep = 10;
     m_FBstep_straight = 15;
     m_FBstep_goal = 0;
@@ -62,8 +68,6 @@ int Obstacle::GetImageResult()
         m_pixel_num = tmp_result->area;
         m_obstacle_rect = tmp_result->rect;
         m_obstacle_center = tmp_result->center;
-        if ( debug_print ) fprintf(stderr,"color leftup: %lf %lf \n",  tmp_result->leftUp.x,  tmp_result->leftUp.y);
-        if ( debug_print ) fprintf(stderr,"color rightdown: %lf %lf \n",  tmp_result->rightDown.x,  tmp_result->rightDown.y);
         if ( debug_print ) fprintf(stderr,"pixle:%lf  color center: %lf %lf \n",m_pixel_num,m_obstacle_center.x,m_obstacle_center.y);
     }
 
@@ -79,16 +83,12 @@ void Obstacle::ThreadMotion()
 
     motion->walk(m_FBstep_straight, m_RLstep_straight, m_RLturn_straight);
     int tmp_img_result=0, tmp_rlfix_result=0, tmp_turn_result=0, turn_flag = 0;
-    double pan,tilt;
-    double pan_range = Head::GetInstance()->GetLeftLimitAngle();  
-    double unit_pan = 0.5;
-    int turn_count = 0;
-    int TURN_count = 0;
+
     motion->poseInit();
     Walking::GetInstance()->Start();
-    while (0){ if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RL:%lf color:%d\n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE,TURN_count);
-
-        static int last_count=0;
+    while (0){ //debug
+		if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RL:%lf color:%d\n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE,TURN_count);
+        int last_count=0;
         //turn right
         Head::GetInstance()->MoveByAngle(0,TILT);
         if (last_count==1){
@@ -98,7 +98,6 @@ void Obstacle::ThreadMotion()
         else{
             motion->walk(1,0,-10);
             motion->walk(1,0,-10);
-            //   motion->walk(m_FBstep,m_RLstep,m_RLturn);
             int  tmp = 0;
             while(1){
                 printf("%d\n",tmp++);
@@ -107,9 +106,9 @@ void Obstacle::ThreadMotion()
             last_count =1;
         }
     }
-    int obstacle_num_odd=0;
     while ( m_execute ){//always true
         if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RL:%lf color:%d\n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE,TURN_count);
+
         motion->CheckStatus();
         if ( m_process_state == BEFOREODD){
             Head::GetInstance()->MoveByAngle(0,TILT);
@@ -118,14 +117,13 @@ void Obstacle::ThreadMotion()
                 //TODO LostDispose();//need turn around  ?
             }
             else {
-                if ( m_pixel_num > m_PixelJudgeNum[obstacle_num_odd] || turn_flag ){
+                if ( m_pixel_num > m_PixelJudgeNum[TURN_count] || turn_flag ){
                     turn_flag = 1;
-                    tmp_turn_result = TurnAdjust(obstacle_num_odd); 
+                    tmp_turn_result = TurnAdjust(TURN_count); 
                     if ( tmp_turn_result == 0 ){
                         m_FBstep = m_FBstep_straight;
                         m_RLturn = m_RLturn_straight;
                         turn_flag = 0;
-                        obstacle_num_odd = obstacle_num_odd+2;
                         m_pre_state = BEFOREODD;
                         if ( debug_print ) fprintf(stderr,"**************************************************state beforeODD to turn !\n");
                         m_process_state = TURN;
@@ -144,7 +142,7 @@ void Obstacle::ThreadMotion()
             tmp_img_result = GetImageResult();
             if ( tmp_img_result == -1 ){
                 if ( debug_print ) fprintf(stderr,"Can't find the Obstacle!\n");
-                //TODO LostDispose();//need turn around  
+                //TODO LostDispose();
             }
             else {
                 if ( m_pixel_num > m_PixelJudgeNum[1] || turn_flag ){
@@ -175,18 +173,17 @@ void Obstacle::ThreadMotion()
                 motion->walk(1,0,-10);
                 motion->walk(1,0,-10);
                 //   motion->walk(m_FBstep,m_RLstep,m_RLturn);
-                int  tmp = 0;
                 last_count =1;
+                usleep(620*8000);
             }
         }
         else if ( m_process_state == TURN ){
+			static int not_found_count = 0;
             tmp_img_result = GetImageResult();
-
             static const int TurnMaxCount = 50000; //TODO
             if ( tmp_img_result == -1 ){
                 if ( debug_print ) fprintf(stderr,"Can't find the Obstacle!\n");
-                turn_count++;
-                //TODO 
+                not_found_count++;
                 if ( m_pre_state == BEFOREODD ){
                     Head::GetInstance()->MoveByAngleOffset(-0.1*unit_pan,0);
                 }
@@ -195,6 +192,7 @@ void Obstacle::ThreadMotion()
                 }
             }
             else {
+				not_found_count = 0;
                 HeadTracker(m_obstacle_center);
                 pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
                 if ( debug_print ) {
@@ -213,7 +211,7 @@ void Obstacle::ThreadMotion()
                     }
                 }	
                 else {
-                    turn_count++;
+                    not_found_count++;
                 }
                 tmp_rlfix_result = RLFixed();
                 if( tmp_rlfix_result == 0 ){
@@ -222,7 +220,7 @@ void Obstacle::ThreadMotion()
 
             }
             motion->walk(m_FBstep, m_RLstep, m_RLturn);
-            if ( turn_count > TurnMaxCount ){
+            if ( not_found_count > TurnMaxCount ){
                 TURN_count++;
                 ChangeObstacleColor(TURN_count);
                 m_process_state = TURNNEXT;

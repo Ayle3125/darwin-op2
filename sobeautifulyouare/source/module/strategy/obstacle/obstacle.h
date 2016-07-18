@@ -41,9 +41,10 @@ class Obstacle:public Strategist
         /*************Process****************/
         ObstacleState m_process_state;
         ObstacleState m_pre_state;
-
         bool m_execute;
-        int m_pre_action;// 1:move left  0:go straight  -1:move right  
+        int m_pre_action;// 1:move left  0:go straight  -1:move right 
+
+	    int TURN_count; 
 
         int LostDispose();
 		int HeadTracker(cv::Point2f);
@@ -52,6 +53,10 @@ class Obstacle:public Strategist
         void ChangeObstacleColor(int number);
 
         /*************Motion Order****************/
+		double pan,tilt;
+		double pan_range; 
+		double unit_pan;
+
         double m_FBstep_straight;
         double m_FBstep;
         double m_FBstep_goal;

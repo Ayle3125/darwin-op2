@@ -271,8 +271,6 @@ void Motion::walk(double FBstep, double RLstep, double RLturn)
         if(Walking::GetInstance()->IsRunning() == true){
             Walking::GetInstance()->Stop();
         }
-        else{
-        }      
     }
     else {
         if(Walking::GetInstance()->IsRunning() == false){
