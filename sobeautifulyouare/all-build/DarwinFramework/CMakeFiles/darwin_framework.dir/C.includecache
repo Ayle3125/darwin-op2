@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minGlue.h
+stdio.h
+-
+
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.c
+minIni.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.h
+assert.h
+-
+string.h
+-
+stdlib.h
+-
+
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minIni.h
+minGlue.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/minGlue.h
+tchar.h
+-
+wxMinIni.h
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/wxMinIni.h
+string
+-
+
+/home/ayle/code/git/soccer/sobeautifulyouare/source/darwin/Framework/src/minIni/wxMinIni.h
+wx/wx.h
+-
+

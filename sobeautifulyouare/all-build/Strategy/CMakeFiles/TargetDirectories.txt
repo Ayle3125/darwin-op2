@@ -1,0 +1,12 @@
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_shot.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_obstacle.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_marathon.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_ladder.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_fullback.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_goalkeeper.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_striker.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_sprint.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_robcup_penalty.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_golf.dir
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/Strategy/CMakeFiles/strategy_fira_penalty.dir

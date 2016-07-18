@@ -1,0 +1,1 @@
+/home/ayle/code/git/soccer/sobeautifulyouare/all-build/VisionCam/CMakeFiles/vision_camera.dir

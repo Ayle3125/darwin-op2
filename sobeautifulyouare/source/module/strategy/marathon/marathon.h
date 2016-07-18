@@ -12,8 +12,6 @@ class Marathon:public Strategist{
         Marathon();
         ~Marathon();
     private:
-        BallTracker *tracker;
-		BallFollower *follower;
         /*************Process****************/
         bool m_execute;
         MarathonState m_process_state;

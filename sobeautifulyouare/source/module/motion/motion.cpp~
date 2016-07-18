@@ -90,7 +90,6 @@ Motion::Motion()
 
 Motion::~Motion()
 {
-printf("motion is gone!");
 	Walking::GetInstance()->Stop();
     while(Walking::GetInstance()->IsRunning() == 1) usleep(8000);
 	Action::GetInstance()->m_Joint.SetEnableBody(true, true);
