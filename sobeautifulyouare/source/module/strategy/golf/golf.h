@@ -4,8 +4,8 @@
 #include <strategy.h>
 
 enum GolfState{
-    APPROACH,
     ADDRESS,
+    APPROACH,
     SWING,
 };
 class Golf:public Strategist
@@ -20,18 +20,19 @@ class Golf:public Strategist
         int m_pre_action;// 1:move left  0:go straight  -1:move right 
 
         int ApproachBall();//return 1:OK
-        int AddressHole();
+        int AddressHole(int ball_valid, int hole_valid);//0:valid -1:invalid
         int Swing();
-		int HeadTracker(cv::Point2f);
+		int HeadTrackTilt(cv::Point2f);
 
         /*************Image*******************/
         ImgProcResult *m_imgRes_hole, *m_imgRes_ball;
         ImgProc *m_imgPro_hole, *m_imgPro_ball;
-        cv::Point m_ball_center;
-        cv::Point m_hole_center;
+        cv::Point2f m_ball_center;
+        cv::Point2f m_hole_center;
         double m_ball_radius;
 
 		double m_ApproachBallTop;
+		double m_ApproachHoleTop;
 		double m_AddressHoleCenter;
         double m_AddressDiff;
         double m_SwingDiff;
@@ -42,7 +43,8 @@ class Golf:public Strategist
 		double pan_range; 
 		double unit_pan;
 		double tilt_min;		
-		double tilt_range;
+		double tilt_range; 
+		double unit_tilt;
 
         double m_FBstep_straight;
         double m_FBstep;
