@@ -32,6 +32,7 @@ class Golf:public Strategist
         double m_ball_radius;
 
 		double m_ApproachBallTop;
+		double m_ApproachHoleTop;
 		double m_AddressHoleCenter;
         double m_AddressDiff;
         double m_SwingDiff;
@@ -42,7 +43,8 @@ class Golf:public Strategist
 		double pan_range; 
 		double unit_pan;
 		double tilt_min;		
-		double tilt_range;
+		double tilt_range; 
+		double unit_tilt;
 
         double m_FBstep_straight;
         double m_FBstep;

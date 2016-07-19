@@ -22,7 +22,6 @@ class Golf:public Strategist
         int ApproachBall();//return 1:OK
         int AddressHole(int ball_valid, int hole_valid);//0:valid -1:invalid
         int Swing();
-		int HeadTrackTilt(cv::Point2f);
 
         /*************Image*******************/
         ImgProcResult *m_imgRes_hole, *m_imgRes_ball;
