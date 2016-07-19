@@ -3,17 +3,17 @@
 
 #include <strategy.h>
 
-enum GolfState{
-    ADDRESS,
-    APPROACH,
-    SWING,
-};
 class Golf:public Strategist
 {
     public:
         Golf();
         ~Golf();
     private:
+        enum GolfState{
+            ADDRESS,
+            APPROACH,
+            SWING,
+        };
         /*************Process****************/
         bool m_execute;
         GolfState m_process_state;
@@ -30,24 +30,24 @@ class Golf:public Strategist
         cv::Point2f m_hole_center;
         double m_ball_radius;
 
-		double m_ApproachBallTop;
-		double m_ApproachHoleTop;
-		double m_AddressHoleCenter;
+        double m_ApproachBallTop;
+        double m_ApproachHoleTop;
+        double m_AddressHoleCenter;
         double m_AddressDiff;
         double m_SwingDiff;
         cv::Point2f m_AddressBallCenter,m_SwingBallCenter;
-		
+
 
         /*************Motion Order*************/
-		double pan_range; 
-		double unit_pan;
-		double tilt_min;		
-		double tilt_range; 
-		double unit_tilt;
+        double pan_range; 
+        double unit_pan;
+        double tilt_min;		
+        double tilt_range; 
+        double unit_tilt;
 
         double m_FBstep_straight;
         double m_FBstep;
-		double m_FBstep_ApproachMin;
+        double m_FBstep_ApproachMin;
         double m_FBstep_goal;
         double m_unit_FBstep;
         double m_MAX_FBstep;

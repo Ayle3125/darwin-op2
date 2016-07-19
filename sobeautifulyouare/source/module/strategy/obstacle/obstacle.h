@@ -9,13 +9,6 @@
 
 #include <strategy.h>
 
-enum ObstacleState{
-    BEFOREODD,// 1,3
-    BEFOREEVEN,// 2
-    LAST,
-    TURN,
-    TURNNEXT,
-};
 
 class Obstacle:public Strategist
 {
@@ -23,6 +16,13 @@ class Obstacle:public Strategist
         Obstacle();
         ~Obstacle();
     private:
+        enum ObstacleState{
+            BEFOREODD,// 1,3
+            BEFOREEVEN,// 2
+            LAST,
+            TURN,
+            TURNNEXT,
+        };
 
         /*************Image****************/
         double m_pixel_num;
@@ -34,8 +34,8 @@ class Obstacle:public Strategist
                                          */
         cv::Point m_obstacle_pts[4];
         cv::Point2f m_obstacle_center;
-		double m_ObstacleCenterNeed[3];
-		double m_TurnPan[3];
+        double m_ObstacleCenterNeed[3];
+        double m_TurnPan[3];
         double m_ObstacleDiff;
 
         /*************Process****************/
@@ -44,18 +44,18 @@ class Obstacle:public Strategist
         bool m_execute;
         int m_pre_action;// 1:move left  0:go straight  -1:move right 
 
-	    int TURN_count; 
+        int TURN_count; 
 
         int LostDispose();
-		int HeadTracker(cv::Point2f);
+        int HeadTracker(cv::Point2f);
         int TurnAdjust(int direction);
         int RLFixed();
         void ChangeObstacleColor(int number);
 
         /*************Motion Order****************/
-		double pan,tilt;
-		double pan_range; 
-		double unit_pan;
+        double pan,tilt;
+        double pan_range; 
+        double unit_pan;
 
         double m_FBstep_straight;
         double m_FBstep;
@@ -78,7 +78,7 @@ class Obstacle:public Strategist
 
     protected:
         virtual void ThreadMotion();
-		virtual int GetImageResult();
+        virtual int GetImageResult();
         int GetImageResult_obstacle(int result_type);//type: 0:line 1:obstacle //abandon= =
 
 };

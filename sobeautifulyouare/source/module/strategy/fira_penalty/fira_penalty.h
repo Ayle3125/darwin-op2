@@ -2,59 +2,70 @@
 #define _FIRA_PENALTY_H_
 
 #include <strategy.h>
-
 class Fira_penalty:public Strategist
 {
-public:
-	Fira_penalty();
-	~Fira_penalty();
-private:
+    public:
+        Fira_penalty();
+        ~Fira_penalty();
+    private:
+        enum PenaltyState{
+            ADDRESSGOAL,
+            APPROACHBALL,
+            KICK,
+        };
+        /*************Process****************/
+        bool m_execute;
+        PenaltyState m_process_state;
+        int m_pre_action;// 1:move left  0:go straight  -1:move right 
 
-            BallTracker *tracker;
-            BallFollower *follower;
-            Motion *motion;
+        int ApproachBall();//return 1:OK
+        int Address(int ball_valid, int hole_valid);//0:valid -1:invalid
 
-            int m_penalty_flag;
-            int m_img_result;
 
-            void Followball();
-            void Adjustment();
-            void Findcolumn();
+        /*************Image*******************/
+        ImgProcResult *m_imgRes_goal, *m_imgRes_ball;
+        ImgProc *m_imgPro_goal, *m_imgPro_ball;
+        cv::Point2f m_ball_center;
+        cv::Point2f m_goal_center;
 
-            bool m_is_checkstatus;
+        double m_ApproachBallTop;
+        double m_AddressDiff;
+        double m_KickDiff;
+        cv::Point2f m_AddressBallCenter,m_SwingBallCenter;
 
-            int m_NoBallMaxCount;
-            int m_NoBallCount;
-            double m_GoalFBStep;
-            double m_GoalRLTurn;
-            double m_FBStep;
-            double m_RLTurn;
-            double m_UnitFBStep;
-            double m_UnitRLTurn;
-            double m_forward_count;
-            double m_forward_max;
-            double m_UnitFBStep;
-            double m_UnitRLTurn;
 
-            double m_FollowMinFBStep;
-            double m_FollowMaxFBStep;
-            double m_FollowMaxRLTurn;
-            int m_KickBallMaxCount;
-            int m_KickBallCount;
-            int KickBall;
-		
-	    int m_pan_angle;
-	    int m_pan_max;
-            /*--------------------Vision--------------------*/
-            cv::Point2f m_point_center_2D;
-            int debug_print;
-            double m_percent_CenterDiff_X;
-            double m_percent_CenterDiff_Y;
-            int m_img_range;
+        /*************Motion Order*************/
+        double pan_range; 
+        double unit_pan;
+        double tilt_min;		
+        double tilt_range; 
+        double unit_tilt;
 
-protected:
-    virtual void ThreadMotion();
-    virtual int GetImageResult();
+        double m_FBstep_straight;
+        double m_FBstep;
+        double m_FBstep_ApproachMin;
+        double m_FBstep_goal;
+        double m_unit_FBstep;
+        double m_MAX_FBstep;
+
+        double m_RLturn_straight;
+        double m_RLturn;
+        double m_RLturn_goal;
+        double m_unit_RLturn;
+        double m_MAX_RLturn;
+
+        double m_RLstep_straight;
+        double m_RLstep;
+        double m_RLstep_goal;
+        double m_unit_RLstep;
+        double m_MAX_RLstep;
+        /*------------------------------------*/
+
+        int debug_print;
+
+    protected:
+        virtual void ThreadMotion();
+        virtual int GetImageResult();
 };
 
 #endif // _FIRA_PENALTY_H_
