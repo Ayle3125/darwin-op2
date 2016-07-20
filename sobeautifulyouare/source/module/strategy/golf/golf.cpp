@@ -134,6 +134,10 @@ Walking::GetInstance()->Stop();
 					
 					Head::GetInstance()->MoveByAngle(0,-20);
                    	motion->walk(0,0,0);
+					Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+					Action::GetInstance()->Start(81);
+					Walking::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+					Walking::GetInstance()->m_Joint.SetEnableLeftArmOnly(false,false);
                     m_process_state = SWING;
 					}
                 }
@@ -158,8 +162,8 @@ if ( swing_count>1){
 	usleep(500 * 8000);
 	
         Action::GetInstance()->m_Joint.SetEnableBody(true, true);
-        Action::GetInstance()->Start(81);
-		while ( Action::GetInstance()->IsRunning() ) usleep(8000);
+       // Action::GetInstance()->Start(81);
+		//while ( Action::GetInstance()->IsRunning() ) usleep(8000);
         //Action::GetInstance()->m_Joint.SetEnableBody(true, true);
         Action::GetInstance()->Start(80);
 }
