@@ -127,7 +127,7 @@ void Robcup_striker::FindBall()
     static int found_count = 0;
     static int MaxFoundCount = 200;
     if ( tracker->limit_mode != 0){
-        tracker->ChangeLimit(20, -10, 30, 0);
+        //tracker->ChangeLimit(20, -10, 30, 0);
     }
 
 
@@ -310,7 +310,7 @@ void Robcup_striker::KickAdjust()
     static int adjust_time = 0;
     static const int MaxAdjustTime = 100;
     if ( tracker->limit_mode != 4){
-        tracker->ChangeLimit(10, -5, 30, 4);
+        //tracker->ChangeLimit(10, -5, 30, 4);
     }
     adjust_time++;
     double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);

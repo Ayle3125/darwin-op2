@@ -37,8 +37,9 @@ namespace Robot
 
 		int  Search(bool count_reset);
         int  SearchAndTracking(Point2D pos);
-        void ChangeLimit(int tiltTop, int tiltBottom, int panLimit, int mode);
+        void ChangeLimit(int tiltTop, int tiltBottom, int panLimit, int mode){};
         void Process(Point2D pos);
+
 	};
 }
 

@@ -9,18 +9,18 @@ class Fira_penalty:public Strategist
         ~Fira_penalty();
     private:
         enum PenaltyState{
-            ADDRESSGOAL,
-            APPROACHBALL,
+			FINDBALL,
+			TURN,
+            ADDRESS,
+            APPROACH,
             KICK,
         };
         /*************Process****************/
         bool m_execute;
+		int m_position;//0:middle 1:left -1:right
         PenaltyState m_process_state;
-        int m_pre_action;// 1:move left  0:go straight  -1:move right 
-
-        int ApproachBall();//return 1:OK
-        int Address(int ball_valid, int hole_valid);//0:valid -1:invalid
-
+        
+        int AddressGoal(int ball_valid, int hole_valid);//0:valid -1:invalid
 
         /*************Image*******************/
         ImgProcResult *m_imgRes_goal, *m_imgRes_ball;
@@ -28,10 +28,9 @@ class Fira_penalty:public Strategist
         cv::Point2f m_ball_center;
         cv::Point2f m_goal_center;
 
-        double m_ApproachBallTop;
         double m_AddressDiff;
         double m_KickDiff;
-        cv::Point2f m_AddressBallCenter,m_SwingBallCenter;
+        cv::Point2f m_AddressBallCenter,m_AddressGoalCenter;
 
 
         /*************Motion Order*************/
@@ -65,7 +64,8 @@ class Fira_penalty:public Strategist
 
     protected:
         virtual void ThreadMotion();
-        virtual int GetImageResult();
+        //virtual int GetImageResult();
+        int GetImageResult(int result_type);//0:ball 1:goal
 };
 
 #endif // _FIRA_PENALTY_H_

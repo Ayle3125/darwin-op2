@@ -29,7 +29,7 @@ namespace Robot
 
 	public:
         Point2D     ball_position;
-		int limit_mode;// 0: striker find ball  1:striker find goal 2 goalkeeper
+		int limit_mode;// 0: striker_findball  1:striker_findgoal 2:goalkeeper 3:fullback
 		 int PanAmplitude;
 		 
 		BallTracker();
@@ -39,6 +39,8 @@ namespace Robot
         int  SearchAndTracking(Point2D pos);
         void ChangeLimit(int tiltTop, int tiltBottom, int panLimit, int mode);
         void Process(Point2D pos);
+
+void ChangeLimit(int a,int b,int c,int d){};
 	};
 }
 

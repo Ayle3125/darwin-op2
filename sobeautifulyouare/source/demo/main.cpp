@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
             runRobcup_goalkeeper();
             break;
         case ROBCUP_PENALTY:
-            runRobcup_penalty();
+            runFira_penalty();
             break;
         case SPRINT:
             runSprint();

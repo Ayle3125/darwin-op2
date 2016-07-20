@@ -173,7 +173,7 @@ int Strategist::CompassCheck()
     return check_result;
 }
 
-void Strategist::CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D)
+void Strategist::CVpointTo2Dpoint(cv::Point2f p_cv, Point2D &p_2D)
 {
     p_2D.X = p_cv.x;
     p_2D.Y = p_cv.y;

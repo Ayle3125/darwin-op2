@@ -55,6 +55,7 @@ enum ImgResultType{
 class Strategist {
     public:
         Strategist();
+        ~Strategist();
         int run();
 		int vision_exe;
 

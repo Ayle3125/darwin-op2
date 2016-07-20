@@ -94,10 +94,10 @@ int main(int argc, char *argv[])
             break;
         default:
             printf("Please input the choice(e.g:sudo ./demo 1):\n");
-            printf("%2d:       obstacle,  %2d:         Marathon,  %2d:Robcup_striker\n", OBSTACLE-48, MARATHON-48, ROBCUP_STRIKER-48);
+            printf("%2d:obstacle,         %2d:Marathon,           %2d:Robcup_striker\n", OBSTACLE-48, MARATHON-48, ROBCUP_STRIKER-48);
             printf("%2d:Robcup_fullback,  %2d:Robcup_goalkeeper,  %2d:runRobcup_penalty\n", ROBCUP_FULLBACK-48, ROBCUP_GOALKEEPER-48, ROBCUP_PENALTY-48);
-            printf("%2d:         Sprint,  %2d:           Ladder,  %2d:Golf\n", SPRINT-48, LADDER-48, GOLF-48);
-            printf("%2d:           Shot,  %2d:     Fira_penalty\n", SHOT-48, FIRA_PENALTY-48);
+            printf("%2d:Sprint,           %2d:Ladder,             %2d:Golf\n", SPRINT-48, LADDER-48, GOLF-48);
+            printf("%2d:Shot,             %2d:Fira_penalty:     \n", SHOT-48, FIRA_PENALTY-48);
             break;
     }
 

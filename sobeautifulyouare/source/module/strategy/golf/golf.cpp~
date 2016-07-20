@@ -163,9 +163,12 @@ void Golf::ThreadMotion()
                         Action::GetInstance()->Start(80);
                     }
                 }
+                else {
+                    
+	                swing_count = 0;
+				}
             }
             else {
-                swing_count = 0;
                 //TODO lost dispose: head track &| go back
                 motion->walk(-5,0,0);
             }
@@ -208,8 +211,6 @@ int Golf::GetImageResult(int result_type)
 
 int Golf::ApproachBall()//I need the ball center xy function && check the valid of Tiny// But the hole is better
 {
-    static double Tiny = 1.0;
-
     if ( m_hole_center.y > m_ApproachHoleTop ){
         return 1;        
     }

@@ -127,7 +127,7 @@ void Robcup_striker::FindBall()
     static int found_count = 0;
     static int MaxFoundCount = 200;
     if ( tracker->limit_mode != 0){
-        tracker->ChangeLimit(20, -10, 30, 0);
+        //tracker->ChangeLimit(20, -10, 30, 0);
     }
 
 
@@ -371,7 +371,7 @@ void Robcup_striker::KickAdjust()
     }
 }
 
-int Robcup_striker::GetImageResult(cv::Mat &frame)
+int Robcup_striker::GetImageResult()
 {
 	
 }

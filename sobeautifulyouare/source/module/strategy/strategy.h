@@ -95,7 +95,7 @@ class Strategist {
 		ImgProcResult *imgRes;
 		ImgProc *imgProc;
         virtual int GetImageResult(){};
-        void CVpointTo2Dpoint(cv::Point p_cv, Point2D &p_2D);
+        void CVpointTo2Dpoint(cv::Point2f p_cv, Point2D &p_2D);
 
         /*------------------compass-------------------*/
         int CompassCheck();

@@ -3,7 +3,48 @@
 
 Fira_penalty::Fira_penalty()
 {
-	
+    m_imgRes_ball = new ColorFindResult();
+    m_imgPro_ball = new ColorFind();
+    m_imgRes_goal = new ColorFindResult();
+    m_imgPro_goal = new ColorFind();
+
+    m_execute = true;
+    m_process_state = ADDRESS;
+    m_position = 0;
+
+    m_ball_center.x = 0; m_ball_center.y = 0;
+    m_goal_center.x = 0; m_goal_center.y = 0;
+
+    m_AddressDiff = 10;
+    m_AddressBallCenter.x = 105;  m_AddressBallCenter.y = 90;
+    m_AddressGoalCenter.x = 50;   m_AddressGoalCenter.y = 240;
+    m_KickDiff = 10;
+
+    //TODO go straight first  
+    unit_pan = 0.5;
+    pan_range = Head::GetInstance()->GetLeftLimitAngle(); 
+    tilt_min = Head::GetInstance()->GetBottomLimitAngle();
+    tilt_range = Head::GetInstance()->GetTopLimitAngle() - tilt_min	;
+    unit_tilt = 0.5;
+
+    m_FBstep = 10;
+    m_FBstep_straight = 10;
+    m_FBstep_goal = 10;
+    m_FBstep_ApproachMin = 5;
+    m_unit_FBstep = 0.3;
+    m_MAX_FBstep = 30; 
+    m_RLturn = 0;
+    m_RLturn_goal = 0;
+    m_RLturn_straight = 0.425;
+    m_unit_RLturn = 5.0;
+    m_MAX_RLturn = 35;
+    m_RLstep_straight = 0;
+    m_RLstep_goal = 0;
+    m_RLstep = 0;
+    m_unit_RLstep = 0.3;
+    m_MAX_RLstep = 30;
+
+    debug_print = 1;
 }
 
 Fira_penalty::~Fira_penalty()
@@ -15,28 +56,248 @@ Fira_penalty::~Fira_penalty()
 void Fira_penalty::ThreadMotion()
 {
     motion = new Motion();
-    
-    
-	motion->poseInit();
+    ColorFind *tmp_proc = dynamic_cast<ColorFind *>(m_imgPro_ball);
+    tmp_proc->load("hongqiu.txt");
+    tmp_proc = dynamic_cast<ColorFind *>(m_imgPro_goal);
+    tmp_proc->load("bluebox.txt");
 
-   
-    while(true)
-    {
-	    motion->CheckStatus();
-        
+    Head::GetInstance()->MoveByAngle(0,10); 
+    motion->poseInit();
+
+    int tmp_img_result=0, tmp_return_value =0, tmp_img_result2=0;
+
+    while(1){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
+			static int turn_count = 0;
+            turn_count++;
+            m_RLstep_goal = -1*m_position*10;
+            m_RLturn_goal = m_position*10;
+            if(m_RLstep < m_RLstep_goal){
+            	m_RLstep += m_unit_RLstep;
+    	    }
+      		else{
+            	m_RLstep -= m_unit_RLstep;
+        	}
+        	if(m_RLturn < m_RLturn_goal){
+            	m_RLturn += m_unit_RLturn;
+        	}
+        	else{
+            	m_RLturn -= m_unit_RLturn;
+        	}
+            if ( turn_count > 5000 ){//TODO
+				m_FBstep = 0;
+				m_RLstep = 0;
+				m_RLturn = 0;
+				m_process_state = ADDRESS;
+                         fprintf(stderr,"**************************************************state change !\n"); 
+                         Walking::GetInstance()->Stop();
+                         getchar(); 
+                         Walking::GetInstance()->Start();
+			}
+        	motion->walk(m_FBstep,m_RLstep,m_RLturn);
+/*
+        double tmp_pan=0,tmp_tilt=-5;
+        scanf("%lf%lf", &tmp_pan, &tmp_tilt);
+        Head::GetInstance()->MoveByAngle(tmp_pan, tmp_tilt); 
+        GetImageResult(0);
+        GetImageResult(1);
+*/
+        /*
+           getchar();
+           Walking::GetInstance()->Start();
+           m_RLstep += m_unit_RLstep;
+        //motion->walk(-1,m_RLstep,0);
+        motion->walk(-1,0,m_RLstep);
+        usleep(10*8000);
+        Walking::GetInstance()->Stop();
+        */
+    }
+
+    BallTracker tracker = BallTracker();
+    BallFollower follower = BallFollower();
+    int position_count = 0;
+    int MAXTurnCount = 500;
+    while(m_execute)
+    {{if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
+
+         motion->CheckStatus();
+         if ( m_process_state == FINDBALL ){
+             tmp_img_result = GetImageResult(0);
+             if ( tmp_img_result != -1 ){
+                if ( m_ball_center.x > IMG_WIDTH/2 ) {// just mid+-+-? 0.0
+                    position_count--;
+                }
+                else {
+                    position_count++;
+                }
+                if ( fabs(position_count)>3 ){
+                    if ( position_count > 0 )
+                        m_position = 1;
+                    else {
+                        m_position = -1;
+						m_goal_center.x = IMG_WIDTH - m_goal_center.x;
+					}
+                    m_process_state = TURN;
+                         fprintf(stderr,"**************************************************state change !\n"); 
+                         Walking::GetInstance()->Stop();
+                         getchar(); 
+                         Walking::GetInstance()->Start();
+                }
+             }
+         }
+         else if ( m_process_state == TURN){
+            static int turn_count = 0;
+            turn_count++;
+            m_RLstep_goal = -1*m_position*10;
+            m_RLturn_goal = m_position*10;
+            if(m_RLstep < m_RLstep_goal){
+            	m_RLstep += m_unit_RLstep;
+    	    }
+      		else{
+            	m_RLstep -= m_unit_RLstep;
+        	}
+        	if(m_RLturn < m_RLturn_goal){
+            	m_RLturn += m_unit_RLturn;
+        	}
+        	else{
+            	m_RLturn -= m_unit_RLturn;
+        	}
+            if ( turn_count > MAXTurnCount ){//TODO
+				m_FBstep = 0;
+				m_RLstep = 0;
+				m_RLturn = 0;
+				m_process_state = ADDRESS;
+                         fprintf(stderr,"**************************************************state change !\n"); 
+                         Walking::GetInstance()->Stop();
+                         getchar(); 
+                         Walking::GetInstance()->Start();
+			}
+        	motion->walk(m_FBstep,m_RLstep,m_RLturn);
+         }
+         else if ( m_process_state == ADDRESS ){
+             tmp_img_result = GetImageResult(0);
+             tmp_img_result2 = GetImageResult(1);
+             if ( tmp_img_result != -1 || tmp_img_result2 !=-1 ){ 
+                 tmp_return_value = AddressGoal(tmp_img_result,tmp_img_result2);   
+                 if(tmp_return_value == 1){
+                     if ( debug_print ) {
+                         fprintf(stderr,"**************************************************state change !\n"); 
+                         Walking::GetInstance()->Stop();
+                         getchar(); 
+                         Walking::GetInstance()->Start();
+                     }
+                     m_process_state = APPROACH;
+                     m_FBstep = 10.0; m_RLstep = 0.0; m_RLturn = 0.0;
+                 }
+                 else {
+                     m_FBstep =-1.0;
+                 }
+                 motion->walk(m_FBstep,m_RLstep,m_RLturn);
+             }
+         }
+         else if( m_process_state == APPROACH ){
+             tmp_img_result = GetImageResult(0);
+             if ( tmp_img_result != -1 ){
+                 Point2D m_ball_center_2D(m_ball_center.x,m_ball_center.y);
+                 tracker.Process(m_ball_center_2D);
+                 follower.Process(tracker.ball_position);
+                 if(follower.KickBall != 0)
+                 {
+                     Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
+                     Action::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+
+                     if(follower.KickBall == -1)
+                     {
+                         Action::GetInstance()->Start(12);   // RIGHT KICK
+                         fprintf(stderr, "RightKick! \n");
+                     }
+                     else if(follower.KickBall == 1)
+                     {
+                         Action::GetInstance()->Start(13);   // LEFT KICK
+                         fprintf(stderr, "LeftKick! \n");
+                     }
+                 }
+                 //motion->walk(m_FBstep,m_RLstep,m_RLturn);
+             }
+             else {
+                 motion->walk(-5,0,0);
+             }
+         }
+         else if ( m_process_state == KICK ){
+
+         }
+     }
+
     }
 
 }
 
-int Fira_penalty::GetImageResult()
+int Fira_penalty::AddressGoal(int ball_valid, int hole_valid)//TODO move R, turn L
 {
-    imgProc->imageProcess(frame,imgRes);
-    ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
-    if ( tmp_result->valid == false ){
-        return -1;
+    double ball_diff=0, goal_diff=0; 
+    if ( ball_valid==0)
+        ball_diff = m_ball_center.x - m_AddressBallCenter.x;
+    if ( hole_valid==0)
+        goal_diff = m_goal_center.x - m_AddressGoalCenter.x;
+    if ( debug_print ) fprintf(stderr,"address diff: ball %lf  hole %lf\n",ball_diff,goal_diff);
+    if ( fabs(ball_diff) >  m_AddressDiff || fabs(goal_diff) >  0.5*m_AddressDiff){
+
+        m_RLstep_goal = -1*m_MAX_RLstep*goal_diff/IMG_WIDTH;
+        if(m_RLstep < m_RLstep_goal){
+            m_RLstep += m_unit_RLstep;
+            //m_RLstep = 0;
+        }
+        else{
+            m_RLstep -= m_unit_RLstep;
+        }
+        m_RLturn_goal = -1*m_MAX_RLturn*ball_diff/IMG_WIDTH;
+        if(m_RLturn < m_RLturn_goal){
+            m_RLturn += m_unit_RLturn;
+        }
+        else{
+            m_RLturn -= m_unit_RLturn;
+            //m_RLturn = 0.0;
+        }
+        if ( ball_valid!=0)
+            m_RLstep = 0;
+        if ( hole_valid!=0)
+            m_RLturn = 0;
     }
     else {
+        return 1;
+    }
+    return 0;
+}
+
+int Fira_penalty::GetImageResult(int result_type)
+{
+
+    while ( is_new_img == false ) usleep(8000);
+    if ( result_type == 0){
+        m_imgPro_ball->imageProcess(frame,m_imgRes_ball);
+        ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(m_imgRes_ball);
+        if ( tmp_result->valid == false ){
+            return -1;
+            if ( debug_print ) fprintf(stderr,"Can't find the ball!\n");
+        }
+        else {
+            m_ball_center = tmp_result->center;
+            if ( debug_print ) fprintf(stderr,"ball_center:%lf %lf  \n",m_ball_center.x,m_ball_center.y);
+        }
+    }
+    else if ( result_type == 1){
+        m_imgPro_goal->imageProcess(frame,m_imgRes_goal);
+        ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(m_imgRes_goal);
+        if ( tmp_result->valid == false ){
+            if ( debug_print ) fprintf(stderr,"Can't find the hole!\n");
+            return -1;
+        }
+        else {
+            m_goal_center = tmp_result->center;
+            if ( debug_print ) fprintf(stderr,"hole_center:%lf %lf  \n",m_goal_center.x,m_goal_center.y);
+        }
 
     }
+    is_new_img = false;
+    return 0;
 }
 

@@ -72,7 +72,7 @@ void Golf::ThreadMotion()
 
     int tmp_img_result=0, tmp_return_value =0, tmp_img_result2=0;
 
-    while(0){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
+    while(1){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
         double tmp_pan=0,tmp_tilt=-5;
         scanf("%lf%lf", &tmp_pan, &tmp_tilt);
         Head::GetInstance()->MoveByAngle(tmp_pan, tmp_tilt); 
@@ -163,9 +163,12 @@ void Golf::ThreadMotion()
                         Action::GetInstance()->Start(80);
                     }
                 }
+                else {
+                    
+	                swing_count = 0;
+				}
             }
             else {
-                swing_count = 0;
                 //TODO lost dispose: head track &| go back
                 motion->walk(-5,0,0);
             }
