@@ -42,10 +42,10 @@ cp source/data/bluebox.txt bin/bluebox.txt
 cp source/data/blue.txt bin/blue.txt
 cp source/data/red.txt bin/red.txt
 cp source/data/golf.txt bin/golf.txt
-cp source/data/blue.jpg bin/blue.jpg
-cp source/data/red.jpg bin/red.jpg
+cp source/data/bluebox.jpg bin/bluebox.jpg
+cp source/data/redbox.jpg bin/redbox.jpg
 cp source/data/golf.jpg bin/golf.jpg
-cp source/data/yellow.jpg bin/yellow.jpg
+cp source/data/yellowbox.jpg bin/yellowbox.jpg
 
 cp source/data/hongqiu.jpg bin/hongqiu.jpg
 cp source/data/golfgoal.jpg bin/golfgoal.jpg
