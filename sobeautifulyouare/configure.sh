@@ -50,6 +50,8 @@ cp source/data/yellow.jpg bin/yellow.jpg
 cp source/data/hongqiu.jpg bin/hongqiu.jpg
 cp source/data/golfgoal.jpg bin/golfgoal.jpg
 cp source/data/golfgoal.txt bin/golfgoal.txt
+cp source/data/lanmen.jpg bin/lanmen.jpg
+cp source/data/lanmen.txt bin/lanmen.txt
 cp source/data/lvqiu.jpg bin/lvqiu.jpg
 cp source/data/hongqiu.txt bin/hongqiu.txt
 cp source/data/lvqiu.txt bin/lvqiu.txt
