@@ -19,6 +19,8 @@ class Fira_penalty:public Strategist
         bool m_execute;
 		int m_position;//0:middle 1:left -1:right
         PenaltyState m_process_state;
+
+		int m_MAXTurnCount;
         
         int AddressGoal(int ball_valid, int hole_valid);//0:valid -1:invalid
 

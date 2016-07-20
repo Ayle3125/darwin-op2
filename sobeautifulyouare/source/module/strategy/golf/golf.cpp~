@@ -72,7 +72,7 @@ void Golf::ThreadMotion()
 
     int tmp_img_result=0, tmp_return_value =0, tmp_img_result2=0;
 
-    while(0){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
+    while(1){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
         double tmp_pan=0,tmp_tilt=-5;
         scanf("%lf%lf", &tmp_pan, &tmp_tilt);
         Head::GetInstance()->MoveByAngle(tmp_pan, tmp_tilt); 
@@ -127,6 +127,8 @@ void Golf::ThreadMotion()
                     m_FBstep = 0.0; m_RLstep = 0.0; m_RLturn = 0.0;
                     motion->walk(0,0,0);
                     if ( approach_count>3){
+
+Action::GetInstance()->SetEnableLeftArmOnly(false,false);
                         if ( debug_print ) {
                             fprintf(stderr,"**************************************************state change !\n"); 
                             Walking::GetInstance()->Stop();
