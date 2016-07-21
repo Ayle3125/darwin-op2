@@ -48,7 +48,7 @@ namespace Robot
 	public:
 		bool DEBUG_PRINT;
 		int KickBall;		// 0: No ball 1:Left -1:Right
-		int IsClose;
+		int IsClose;		// 0: adjust  1:complete  -1:noball
 
 		BallFollower();
 		~BallFollower();

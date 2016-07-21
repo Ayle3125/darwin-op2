@@ -43,6 +43,7 @@ BallFollower::BallFollower()
 	m_RLTurn = 0;
 	DEBUG_PRINT = false;
 	KickBall = 0;
+	IsClose = 0;
 }
 
 BallFollower::~BallFollower()
@@ -94,6 +95,7 @@ void BallFollower::Process(Point2D ball_pos)
 		{
 			if(tilt <= (tilt_min + MX28::RATIO_VALUE2ANGLE))
 			{
+				IsClose = 1;
 				if(ball_pos.Y < m_KickTopAngle)
 				{
 					m_GoalFBStep = 0;
@@ -140,6 +142,7 @@ void BallFollower::Process(Point2D ball_pos)
 			{
 				m_KickBallCount = 0;
 				KickBall = 0;
+				IsClose = 0;
 				m_GoalFBStep = m_FollowMaxFBStep * tilt_percent;
 				if(m_GoalFBStep < m_FollowMinFBStep)
 				    m_GoalFBStep = m_FollowMinFBStep;

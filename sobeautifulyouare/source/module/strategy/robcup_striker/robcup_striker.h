@@ -4,11 +4,6 @@
 #include <strategy.h>
 
 
-enum StrikerState{
-    FINDBALL,
-    DRIBBLE,
-    KICK,
-};
 
 class Robcup_striker:public Strategist
 {
@@ -17,61 +12,55 @@ class Robcup_striker:public Strategist
         ~Robcup_striker();
     private:
 
+        enum StrikerState{
+            FINDBALL,
+            JUDGE,
+			TURN,
+            KICK,
+        };
+
         BallTracker *tracker;
         BallFollower *follower;	
 
-        followball *ballpro; 
-        goalpost *goalpro;
-        sideline *linepro;
-        findrobot *robotpro;
 
-
+        /*************Process****************/
+        bool m_execute;
         StrikerState m_process_state;
 
-        void FindBall();
-        void Dribble();
-        void KickAdjust();
+        int m_MAXTurnCount;
 
-        int FindGoal();// 0: no goal  1:goal found  -1:can't get two goalpost(close to goalpost)
+        int TurnGoal(bool count_reset);
 
-        int m_is_dribble;
+        /*************Image*******************/
+        ImgProcResult *m_imgRes_goal, *m_imgRes_ball;
+        ImgProc *m_imgPro_goal, *m_imgPro_ball;
+        cv::Point2f m_ball_center;
+		Point2D m_ball_center_2D;
+        cv::Point2f m_goal_center;
 
+        /*************Motion Order*************/
+        double pan_range; 
+        double unit_pan;
+        double tilt_min;		
+        double tilt_range; 
+        double unit_tilt;
 
-        /*********Process*******************/
-
-        int m_ball_found;// 0: noball 1:found 2:found then lost -1:noball for long
-        int m_NoBallMaxCount;
-        int m_goal_found;// the number of goalpost
-        int m_line_found;// 0:no 1:sideline 2:forbiddenline
-        Point2D m_ball_center_2D;
-        Point2D m_ball_center_angle;
-        Point2D m_line_center_2D;//forbiddenline & sideline
-        Point2D m_goalfoot1, m_goalfoot2;
-        double m_line_Kvalue;
-
-        double m_dribble_pan;
-
-        double m_LongShotRightAngle;
-        double m_LongShotLeftAngle;
-        double m_LongShotTopAngle;
-
-        double m_LineTopValue;
-
-        int m_kick_ball_count;
-        int m_KickBallMaxCount;
-
-        /*---------------------------------------*/
-
-        /*************Motion Order****************/
+        double m_FBstep_straight;
         double m_FBstep;
+        double m_FBstep_ApproachMin;
+        double m_FBstep_goal;
         double m_unit_FBstep;
         double m_MAX_FBstep;
 
+        double m_RLturn_straight;
         double m_RLturn;
+        double m_RLturn_goal;
         double m_unit_RLturn;
         double m_MAX_RLturn;
 
+        double m_RLstep_straight;
         double m_RLstep;
+        double m_RLstep_goal;
         double m_unit_RLstep;
         double m_MAX_RLstep;
         /*------------------------------------*/
@@ -80,7 +69,8 @@ class Robcup_striker:public Strategist
 
     protected:
         virtual void ThreadMotion();
-		virtual int GetImageResult();
+        //virtual int GetImageResult();
+        int GetImageResult(int result_type);//0:ball 1:goal
 
 
 };
