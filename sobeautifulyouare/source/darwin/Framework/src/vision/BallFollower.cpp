@@ -90,12 +90,18 @@ void BallFollower::Process(Point2D ball_pos)
 		double tilt_percent = (tilt - tilt_min) / tilt_range;
 		if(tilt_percent < 0)
 			tilt_percent = -tilt_percent;
-
+		static int close_count = 0;
 		if(pan > m_KickRightAngle && pan < m_KickLeftAngle)
 		{
+			if(tilt <= 0 ) {
+				close_count++;
+				if ( close_count>2 ) IsClose = 1;
+			}
+			else {
+				close_count =0;
+			}
 			if(tilt <= (tilt_min + MX28::RATIO_VALUE2ANGLE))
 			{
-				IsClose = 1;
 				if(ball_pos.Y < m_KickTopAngle)
 				{
 					m_GoalFBStep = 0;
