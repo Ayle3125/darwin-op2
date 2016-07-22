@@ -28,7 +28,7 @@ Robcup_goalkeeper::Robcup_goalkeeper()
 		
     m_DiveRightAngle = 10;
     m_DiveLeftAngle = -10;
-    m_DiveTopAngle = -5;//TODO
+    m_DiveTopAngle = 5;//TODO
 }
 Robcup_goalkeeper::~Robcup_goalkeeper()
 {
@@ -58,14 +58,14 @@ void Robcup_goalkeeper::ThreadVision()
     if(!cap.isOpened())  // check if we succeeded
         fprintf(stderr,"Can not open the camera!\n");
     while (true)
-    {/*
+    {
         pthread_mutex_lock(&mut);//相当于模拟单线程，锁不锁也没关系
         while( is_new_img == true){
             pthread_cond_wait(&cond, &mut);
         }
         is_new_img = true;
         pthread_mutex_unlock(&mut);
-*/
+
         cap >> frame;
         flip(frame,frame,-1);
         if ( debug_print ){
@@ -86,12 +86,14 @@ void Robcup_goalkeeper::ThreadMotion()
     compasspro = new compass();
     static int m_old_btn = 0;
     printf("Press the ENTER key to start ROBOCUP!\n");
-	while(StatusCheck::m_is_started == 0)
+/*	while(StatusCheck::m_is_started == 0)
 	{
 		if ( MotionStatus::BUTTON != m_old_btn ) {
 			break;
 		}
 	}
+*/
+	getchar();
     Action::GetInstance()->m_Joint.SetEnableBody(true, true);  //!!!
     Action::GetInstance()->Start(9);  
     while(Action::GetInstance()->IsRunning() == true) usleep(8000);
@@ -102,15 +104,15 @@ void Robcup_goalkeeper::ThreadMotion()
 
     while ( true )
     {
-		/*
+	
         pthread_mutex_lock(&mut);
         if( is_new_img == true){
             pthread_cond_signal(&cond);
         }
         is_new_img = false;
         pthread_mutex_unlock(&mut);
-	*/
-		usleep(50*8000);
+	
+		usleep(10*8000);
         if (  m_is_checkstatus ) {
 			motion->CheckStatus();
 		}
@@ -122,9 +124,10 @@ void Robcup_goalkeeper::ThreadMotion()
         }
 //TODO:还没有加处理两幅图片球的坐标变化判断
         if ( m_process_state == AFTERDIVE ){
+			//CompassCheck();
 	if( debug_print ) printf("AFTERDIVE\n");
 			GetImageResult(frame,BALL);
-            AfterDive();
+       //     AfterDive();
         }
 		if ( m_process_state == RETURNFOLLOW ){
 	if( debug_print ) printf("RETURNFOLLOW \n");
@@ -224,13 +227,13 @@ void Robcup_goalkeeper::ReturnFollow()
 
 void Robcup_goalkeeper::FollowBall()
 {
-	static int LRMoveAngle = 10;
+	static int LRMoveAngle = 3;
      if ( tracker->limit_mode != 2){
-        tracker->ChangeLimit(20, -10, 65, 2); //TODO 守门员检查的视野范围，（tiltMax,tiltMin,Pan,Mode=goalkeeper)
+        tracker->ChangeLimit(12, -10, 50, 2); //TODO 守门员检查的视野范围，（tiltMax,tiltMin,Pan,Mode=goalkeeper)
     }
     m_ball_found = tracker->SearchAndTracking(m_ball_center_2D); 
-    m_ball_center_angle = tracker->ball_position;
-    if ( debug_print == 1 ) printf("ballfound:%d \n", m_ball_found);
+    tracker->Process(tracker->ball_position);
+    if ( debug_print == 1 ) printf("ballfound: while follow ball %d \n", m_ball_found);
     if ( m_ball_found == 1){
 		double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
         double pan_range = Head::GetInstance()->GetLeftLimitAngle();
@@ -254,7 +257,7 @@ void Robcup_goalkeeper::FollowBall()
 			m_is_checkstatus = false;
 			if ( debug_print){
 				printf("i am going to dive\n");
-				getchar();
+				//getchar();
 			}
 			if (m_ball_center_angle.X > m_DiveRightAngle){
 					if ( debug_print == 1 ) printf("dive right \n");

@@ -80,49 +80,6 @@ void Robcup_fullback::ThreadVision()
 }
 
 
-int Robcup_fullback::CompassCheck()
-{// degree 0~360  -> -180~ 180
-    int check_time = 0;
-    int check_result = 1;
-    static int MaxCheckTime = 5; 
-    m_angle_diff_opponentGoal = compasspro->GetAngle()  -  m_OpponentAngle;//任意角度还不行orz
-    if ( m_angle_diff_opponentGoal  < 0 ){
-		m_angle_diff_opponentGoal += 360;
-	}//orz 开幕式太吵 只能啰嗦些
-
-	if ( m_angle_diff_opponentGoal  > 180 ){
-		m_angle_diff_opponentGoal = m_angle_diff_opponentGoal -360;
-	}
-   if ( debug_print ) printf("angle diff: %lf\n", m_angle_diff_opponentGoal);
-   while ( abs(m_angle_diff_opponentGoal) > abs(m_DribbleLeftAngle)  ){
-	check_time++;
-        if ( check_time > MaxCheckTime ) {
-            check_result = 0;
-			break;
-        }
-        if (m_angle_diff_opponentGoal >m_DribbleRightAngle  ) {
-			if ( debug_print == 1 ) printf("turn left \n");
-			motion->walk(-5, 0, 25);
-            //m_RLturn = m_MAX_RLturn *  m_angle_diff_opponentGoal /180.0;// turn left
-            //m_RLstep = -10;//TODO
-        }
-        else {
-			if ( debug_print == 1 ) printf("turn right \n");
-			motion->walk(-5, 0, -25);
-            //m_RLturn = m_MAX_RLturn * ( m_angle_diff_opponentGoal )/180.0;//turn right
-            //m_RLstep = 5;//TODO
-        }//TODO 绕球转
-     /*   m_FBstep = -10 * m_unit_FBstep;
-       motion->walk(m_FBstep, m_RLstep, m_RLturn);
-*/
-       int tmp = m_MAX_RLturn *  m_angle_diff_opponentGoal /180.0;
-	//if ( debug_print == 1 ) printf("%lf   %lf   %lf  \n", m_FBstep, m_RLstep, m_RLturn);
-       usleep( abs(tmp)*1000);
-    }
-	return check_result;
-}
-
-
 void Robcup_fullback::ThreadMotion() 
 {
     motion = new Motion();
@@ -325,6 +282,48 @@ void Robcup_fullback::CloseToBall()
     }
 }
 
+
+int Robcup_fullback::CompassCheck()
+{// degree 0~360  -> -180~ 180
+    int check_time = 0;
+    int check_result = 1;
+    static int MaxCheckTime = 5; 
+    m_angle_diff_opponentGoal = compasspro->GetAngle()  -  m_OpponentAngle;//任意角度还不行orz
+    if ( m_angle_diff_opponentGoal  < 0 ){
+		m_angle_diff_opponentGoal += 360;
+	}//orz 开幕式太吵 只能啰嗦些
+
+	if ( m_angle_diff_opponentGoal  > 180 ){
+		m_angle_diff_opponentGoal = m_angle_diff_opponentGoal -360;
+	}
+   if ( debug_print ) printf("angle diff: %lf\n", m_angle_diff_opponentGoal);
+   while ( abs(m_angle_diff_opponentGoal) > abs(m_DribbleLeftAngle)  ){
+	check_time++;
+        if ( check_time > MaxCheckTime ) {
+            check_result = 0;
+			break;
+        }
+        if (m_angle_diff_opponentGoal >m_DribbleRightAngle  ) {
+			if ( debug_print == 1 ) printf("turn left \n");
+			motion->walk(-5, 0, 25);
+            //m_RLturn = m_MAX_RLturn *  m_angle_diff_opponentGoal /180.0;// turn left
+            //m_RLstep = -10;//TODO
+        }
+        else {
+			if ( debug_print == 1 ) printf("turn right \n");
+			motion->walk(-5, 0, -25);
+            //m_RLturn = m_MAX_RLturn * ( m_angle_diff_opponentGoal )/180.0;//turn right
+            //m_RLstep = 5;//TODO
+        }//TODO 绕球转
+     /*   m_FBstep = -10 * m_unit_FBstep;
+       motion->walk(m_FBstep, m_RLstep, m_RLturn);
+*/
+       int tmp = m_MAX_RLturn *  m_angle_diff_opponentGoal /180.0;
+	//if ( debug_print == 1 ) printf("%lf   %lf   %lf  \n", m_FBstep, m_RLstep, m_RLturn);
+       usleep( abs(tmp)*1000);
+    }
+	return check_result;
+}
 
 void Robcup_fullback::Longshot()
 {

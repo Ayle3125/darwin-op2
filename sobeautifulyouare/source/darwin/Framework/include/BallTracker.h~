@@ -23,10 +23,10 @@ namespace Robot
 	class BallTracker
 	{
 	private:
-		int NoBallCount;
-		static const int NoBallMaxCount = 15, NotFoundMaxCount = 50;
-        double TiltTopLimit, TiltBottomLimit, PanLimit ;
-
+		int NoBallCount;
+		static const int NoBallMaxCount = 15, NotFoundMaxCount = 100;
+        static const double TiltTopLimit = 25, TiltBottomLimit = -12;
+static const double PanLimit = 65;
 	public:
         Point2D     ball_position;
 		int limit_mode;// 0: striker_findball  1:striker_findgoal 2:goalkeeper 3:fullback
@@ -37,10 +37,9 @@ namespace Robot
 
 		int  Search(bool count_reset);
         int  SearchAndTracking(Point2D pos);
-        void ChangeLimit(int tiltTop, int tiltBottom, int panLimit, int mode);
+        void ChangeLimit(int tiltTop, int tiltBottom, int panLimit, int mode){};
         void Process(Point2D pos);
 
-void ChangeLimit(int a,int b,int c,int d){};
 	};
 }
 

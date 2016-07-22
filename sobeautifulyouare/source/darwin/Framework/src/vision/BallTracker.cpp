@@ -20,6 +20,7 @@ BallTracker::BallTracker() :
         ball_position(Point2D(-1.0, -1.0))
 {
 	NoBallCount = 0;
+	PanLimit = 65;
 }
 
 BallTracker::~BallTracker()
@@ -57,7 +58,6 @@ int BallTracker::Search(bool count_reset)
             else Head::GetInstance()->MoveByAngle(head_pan_angle, TiltTopLimit);
         }
     }
-
 	return 0;
 }
 
