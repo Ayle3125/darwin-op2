@@ -598,7 +598,10 @@ void Walking::Process()
         outValue[11] -= (int)(dir[11] * rlGyroErr * BALANCE_ANKLE_ROLL_GAIN*4); // L_ANKLE_ROLL
 #endif
     }
-
+for ( int i = 0; i < 14; i++){
+	printf("joint %d data:%d; ",i,outValue[i]);
+}
+printf("\n");
 	m_Joint.SetValue(JointData::ID_R_HIP_YAW,           outValue[0]);
 	m_Joint.SetValue(JointData::ID_R_HIP_ROLL,          outValue[1]);
 	m_Joint.SetValue(JointData::ID_R_HIP_PITCH,         outValue[2]);

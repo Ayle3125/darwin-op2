@@ -243,7 +243,7 @@ void Walking::update_param_time()
     m_Z_Swap_PeriodTime = m_PeriodTime / 2;
     m_Z_Move_PeriodTime = m_PeriodTime * m_SSP_Ratio / 2;
     m_A_Move_PeriodTime = m_PeriodTime * m_SSP_Ratio;
-/*
+
     m_SSP_Time = m_PeriodTime * m_SSP_Ratio;
     m_SSP_Time_Start_L = (1 - m_SSP_Ratio) * m_PeriodTime / 4;
     m_SSP_Time_End_L = (1 + m_SSP_Ratio) * m_PeriodTime / 4;
@@ -253,16 +253,6 @@ void Walking::update_param_time()
     m_Phase_Time1 = (m_SSP_Time_End_L + m_SSP_Time_Start_L) / 2;
     m_Phase_Time2 = (m_SSP_Time_Start_R + m_SSP_Time_End_L) / 2;
     m_Phase_Time3 = (m_SSP_Time_End_R + m_SSP_Time_Start_R) / 2;
-*/
- 	m_SSP_Time = m_PeriodTime * m_SSP_Ratio;
-    m_SSP_Time_Start_R = (1 - m_SSP_Ratio) * m_PeriodTime / 4;
-    m_SSP_Time_End_R = (1 + m_SSP_Ratio) * m_PeriodTime / 4;
-    m_SSP_Time_Start_L = (3 - m_SSP_Ratio) * m_PeriodTime / 4;
-    m_SSP_Time_End_L = (3 + m_SSP_Ratio) * m_PeriodTime / 4;
-
-    m_Phase_Time1 = (m_SSP_Time_End_R + m_SSP_Time_Start_R) / 2;
-    m_Phase_Time2 = (m_SSP_Time_Start_L + m_SSP_Time_End_R) / 2;
-    m_Phase_Time3 = (m_SSP_Time_End_L + m_SSP_Time_Start_L) / 2;
 
     m_Pelvis_Offset = PELVIS_OFFSET*MX28::RATIO_ANGLE2VALUE;
     m_Pelvis_Swing = m_Pelvis_Offset * 0.35;
@@ -434,8 +424,8 @@ void Walking::Process()
     a_swap = 0;
     b_swap = 0;
     c_swap = 0;
-//!!
-    if( m_SSP_Time_End_R < m_Time && m_Time <= m_SSP_Time_Start_L)
+
+    if(m_Time <= m_SSP_Time_Start_L)
     {
         x_move_l = wsin(m_SSP_Time_Start_L, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
         y_move_l = wsin(m_SSP_Time_Start_L, m_Y_Move_PeriodTime, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
@@ -448,7 +438,7 @@ void Walking::Process()
         pelvis_offset_l = 0;
         pelvis_offset_r = 0;
     }
-    else if( m_SSP_Time_Start_L < m_Time && m_Time <= m_SSP_Time_End_L)
+    else if(m_Time <= m_SSP_Time_End_L)
     {
         x_move_l = wsin(m_Time, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
         y_move_l = wsin(m_Time, m_Y_Move_PeriodTime, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
@@ -474,7 +464,7 @@ void Walking::Process()
         pelvis_offset_l = 0;
         pelvis_offset_r = 0;
     }
-    else if( m_SSP_Time_Start_R < m_Time &&  m_Time <= m_SSP_Time_End_R)
+    else if(m_Time <= m_SSP_Time_End_R)
     {
         x_move_l = wsin(m_Time, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
         y_move_l = wsin(m_Time, m_Y_Move_PeriodTime, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
@@ -520,7 +510,7 @@ void Walking::Process()
     ep[11] = c_swap + c_move_l + m_A_Offset / 2;
 
     // Compute body swing
-    if(m_Time <= m_SSP_Time_End_R)
+    if(m_Time <= m_SSP_Time_End_L)
     {
         m_Body_Swing_Y = -ep[7];
         m_Body_Swing_Z = ep[8];
@@ -608,13 +598,7 @@ void Walking::Process()
         outValue[11] -= (int)(dir[11] * rlGyroErr * BALANCE_ANKLE_ROLL_GAIN*4); // L_ANKLE_ROLL
 #endif
     }
-	int changeValue[14];
-	for ( int i = 0; i < 14; i++){
-		changeValue[i] = outValue[i];
-	} 
-	for ( int i = 0; i < 12; i++){
-		outValue[i] = MX28::GetMirrorValue( changeValue[ (i+6)%12 ] ) ;
-	} 
+
 	m_Joint.SetValue(JointData::ID_R_HIP_YAW,           outValue[0]);
 	m_Joint.SetValue(JointData::ID_R_HIP_ROLL,          outValue[1]);
 	m_Joint.SetValue(JointData::ID_R_HIP_PITCH,         outValue[2]);
@@ -627,7 +611,6 @@ void Walking::Process()
 	m_Joint.SetValue(JointData::ID_L_KNEE,              outValue[9]);
 	m_Joint.SetValue(JointData::ID_L_ANKLE_PITCH,       outValue[10]);
 	m_Joint.SetValue(JointData::ID_L_ANKLE_ROLL,        outValue[11]);
-
 	m_Joint.SetValue(JointData::ID_R_SHOULDER_PITCH,    outValue[12]);
 	m_Joint.SetValue(JointData::ID_L_SHOULDER_PITCH,    outValue[13]);
 	m_Joint.SetAngle(JointData::ID_HEAD_PAN, A_MOVE_AMPLITUDE);
