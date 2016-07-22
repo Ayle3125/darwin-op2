@@ -15,9 +15,9 @@ Fira_penalty::Fira_penalty()
     m_ball_center.x = 0; m_ball_center.y = 0;
     m_goal_center.x = 0; m_goal_center.y = 0;
 
-    m_AddressDiff = 10;
+    m_AddressDiff = 15;
     m_AddressBallCenter.x = 160;  m_AddressBallCenter.y = 90;
-    m_AddressGoalCenter.x = 140;   m_AddressGoalCenter.y = 240;
+    m_AddressGoalCenter.x = 150;   m_AddressGoalCenter.y = 240;
     m_KickDiff = 10;
 
     m_MAXTurnCount = 10000;
@@ -38,7 +38,7 @@ Fira_penalty::Fira_penalty()
     m_RLturn = 0;
     m_RLturn_goal = 0;
     m_RLturn_straight = 0.425;
-    m_unit_RLturn = 0.3;
+    m_unit_RLturn = 0.5;
     m_MAX_RLturn = 35;
     m_RLstep_straight = 0;
     m_RLstep_goal = 0;
@@ -69,38 +69,38 @@ void Fira_penalty::ThreadMotion()
     int tmp_img_result=0, tmp_return_value =0, tmp_img_result2=0;
 
     while(0){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
-/*			static int turn_count = 0, m_position = -1;
-            turn_count++;
-            m_RLstep_goal = -1*m_position*10;
-            m_RLturn_goal = m_position*10;
-            if(m_RLstep < m_RLstep_goal){
-            	m_RLstep += 1.2*m_unit_RLstep;
-    	    }
-      		else{
-            	m_RLstep -= m_unit_RLstep;
-        	}
-        	if(fabs(m_RLturn) < m_RLturn_goal){
-            	//m_RLturn += 0.5*m_unit_RLturn;
-				m_RLturn += m_RLturn_goal/20000;
-        	}
-        	else{fprintf(stderr,"**************************************************state change !\n"); 
-                         Walking::GetInstance()->Stop();
-            	//m_RLturn -= 0.1*m_unit_RLturn;
-            	//m_RLturn += m_RLturn_goal/10000;
-        	}
-                         fprintf(stderr,"**************************************************%d !\n",turn_count); 
-            if ( turn_count > 8000*20 ){//TODO
-				m_FBstep = 0;
-				m_RLstep = 0;
-				m_RLturn = 0;
-				m_process_state = ADDRESS;
-                         fprintf(stderr,"**************************************************state change !\n"); 
-                         Walking::GetInstance()->Stop();
-                         getchar(); 
-                         Walking::GetInstance()->Start();
-			}
-        	motion->walk(-1,m_RLstep,m_RLturn);
-*/
+        /*			static int turn_count = 0, m_position = -1;
+                    turn_count++;
+                    m_RLstep_goal = -1*m_position*10;
+                    m_RLturn_goal = m_position*10;
+                    if(m_RLstep < m_RLstep_goal){
+                    m_RLstep += 1.2*m_unit_RLstep;
+                    }
+                    else{
+                    m_RLstep -= m_unit_RLstep;
+                    }
+                    if(fabs(m_RLturn) < m_RLturn_goal){
+        //m_RLturn += 0.5*m_unit_RLturn;
+        m_RLturn += m_RLturn_goal/20000;
+        }
+        else{fprintf(stderr,"**************************************************state change !\n"); 
+        Walking::GetInstance()->Stop();
+        //m_RLturn -= 0.1*m_unit_RLturn;
+        //m_RLturn += m_RLturn_goal/10000;
+        }
+        fprintf(stderr,"**************************************************%d !\n",turn_count); 
+        if ( turn_count > 8000*20 ){//TODO
+        m_FBstep = 0;
+        m_RLstep = 0;
+        m_RLturn = 0;
+        m_process_state = ADDRESS;
+        fprintf(stderr,"**************************************************state change !\n"); 
+        Walking::GetInstance()->Stop();
+        getchar(); 
+        Walking::GetInstance()->Start();
+        }
+        motion->walk(-1,m_RLstep,m_RLturn);
+        */
 
         double tmp_pan=0,tmp_tilt=-5;
         scanf("%lf%lf", &tmp_pan, &tmp_tilt);
@@ -121,9 +121,9 @@ void Fira_penalty::ThreadMotion()
 
     BallTracker tracker = BallTracker();
     BallFollower follower = BallFollower();
-	Walking::GetInstance()->Start();
+    Walking::GetInstance()->Start();
     int position_count = 0;
-	int TurnCount = 0;
+    int TurnCount = 0;
     while(m_execute)
     {{if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
 
@@ -131,83 +131,103 @@ void Fira_penalty::ThreadMotion()
          if ( m_process_state == FINDBALL ){
              tmp_img_result = GetImageResult(0);
              if ( tmp_img_result != -1 ){
-                if ( m_ball_center.x > IMG_WIDTH/2 ) {// just mid+-+-? 0.0
-                    position_count--;
-                }
-                else {
-                    position_count++;
-                }
-                if ( fabs(position_count)>3 ){
-                    if ( position_count > 0 )
-                        m_position = 1;
-                    else {
-                        m_position = -1;
-						m_AddressGoalCenter.x = IMG_WIDTH -  m_AddressGoalCenter.x;
-					}
-					TurnCount = m_MAXTurnCount ;//* ( IMG_WIDTH/2 - fabs(m_ball_center.x - IMG_WIDTH/2) )/IMG_WIDTH;//TODO
-                    m_process_state = TURN;
-                         fprintf(stderr,"**************************************************state change positon:%d!\n",m_position); 
-                }
+                 if ( m_ball_center.x > IMG_WIDTH/2 ) {// just mid+-+-? 0.0
+                     position_count--;       //qiu zai you ce - qiu zai zuo ce +
+                 }
+                 else {
+                     position_count++;
+                 }
+                 if ( fabs(position_count)>3 ){
+                     m_AddressGoalCenter.x = m_AddressGoalCenter.x - fabs( IMG_WIDTH/2 -  m_ball_center.x)/4;
+                     if ( position_count > 0 ){
+                         m_position = 1;
+                     }
+                     else {
+                         m_position = -1;
+                         m_AddressGoalCenter.x = IMG_WIDTH -  m_AddressGoalCenter.x;
+                     }
+                     TurnCount = m_MAXTurnCount ;//* ( IMG_WIDTH/2 - fabs(m_ball_center.x - IMG_WIDTH/2) )/IMG_WIDTH;//TODO
+                     m_FBstep = 5;
+                     m_process_state = TURN;
+                     fprintf(stderr,"**************************************************state change positon:%d   goalx:%lf!\n",m_position,m_AddressGoalCenter.x); 
+                     Walking::GetInstance()->Stop();
+                     getchar();
+                     Walking::GetInstance()->Start();
+
+                 }
              }
          }
          else if ( m_process_state == TURN){
-            static int turn_count = 0;
-            turn_count++;
-if ( debug_print ) fprintf(stderr,"turn count%d\n",turn_count);
-            m_RLstep_goal = -1*m_position*10;
-            m_RLturn_goal = m_position*5;
-            if(m_RLstep < m_RLstep_goal){
-            	m_RLstep += 1.2*m_unit_RLstep;
-    	    }
-      		else{
-            	m_RLstep -= m_unit_RLstep;
-        	}
-        	if(fabs(m_RLturn) < fabs(m_RLturn_goal) ){
-            	m_RLturn += m_RLturn_goal/TurnCount;
-        	}/*
-        	else{
-            	m_RLturn -= 0.1*m_unit_RLturn;
-        	}*/
-            if ( turn_count > (TurnCount + m_position*TurnCount/20) ){//LR correct
-				turn_count = 0;
-				m_FBstep = 0;
-				m_RLstep = 0;
-				m_RLturn = 0;
-				m_process_state = ADDRESS;
-                         fprintf(stderr,"**************************************************state change !\n"); 
-                         Walking::GetInstance()->Stop();
-                         getchar(); 
-                         Walking::GetInstance()->Start();
-			}
-        	motion->walk(m_FBstep,m_RLstep,m_RLturn);
+             static int turn_count = 0;
+             turn_count++;
+             usleep(50);
+             if ( debug_print ) fprintf(stderr,"turn count%d\n",turn_count);
+             m_RLstep_goal = -1*m_position*10;
+             m_RLturn_goal = m_position*5;
+             if(m_RLstep < m_RLstep_goal){
+                 m_RLstep += 0.05*m_unit_RLstep;
+             }
+             else{
+                 m_RLstep -= 0.01*m_unit_RLstep;
+             }
+
+             if(fabs(m_RLturn) < fabs(m_RLturn_goal) ){
+                 if(m_RLturn < m_RLturn_goal ){
+                     m_RLturn += 16*m_RLturn_goal/TurnCount;
+                 }
+                 else{
+                     m_RLturn += 1*m_RLturn_goal/TurnCount;
+                 }
+             }
+             if ( turn_count > (TurnCount + m_position*TurnCount/20) ){//LR correct
+                 turn_count = 0;
+                 m_FBstep = 0;
+                 m_RLstep = 0;
+                 m_RLturn = 0;
+                 m_process_state = ADDRESS;
+                 fprintf(stderr,"**************************************************state change !\n"); 
+                 Walking::GetInstance()->Stop();
+                 getchar();
+                 Walking::GetInstance()->Start();
+             }
+             motion->walk(m_FBstep,m_RLstep,m_RLturn);
          }
          else if ( m_process_state == ADDRESS ){
+             static int address_count =0;
              tmp_img_result = GetImageResult(0);
              tmp_img_result2 = GetImageResult(1);
              if ( tmp_img_result != -1 || tmp_img_result2 !=-1 ){ 
                  tmp_return_value = AddressGoal(tmp_img_result,tmp_img_result2);   
                  if(tmp_return_value == 1){
-                     if ( debug_print ) {
-                         fprintf(stderr,"**************************************************state change !\n"); 
-                         Walking::GetInstance()->Stop();
-                         getchar(); 
-                         Walking::GetInstance()->Start();
+                     fprintf(stderr,"**************************************************address count %d !\n",address_count);
+                     Walking::GetInstance()->Stop();
+                     m_FBstep = 0.0; m_RLstep = 0.0; m_RLturn = 0.0;
+                     address_count++;
+                     if ( address_count > 0 ){
+                         if ( debug_print ) {
+                             fprintf(stderr,"**************************************************state change !\n"); 
+                             Walking::GetInstance()->Stop();
+                             getchar(); 
+                             Walking::GetInstance()->Start();
+                         }
+                         Head::GetInstance()->MoveByAngle(0,0); 
+                         m_process_state = APPROACH;
+                         m_FBstep = 10.0; m_RLstep = 0.0; m_RLturn = 0.0;
                      }
-                     m_process_state = APPROACH;
-                     m_FBstep = 10.0; m_RLstep = 0.0; m_RLturn = 0.0;
                  }
                  else {
+                     address_count = 0;
                      m_FBstep =-1.0;
                  }
                  motion->walk(m_FBstep,m_RLstep,m_RLturn);
              }
          }
          else if( m_process_state == APPROACH ){
-			 
+
              tmp_img_result = GetImageResult(0);
              if ( tmp_img_result != -1 ){
-                 Point2D m_ball_center_2D(m_ball_center.x,m_ball_center.y+25);
-                 tracker.Process(m_ball_center_2D);
+                 Point2D m_ball_center_2D(m_ball_center.x-3,m_ball_center.y+28);
+                 tracker.SearchAndTracking(m_ball_center_2D);
                  follower.Process(tracker.ball_position);
                  if(follower.KickBall != 0)
                  {
@@ -229,6 +249,7 @@ if ( debug_print ) fprintf(stderr,"turn count%d\n",turn_count);
              }
              else {
                  motion->walk(-5,0,0);
+                 Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
              }
          }
          else if ( m_process_state == KICK ){
@@ -248,22 +269,22 @@ int Fira_penalty::AddressGoal(int ball_valid, int hole_valid)
     if ( hole_valid==0)
         goal_diff = m_goal_center.x - m_AddressGoalCenter.x;
     if ( debug_print ) fprintf(stderr,"address diff: ball %lf  hole %lf\n",ball_diff,goal_diff);
-    if ( fabs(ball_diff) >  m_AddressDiff || fabs(goal_diff) >  0.5*m_AddressDiff){
+    if ( fabs(ball_diff) >  m_AddressDiff || fabs(goal_diff) > 1.5*m_AddressDiff){
 
         m_RLstep_goal = -1*m_MAX_RLstep*ball_diff/IMG_WIDTH;
         if(m_RLstep < m_RLstep_goal){
-            m_RLstep += m_unit_RLstep;
+            m_RLstep += 3*m_unit_RLstep;
             //m_RLstep = 0;
         }
         else{
-            m_RLstep -= m_unit_RLstep;
+            m_RLstep -= 2*m_unit_RLstep;
         }
         m_RLturn_goal = -1*m_MAX_RLturn*goal_diff/IMG_WIDTH;
         if(m_RLturn < m_RLturn_goal){
-            m_RLturn += m_unit_RLturn;
+            m_RLturn += 0.5*m_unit_RLturn;
         }
         else{
-            m_RLturn -= m_unit_RLturn;
+            m_RLturn -= 0.1*m_unit_RLturn;
             //m_RLturn = 0.0;
         }
         if ( ball_valid!=0)
