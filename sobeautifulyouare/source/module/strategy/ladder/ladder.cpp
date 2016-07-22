@@ -78,7 +78,7 @@ tmp_proc->load("red.txt");
         {
             if(m_upcnt < m_max_upcnt)
             {
-                if(debug_print)fprintf(stderr,"I 'm walking upstairs %d\n",Walking::GetInstance()->X_OFFSET);
+                if(debug_print)fprintf(stderr,"I 'm walking upstairs %lf\n",Walking::GetInstance()->X_OFFSET);
                 moveupstair();
                 m_upcnt++;
             }
@@ -92,7 +92,7 @@ tmp_proc->load("red.txt");
             else if(m_downcnt < m_max_downcnt)
             {
 		Walking::GetInstance()->Start();
-                if(debug_print)fprintf(stderr,"I 'm walking downstairs %d\n",Walking::GetInstance()->X_OFFSET);
+                if(debug_print)fprintf(stderr,"I 'm walking downstairs %lf\n",Walking::GetInstance()->X_OFFSET);
                 movedownstair();
                 m_downcnt++;
             }
@@ -104,7 +104,7 @@ tmp_proc->load("red.txt");
         }
         else if(m_ladder_flag == 3)
         {
-	    if(debug_print)fprintf(stderr,"I 'm walking flat %d\n",Walking::GetInstance()->X_OFFSET);
+        if(debug_print)fprintf(stderr,"I 'm walking flat %lf\n",Walking::GetInstance()->X_OFFSET);
             if(debug_print)fprintf(stderr,"Walking already\n");
              motion->walk(10,0,0);
         }
