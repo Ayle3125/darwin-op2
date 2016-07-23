@@ -94,7 +94,7 @@ void Sprint::ThreadMotion()
             }
             else if(m_pre_action == 1){
                 motion ->walk(m_FBStep,0,m_RLTurn_left);   //haven't LostDispose but need turn easy left
-                if ( debug_print ) fprintf(stderr,"I'm walking easy left! %d\n",m_RLTurn_left);
+                if ( debug_print ) fprintf(stderr,"I'm walking easy left! %lf\n",m_RLTurn_left);
             }
             else if(m_pre_action == -1){
                 motion ->walk(m_FBStep,0,m_RLTurn_right);   //haven't LostDispose but need turn easy right
