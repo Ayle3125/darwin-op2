@@ -14,7 +14,7 @@ Robcup_striker::Robcup_striker()
     m_execute = true;
     m_process_state = FINDBALL;
 
-	m_MAXTurnCount = 8000;
+	m_MAXTurnCount = 200;
 
     m_ball_center.x = 0; m_ball_center.y = 0;
     m_goal_center.x = 0; m_goal_center.y = 0;
@@ -35,12 +35,12 @@ Robcup_striker::Robcup_striker()
     m_RLturn = 0;
     m_RLturn_goal = 0;
     m_RLturn_straight = 0.425;
-    m_unit_RLturn = 0.3;
+    m_unit_RLturn = 0.15;		/*******gao********/
     m_MAX_RLturn = 35;
     m_RLstep_straight = 0;
     m_RLstep_goal = 0;
     m_RLstep = 0;
-    m_unit_RLstep = 0.3;
+    m_unit_RLstep = 0.3;		/******gao******/
     m_MAX_RLstep = 30;
 
     debug_print = 1;
@@ -63,7 +63,6 @@ void Robcup_striker::ThreadMotion()
     tracker = new BallTracker();
     follower = new BallFollower();
 
-    if(debug_print) fprintf(stderr,"pose begin!\n");
     int tmp_img_result=0, tmp_return_value =0, tmp_img_result2=0;
 
     while(0){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
@@ -101,9 +100,11 @@ void Robcup_striker::ThreadMotion()
         Walking::GetInstance()->Stop();
         */
     }
-    Walking::GetInstance()->Start();
+   // Walking::GetInstance()->Start();
 
-    while(m_execute){
+    Head::GetInstance()->MoveByAngle(0,25);
+    while(m_execute){if ( debug_print ) fprintf(stderr,"state %d. FB:%lf.  RLstep:%lf.  RLturn:%lf. \n",m_process_state,Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE);
+   
         motion->CheckStatus();
         if ( m_process_state == FINDBALL ){
             tmp_img_result = GetImageResult(0);
@@ -111,10 +112,11 @@ void Robcup_striker::ThreadMotion()
             if(tmp_return_value == 1)
             {
                 follower->Process(tracker->ball_position);
-
                 if(follower->IsClose != 0)
                 {
                     motion->walk(0,0,0);
+        	   Head::GetInstance()->MoveByAngle(0, 25); 
+		    Head::GetInstance()->Initialize();
                     m_process_state = JUDGE;
                 }
             }
@@ -128,13 +130,17 @@ void Robcup_striker::ThreadMotion()
             }
         }
         else if ( m_process_state == JUDGE ){
-    		Head::GetInstance()->MoveByAngle(0,25);
+	    static int judge_count = 0;
             tmp_img_result = GetImageResult(1);
             if ( tmp_img_result != -1 ){
-                m_process_state = KICK;
+		judge_count++;
+                if ( judge_count > 2 )
+			m_process_state = KICK;
             }
             else {
+		 judge_count = 0;
                 tmp_return_value = tracker->Search(0);
+		usleep(10000);
                 if ( tmp_return_value == -1 ){
                     tracker->Search(1);
                     m_FBstep = -1; m_RLstep = 0; m_RLturn = 0;
@@ -157,6 +163,7 @@ void Robcup_striker::ThreadMotion()
                     m_process_state = FINDBALL;
                 }
             }
+		m_FBstep = -2;
             motion->walk(m_FBstep,m_RLstep,m_RLturn);
         }
         else if ( m_process_state == KICK ){
@@ -215,7 +222,7 @@ int Robcup_striker::GetImageResult(int result_type)
         else {
             m_ball_center = tmp_result->center;
             m_ball_center_2D.X = m_ball_center.x;
-            m_ball_center_2D.Y = m_ball_center.y+25;
+            m_ball_center_2D.Y = m_ball_center.y+28;
             if ( debug_print ) fprintf(stderr,"ball_center:%lf %lf  \n",m_ball_center.x,m_ball_center.y);
         }
     }
@@ -241,7 +248,7 @@ int Robcup_striker::GetImageResult(int result_type)
 int Robcup_striker::TurnGoal(bool count_reset)
 {
     static int count = 0;
-
+printf("   %d\n",count);
     if(count_reset)
         count = 0;
     else {
@@ -249,21 +256,23 @@ int Robcup_striker::TurnGoal(bool count_reset)
             return -1;
         else
         {
-            m_RLstep_goal = 15;
+            m_RLstep_goal = 20;
             m_RLturn_goal = -10;
-
+	    count++;
         }
         if(m_RLstep < m_RLstep_goal){
-            m_RLstep += 1.2*m_unit_RLstep;
+            m_RLstep += m_unit_RLstep;
         }
         else{
             m_RLstep -= m_unit_RLstep;
+			//m_RLstep = 0;
         }
         if(m_RLturn < m_RLturn_goal){
             m_RLturn += m_unit_RLturn;
+			//m_RLturn = 0;
         }
         else{
-            m_RLturn -= m_unit_RLturn;
+            m_RLturn -= 0.415*m_unit_RLturn;
         }
 		m_FBstep = -1;
     }

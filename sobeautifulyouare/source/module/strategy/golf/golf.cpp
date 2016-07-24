@@ -136,8 +136,10 @@ Walking::GetInstance()->Stop();
                    	motion->walk(0,0,0);
 					Action::GetInstance()->m_Joint.SetEnableBody(true, true);
 					Action::GetInstance()->Start(81);
+					while(Action::GetInstance()->IsRunning() == 1) usleep(8000);
 					Walking::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
 					Walking::GetInstance()->m_Joint.SetEnableLeftArmOnly(false,false);
+    				Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
                     m_process_state = SWING;
 					}
                 }

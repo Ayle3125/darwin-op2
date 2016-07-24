@@ -54,11 +54,15 @@ class Obstacle:public Strategist
 
         /*************Motion Order****************/
         double pan,tilt;
-        double pan_range; 
-        double unit_pan;
+		double pan_range; 
+		double unit_pan;
+		double tilt_min;		
+		double tilt_range; 
+		double unit_tilt;
 
         double m_FBstep_straight;
         double m_FBstep;
+		double m_FBstep_ApproachMin;
         double m_FBstep_goal;
         double m_unit_FBstep;
         double m_MAX_FBstep;
@@ -71,6 +75,7 @@ class Obstacle:public Strategist
 
         double m_RLstep_straight;
         double m_RLstep;
+        double m_RLstep_goal;
         double m_unit_RLstep;
         double m_MAX_RLstep;
         /*------------------------------------*/

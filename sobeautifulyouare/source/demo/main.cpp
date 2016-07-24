@@ -23,12 +23,13 @@
 #include <golf.h>
 #include <fira_penalty.h>
 #include <shot.h>
+#include <test.h>
 
 #define IMG_WIDTH 320
 #define IMG_HEIGHT 240
 
 // 以下宏定义对应于键盘上的0~9.
-#define STOP			48
+#define TEST			48
 #define OBSTACLE		49
 #define MARATHON		50
 #define ROBCUP_STRIKER 		51
@@ -52,6 +53,7 @@ void runLadder();
 void runGolf();
 void runShot();
 void runFira_penalty();
+void runTest();
 
 
 int main(int argc, char *argv[])
@@ -59,6 +61,9 @@ int main(int argc, char *argv[])
     if(argc == 1)
         return 1;
     switch((int)argv[1][0]) {
+        case TEST:
+            runTest();
+            break;
         case OBSTACLE:
             runObstacle();
             break;
@@ -103,80 +108,74 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+void runTest()
+{
+    Test *test = new Test();
+    test->run();
+}
 
 void runObstacle()
 {
     Obstacle *obstacle = new Obstacle();
-    // Here is for Obstacle
     obstacle->run();
 }
 
 void runMarathon()
 {
     Marathon *marathon = new Marathon();
-    // Here is for Marathon
     marathon->run();
 }
 
 void runRobcup_striker()
 {
     Robcup_striker *robcup_striker = new Robcup_striker();
-    // Here is for Robcup_striker
     robcup_striker->run();
 }
 
 void runRobcup_fullback()
 {
     Robcup_fullback *robcup_fullback = new Robcup_fullback();
-    // Here is for Robcup_fullback
     robcup_fullback->run();
 }
 
 void runRobcup_goalkeeper()
 {
     Robcup_goalkeeper *robcup_goalkeeper = new Robcup_goalkeeper();
-    // Here is for Robcup_goalkeeper
     robcup_goalkeeper->run();
 }
 
 void runRobcup_penalty()
 {
     Robcup_penalty *robcup_penalty = new Robcup_penalty();
-    // Here is for Robcup_penalty
     robcup_penalty->run();
 }
 
 void runSprint()
 {
     Sprint *sprint = new Sprint();
-    // Here is for Sprint
     sprint->run();
 }
 
 void runLadder()
 {
     Ladder *ladder = new Ladder();
-    // Here is for Sprint
     ladder->run();
 }
 
 void runGolf()
 {
     Golf *golf = new Golf();
-    // Here is for Sprint
     golf->run();
 }
 
 void runShot()
 {
     Shot *shot = new Shot();
-    // Here is for Sprint
     shot->run();
 }
 
 void runFira_penalty()
 {
     Fira_penalty *fira_penalty = new Fira_penalty();
-    // Here is for Sprint
     fira_penalty->run();
 }

@@ -35,12 +35,12 @@ Robcup_striker::Robcup_striker()
     m_RLturn = 0;
     m_RLturn_goal = 0;
     m_RLturn_straight = 0.425;
-    m_unit_RLturn = 0.15;		/*******gao********/
+    m_unit_RLturn = 0.15;	
     m_MAX_RLturn = 35;
     m_RLstep_straight = 0;
     m_RLstep_goal = 0;
     m_RLstep = 0;
-    m_unit_RLstep = 0.3;		/******gao******/
+    m_unit_RLstep = 0.3;	
     m_MAX_RLstep = 30;
 
     debug_print = 1;

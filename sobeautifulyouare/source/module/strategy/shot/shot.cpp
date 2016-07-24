@@ -3,7 +3,42 @@
 
 Shot::Shot()
 {
-	debug_print = 1; 
+    imgRes = new ColorFindResult();
+    imgProc = new ColorFind();
+    ColorFind *tmp_proc = dynamic_cast<ColorFind *>(imgProc);
+    tmp_proc->load("redbox.txt");
+
+    m_execute = true;
+    m_ball_center.x = 0; m_ball_center.y = 0;
+    m_ApproachBallCenter.x = 160;
+    m_ApproachBallCenter.y = 100;
+    m_ApproachDiff_X = 30;
+    m_ApproachDiff_Y = 20;
+    //TODO go straight first  
+    unit_pan = 0.5;
+    pan_range = Head::GetInstance()->GetLeftLimitAngle(); 
+    tilt_min = Head::GetInstance()->GetBottomLimitAngle();
+    tilt_range = Head::GetInstance()->GetTopLimitAngle() - tilt_min;
+    unit_tilt = 0.5;
+
+    m_FBstep = 1;
+    m_FBstep_straight = 10;
+    m_FBstep_goal = 10;
+    m_FBstep_ApproachMin = 5;
+    m_unit_FBstep = 0.3;
+    m_MAX_FBstep = 30; 
+    m_RLturn = 0;
+    m_RLturn_goal = 0;
+    m_RLturn_straight = 0.425;
+    m_unit_RLturn = 5.0;
+    m_MAX_RLturn = 35;
+    m_RLstep_straight = 0;
+    m_RLstep_goal = 0;
+    m_RLstep = 0;
+    m_unit_RLstep = 0.3;
+    m_MAX_RLstep = 30;
+
+    debug_print = 1; 
 }
 
 Shot::~Shot()
@@ -15,28 +50,138 @@ Shot::~Shot()
 void Shot::ThreadMotion()
 {
     motion = new Motion();
-    
-    
-	motion->poseInit();
 
-   
-    while(true)
-    {
-	    motion->CheckStatus();
-        
+
+    motion->poseInit();
+
+    int approach_count = 0;
+    int tmp_img_result=0, tmp_return_value =0;
+    Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+    Action::GetInstance()->Start(93);
+    while(Action::GetInstance()->IsRunning() == 1) usleep(8000);
+    Walking::GetInstance()->m_Joint.SetEnableBodyWithoutHead(true, true);
+    Walking::GetInstance()->m_Joint.SetEnableLeftArmOnly(false,false);
+    Walking::GetInstance()->m_Joint.SetEnableRightArmOnly(false,false);
+    Head::GetInstance()->m_Joint.SetEnableHeadOnly(true, true);
+    Walking::GetInstance()->Start();
+    while( m_execute )
+    {if ( debug_print ) fprintf(stderr," FB:%lf.  RLstep:%lf.  RLturn:%lf. Tilt:%lf .\n",Walking::GetInstance()->X_MOVE_AMPLITUDE,Walking::GetInstance()->Y_MOVE_AMPLITUDE,Walking::GetInstance()->A_MOVE_AMPLITUDE,MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_TILT));
+        motion->CheckStatus();
+        tmp_img_result = GetImageResult();
+        if ( tmp_img_result != -1 ){
+            HeadTracker(m_ball_center);
+            double tilt = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_TILT);
+            if (tilt <= (tilt_min + MX28::RATIO_VALUE2ANGLE)){	
+              // tmp_return_value = Approach();
+              //  if ( tmp_return_value == 1  ){
+              //      approach_count++;
+              //      if (approach_count > 3 ) {
+                        Action::GetInstance()->m_Joint.SetEnableBody(true, true);
+                        Action::GetInstance()->Start(83);
+              //      }
+              //  }
+            }
+            else {
+                double tilt_percent = (tilt - tilt_min) / tilt_range;
+                double pan = MotionStatus::m_CurrentJoints.GetAngle(JointData::ID_HEAD_PAN);
+                if(tilt_percent < 0)
+                    tilt_percent = -tilt_percent;
+                double pan_percent = pan / pan_range;
+                m_FBstep_goal = m_MAX_FBstep * tilt_percent;
+                m_RLturn_goal = m_MAX_RLturn * pan_percent;
+                if(m_FBstep_goal < m_FBstep_ApproachMin)
+                    m_FBstep_goal = m_FBstep_ApproachMin;
+                if (m_FBstep < m_FBstep_goal){
+                    m_FBstep += m_unit_FBstep;
+                }
+                else {
+                    m_FBstep -= m_unit_FBstep;
+                }
+                if(m_RLturn < m_RLturn_goal){
+                    m_RLturn += m_unit_RLturn;
+                }
+                else {
+                    m_RLturn -= m_unit_RLturn;
+                }
+                motion->walk(m_FBstep,m_RLstep,m_RLturn);
+            }
+        }
     }
 
 }
 
+
 int Shot::GetImageResult()
 {
+    while ( is_new_img == false ) usleep(8000);
     imgProc->imageProcess(frame,imgRes);
     ColorFindResult *tmp_result = dynamic_cast<ColorFindResult *>(imgRes);
     if ( tmp_result->valid == false ){
+        if ( debug_print ) fprintf(stderr,"Can't find the Ball!\n");
         return -1;
     }
     else {
+        m_ball_center = tmp_result->center;
+        if ( debug_print ) fprintf(stderr,"center: %lf %lf \n",m_ball_center.x,m_ball_center.y);
+    }
 
+    is_new_img = false;
+    return 0;
+}
+
+int Shot::Approach()
+{
+    static bool approach_flag = 0;
+    double RLdiff = m_ball_center.x - m_ApproachBallCenter.x;
+    double FBdiff = m_ball_center.y - m_ApproachBallCenter.y;
+    if ( debug_print ) fprintf(stderr,"approach diff: RL %lf  FB %lf\n",RLdiff,FBdiff);
+    if( ( fabs(RLdiff) < m_ApproachDiff_X || m_ball_center.x <(m_ApproachBallCenter.x+RLdiff) ) && fabs(FBdiff) < m_ApproachDiff_Y){
+        return 1;
+    }
+    else {
+        m_RLstep_goal = -1*m_MAX_RLstep*RLdiff/IMG_WIDTH;
+        m_FBstep_goal = -1*m_MAX_FBstep*FBdiff/IMG_HEIGHT;
+        if (m_FBstep < m_FBstep_goal){
+            m_FBstep += 0.3*m_unit_FBstep;
+        }
+        else {
+            m_FBstep -= m_unit_FBstep;
+        }
+        if ( m_RLstep < m_RLstep_goal ){
+            m_RLstep += m_unit_RLstep ;
+        }
+        else {
+            m_RLstep -= m_unit_RLstep ;
+        }
+        motion->walk(m_FBstep,m_RLstep,m_RLturn);
+    }
+}
+
+
+int Shot::HeadTracker(cv::Point2f pos)
+{
+    static int NoFindCount =0;
+    static const int NoFindMaxCount = 4;
+    if(pos.x < 0 || pos.y < 0)
+    {
+        if(NoFindCount < NoFindMaxCount)
+        {
+            Head::GetInstance()->MoveTracking();
+            NoFindCount++;
+        }
+        else
+            Head::GetInstance()->InitTracking();
+    }
+    else
+    {
+        NoFindCount = 0;
+        Point2D offset;
+        offset.X = pos.x - IMG_WIDTH/2;
+        offset.Y = pos.y - IMG_HEIGHT/2;
+        offset *= -1; // Inverse X-axis, Y-axis 
+        offset.X *= (VIEW_H_ANGLE / IMG_WIDTH); // pixel per angle 
+        offset.Y *= (VIEW_V_ANGLE / IMG_HEIGHT);
+        Head::GetInstance()->MoveTracking(offset);
     }
 }
 

@@ -9,7 +9,44 @@ public:
 	Shot();
 	~Shot();
 private:
+        /*************Process****************/
+        bool m_execute;
+			
+		int Approach();
+		int HeadTracker(cv::Point2f pos);
+ 		/*************Image*******************/
+        cv::Point2f m_ball_center;
 
+        cv::Point2f m_ApproachBallCenter;
+		
+		double m_ApproachDiff_X;
+		double m_ApproachDiff_Y;
+        /*************Motion Order*************/
+		double pan_range; 
+		double unit_pan;
+		double tilt_min;		
+		double tilt_range; 
+		double unit_tilt;
+
+        double m_FBstep_straight;
+        double m_FBstep;
+		double m_FBstep_ApproachMin;
+        double m_FBstep_goal;
+        double m_unit_FBstep;
+        double m_MAX_FBstep;
+
+        double m_RLturn_straight;
+        double m_RLturn;
+        double m_RLturn_goal;
+        double m_unit_RLturn;
+        double m_MAX_RLturn;
+
+        double m_RLstep_straight;
+        double m_RLstep;
+        double m_RLstep_goal;
+        double m_unit_RLstep;
+        double m_MAX_RLstep;
+        /*------------------------------------*/
     int debug_print;
 
 protected:
